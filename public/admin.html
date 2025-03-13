@@ -368,5 +368,24 @@ document.getElementById('adminContent').style.display = 'none';
 		});
 	</script>
 	<script src="js/admin.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const isAuthenticated = checkAdminAuth();
+        const loginSection = document.getElementById('loginSection');
+        const adminContent = document.getElementById('adminContent');
+
+        if (isAuthenticated) {
+            loginSection.style.display = 'none';
+            adminContent.style.display = 'block';
+            loadFoods();
+            loadOrders();
+            loadUsers();
+            loadAnalytics();
+        } else {
+            loginSection.style.display = 'flex';
+            adminContent.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

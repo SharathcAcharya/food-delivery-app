@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth');
+const { verifyToken } = require('../middleware/auth');
 const Notification = require('../models/Notification');
 
 // Get all notifications for the authenticated user
-router.get('/', auth, async (req, res) => {
+router.get('/', verifyToken, async (req, res) => {
     try {
         const notifications = await Notification.find({ recipient: req.user._id })
             .sort({ createdAt: -1 });
@@ -15,7 +15,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 // Mark a notification as read
-router.patch('/:id/read', auth, async (req, res) => {
+router.patch('/:id/read', verifyToken, async (req, res) => {
     try {
         const notification = await Notification.findOneAndUpdate(
             { _id: req.params.id, recipient: req.user._id },
@@ -32,7 +32,7 @@ router.patch('/:id/read', auth, async (req, res) => {
 });
 
 // Mark all notifications as read
-router.patch('/mark-all-read', auth, async (req, res) => {
+router.patch('/mark-all-read', verifyToken, async (req, res) => {
     try {
         await Notification.updateMany(
             { recipient: req.user._id, isRead: false },
@@ -45,7 +45,7 @@ router.patch('/mark-all-read', auth, async (req, res) => {
 });
 
 // Delete a notification
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', verifyToken, async (req, res) => {
     try {
         const notification = await Notification.findOneAndDelete({
             _id: req.params.id,

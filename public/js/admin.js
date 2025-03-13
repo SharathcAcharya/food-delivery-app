@@ -16,14 +16,19 @@ let analytics = {
 
 // Update checkAdminAuth function
 function checkAdminAuth() {
-	token = localStorage.getItem('token');
-	const user = JSON.parse(localStorage.getItem('user') || 'null');
-	
-	if (!token || !user || !user.isAdmin) {
-		window.location.href = 'admin-login.html';
-		return false;
-	}
-	return true;
+    token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user') || 'null');
+    
+    if (!token || !user) {
+        return false;
+    }
+    
+    if (!user.isAdmin) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        return false;
+    }
+    return true;
 }
 
 // Update fetchWithAuth function

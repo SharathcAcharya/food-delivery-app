@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const { createServer } = require('http');
+const WebSocket = require('ws');
 const { Server } = require('socket.io');
 const NotificationService = require('./services/notification');
 const { verifyToken, verifyAdmin } = require('./middleware/auth');
@@ -11,6 +12,9 @@ require('dotenv').config();
 // Initialize express app
 const app = express();
 const PORT = process.env.PORT || 3005;
+
+// Create HTTP server
+const httpServer = createServer(app);
 
 // Basic middleware
 app.use(express.json());
@@ -72,12 +76,12 @@ async function startServer() {
 		});
 		console.log('MongoDB Connected Successfully');
 
-		const server = httpServer.listen(PORT, () => {
+		httpServer.listen(PORT, () => {
 			console.log(`Server is running on port ${PORT}`);
 		});
 
 		// WebSocket setup
-		const wss = new WebSocket.Server({ server });
+		const wss = new WebSocket.Server({ server: httpServer });
 		const clients = new Map();
 
 		wss.on('connection', (ws) => {
@@ -104,7 +108,7 @@ async function startServer() {
 			if (ws) ws.send(JSON.stringify({ type: 'orderUpdate', orderId, status, ...data }));
 		};
 
-		return server;
+		return httpServer;
 	} catch (error) {
 		console.error('Server startup error:', error);
 		process.exit(1);

@@ -2,6 +2,7 @@
 let foodItems = [];
 let selectedCategory = '';
 let razorpay = null;
+const DEFAULT_FOOD_IMAGE = '/uploads/cheese-pizza.jpg';
 
 // WebSocket initialization
 let orderSocket = null;
@@ -98,22 +99,25 @@ function displayFoodItems(items) {
     const foodGrid = document.getElementById('foodGrid');
     if (!foodGrid) return;
 
-    foodGrid.innerHTML = items.map((item, index) => `
-        <div class="food-item" data-id="${item._id}" style="animation-delay: ${index * 0.1}s">
-            <img src="${item.image}" alt="${item.name}">
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <div class="food-meta">
-                <span class="price">₹${item.price.toFixed(2)}</span>
-                <span class="${item.isVeg ? 'veg-badge' : 'non-veg-badge'}">
-                    ${item.isVeg ? 'VEG' : 'NON-VEG'}
-                </span>
+    foodGrid.innerHTML = items.map(item => {
+        const imagePath = item.image ? 
+            (item.image.startsWith('/') ? item.image : `/${item.image}`) : 
+            DEFAULT_FOOD_IMAGE;
+
+        return `
+            <div class="food-item">
+                <img src="${imagePath}" alt="${item.name}" onerror="this.src='${DEFAULT_FOOD_IMAGE}'">
+                <div class="food-info">
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                    <span class="food-price">₹${item.price.toFixed(2)}</span>
+                    <span class="food-category">${item.category}</span>
+                    ${item.isVeg ? '<span class="veg-badge">VEG</span>' : ''}
+                </div>
+                <button onclick="addToCart(${JSON.stringify(item)})" class="add-to-cart-btn">Add to Cart</button>
             </div>
-            <button onclick="addToCart('${item._id}')" class="add-to-cart-btn">
-                Add to Cart
-            </button>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 function filterByCategory(category) {
