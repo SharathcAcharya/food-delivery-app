@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head >
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href='https://stackpath.bootstrapcdn.com' rel='preconnect' crossorigin>
+<script data-no-optimize="1" data-cfasync="false">!function(){"use strict";function e(e){const t=e.match(/((?=([a-z0-9._!#$%+^&*()[\]<>-]+))\2@[a-z0-9._-]+\.[a-z0-9._-]+)/gi);return t?t[0]:""}function t(t){return e(a(t.toLowerCase()))}function a(e){return e.replace(/\s/g,"")}async function n(e){const t={sha256Hash:"",sha1Hash:""};if(!("msCrypto"in window)&&"https:"===location.protocol&&"crypto"in window&&"TextEncoder"in window){const a=(new TextEncoder).encode(e),[n,c]=await Promise.all([s("SHA-256",a),s("SHA-1",a)]);t.sha256Hash=n,t.sha1Hash=c}return t}async function s(e,t){const a=await crypto.subtle.digest(e,t);return Array.from(new Uint8Array(a)).map(e=>("00"+e.toString(16)).slice(-2)).join("")}function c(e){let t=!0;return Object.keys(e).forEach(a=>{0===e[a].length&&(t=!1)}),t}function i(e,t,a){e.splice(t,1);const n="?"+e.join("&")+a.hash;history.replaceState(null,"",n)}var o={checkEmail:e,validateEmail:t,trimInput:a,hashEmail:n,hasHashes:c,removeEmailAndReplaceHistory:i,detectEmails:async function(){const e=new URL(window.location.href),a=Array.from(e.searchParams.entries()).map(e=>`${e[0]}=${e[1]}`);let s,o;const r=["adt_eih","sh_kit"];if(a.forEach((e,t)=>{const a=decodeURIComponent(e),[n,c]=a.split("=");if("adt_ei"===n&&(s={value:c,index:t,emsrc:"url"}),r.includes(n)){o={value:c,index:t,emsrc:"sh_kit"===n?"urlhck":"urlh"}}}),s)t(s.value)&&n(s.value).then(e=>{if(c(e)){const t={value:e,created:Date.now()};localStorage.setItem("adt_ei",JSON.stringify(t)),localStorage.setItem("adt_emsrc",s.emsrc)}});else if(o){const e={value:{sha256Hash:o.value,sha1Hash:""},created:Date.now()};localStorage.setItem("adt_ei",JSON.stringify(e)),localStorage.setItem("adt_emsrc",o.emsrc)}s&&i(a,s.index,e),o&&i(a,o.index,e)},cb:"adthrive"};const{detectEmails:r,cb:l}=o;r()}();
+</script><script>ifInited=!1;
+
+function lazyif1(){
+if(ifInited)return;var l=document.createElement('link');l.href='/wp-content/plugins/instagram-feed-pro/css/sbi-styles.min.css';l.type='text/css';l.rel='stylesheet';l.media='screen';document.getElementsByTagName('head')[0].appendChild(l);
+var s=document.createElement('script');s.onload=function(){};s.src='/wp-content/plugins/instagram-feed-pro/js/sbi-scripts.min.js';document.head.appendChild(s)
+ifInited=!0;console.log('load css / js [ /plugins/instagram-feed-pro/css/sb-instagram.min.css ] [1x css /01x js ]')
+}
+var s_if='#sb_instagram';
+
+function lazyifold1(){
+var i=function(t){if(!t)return;var n=t.getBoundingClientRect();return 2623>n.top||-2623>n.top};if(ifInited||!i(document.querySelector(s_if)))return;lazyif1()
+}
+function inviewif(){if(!'IntersectionObserver' in window||!('IntersectionObserverEntry' in window)||!('intersectionRatio' in window.IntersectionObserverEntry.prototype)){
+document.addEventListener('resize',lazyifold1);
+document.addEventListener('mousemove',lazyifold1);
+document.addEventListener('scroll',function(){if(window.scrollY>99)lazyifold1()})
+lazyifold1()
+}else{
+var Elsif=document.querySelectorAll(s_if);
+var observerif=new IntersectionObserver(function(entries){
+entries.forEach(function(e){
+if(e.isIntersecting){
+lazyif1();
+observerif.unobserve(e.target)
+}})},{rootMargin:'1311px'});Elsif.forEach(function(e){observerif.observe(e)})
+}}
+document.addEventListener('DOMContentLoaded',inviewif);document.addEventListener('mousemove',lazyifold1);
+document.addEventListener('touchstart',lazyifold1);</script><script>wicInited=!1;
+function lazywic1(){
+var i=function(t){if(!t)return;var n=t.getBoundingClientRect();return 1888>n.top||-1888>n.top};if(wicInited||!i(document.querySelector('[class^="components-"]')))return;wicInited=!0;['touchstart','mousemove','resize'].forEach(function(e){window.removeEventListener(e,lazywic1)});document.removeEventListener('scroll',sclazywic1);console.log('load css/js [/wp-includes/css/dist/components/style.min.css] [1/0]');
+var l=document.createElement('link');l.href='/wp-includes/css/dist/components/style.min.css';l.type='text/css';l.rel='stylesheet';l.media='screen';document.getElementsByTagName('head')[0].appendChild(l);
+}['touchstart','mousemove'].forEach(function(e){window.addEventListener(e,lazywic1)});function sclazywic1(){if(window.scrollY>53)lazywic1()}document.addEventListener('scroll',sclazywic1)</script><script>cblInited=!1;
+function lazycbl1(){
+var i=function(t){if(!t)return;var n=t.getBoundingClientRect();return 1888>n.top||-1888>n.top};if(cblInited||!i(document.querySelector('[class^="wp-block-coblocks-"]')))return;cblInited=!0;['touchstart','mousemove','resize'].forEach(function(e){window.removeEventListener(e,lazycbl1)});document.removeEventListener('scroll',sclazycbl1);console.log('load css/js [/plugins/coblocks/dist/] [3/3]');
+var l=document.createElement('link');l.href='/wp-content/plugins/coblocks/dist/style-coblocks-1.css';l.type='text/css';l.rel='stylesheet';l.media='screen';document.getElementsByTagName('head')[0].appendChild(l);
+var l1=document.createElement('link');l1.href='/wp-content/plugins/coblocks/dist/style-coblocks-extensions.css';l1.type='text/css';l1.rel='stylesheet';l1.media='screen';document.getElementsByTagName('head')[0].appendChild(l1);
+var l2=document.createElement('link');l2.href='/wp-content/plugins/coblocks/dist/style-coblocks-animation.css';l2.type='text/css';l2.rel='stylesheet';l2.media='screen';document.getElementsByTagName('head')[0].appendChild(l2);
+var s=document.createElement('script');s.onload=function(){};s.src='/wp-content/plugins/coblocks/dist/js/coblocks-animation.js';document.head.appendChild(s);
+var s1=document.createElement('script');s1.onload=function(){};s1.src='/wp-content/plugins/coblocks/dist/js/vendors/tiny-swiper.js';document.head.appendChild(s1);
+var s2=document.createElement('script');s2.onload=function(){};s2.src='/wp-content/plugins/coblocks/dist/js/coblocks-tinyswiper-initializer.js';document.head.appendChild(s2);
+}['touchstart','mousemove'].forEach(function(e){window.addEventListener(e,lazycbl1)});function sclazycbl1(){if(window.scrollY>53)lazycbl1()}document.addEventListener('scroll',sclazycbl1)</script><meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<style data-no-optimize="1" data-cfasync="false">
+	.adthrive-ad {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		overflow-x: visible;
+		clear: both;
+		line-height: 0;
+	}
+	.adthrive-device-desktop .adthrive-recipe, .adthrive-device-tablet .adthrive-recipe{
+float:right;
+margin: 0 0 20px 20px !important;
+}
+
+.adthrive-player-title {
+    margin: 10px 0 !important;
+}
+
+.adthrive-player-container {
+    margin-bottom: 20px;
+}
+
+/* confirm click footer ad fix test */
+body.adthrive-device-phone .adthrive-footer.adthrive-sticky {
+padding-top:0px;
+overflow:visible !important;
+border-top:0px !important;
+}
+body.adthrive-device-phone .adthrive-sticky.adthrive-footer>.adthrive-close {
+top:-25px !important;
+right:0px !important;
+border-radius: 0px !important;
+line-height: 24px !important;
+font-size: 24px !important;
+}
+/* confirm click footer ad fix test  end */
+
+.adthrive-device-phone .adthrive-footer {
+padding-bottom: 10px;
+}
+
+.adthrive-collapse-mobile {
+margin-bottom:14px;
+}
+
+.adthrive-collapse-mobile {
+margin-left:5px;
+}
+
+.adthrive-wrapper-float-close { 
+float: left; 
+}
+
+/* Place “Advertisement” tag above ads */
+.adthrive-content:before {
+  content: "Advertisement";
+  font-family: "Segoe UI", Helvetica, Arial, 'Quattrocento', serif;
+text-transform: uppercase;
+font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  display: block;
+  color: #888;
+}
+/* END ADVERTISEMENT STYLING */
+
+.tasty-recipes-notes p {
+overflow: auto;
+}
+
+/* mobile top center video and Slickstream - prevent video player shifting when scrolling */
+body.slick-filmstrip-toolbar-showing .adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center:not(.adthrive-collapse-bottom-left):not(.adthrive-collapse-bottom-right), 
+body.slick-filmstrip-toolbar-showing .adthrive-player-position.adthrive-collapse-mobile-background:not(.adthrive-collapse-bottom-left):not(.adthrive-collapse-bottom-right) {
+    transform: translate3d(15%, 0px, 0)!important;
+}
+body.slick-filmstrip-toolbar-showing.adthrive-device-phone .adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center:not(.adthrive-collapse-bottom-left):not(.adthrive-collapse-bottom-right),
+body.slick-filmstrip-toolbar-showing.adthrive-device-phone .adthrive-player-position.adthrive-collapse-mobile-background:not(.adthrive-collapse-bottom-left):not(.adthrive-collapse-bottom-right){
+    transform: translate3d(-50%, 0px, 0)!important;
+}
+body.slick-filmstrip-toolbar-showing.adthrive-device-phone .adthrive-collapse-mobile-background {
+    transform: translate3d(0, 0px, 0)!important;
+}
+
+.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-center,
+.adthrive-collapse-mobile-background{
+z-index: 1;
+}
+
+</style>
+<script data-no-optimize="1" data-cfasync="false">
+	window.adthriveCLS = {
+		enabledLocations: ['Content', 'Recipe'],
+		injectedSlots: [],
+		injectedFromPlugin: true,
+		branch: '091846e',bucket: 'prod',			};
+	window.adthriveCLS.siteAds = {"siteId":"580689dc6a82ff856e76b4ac","siteName":"Ahead of Thyme","betaTester":false,"targeting":[{"value":"580689dc6a82ff856e76b4ac","key":"siteId"},{"value":"6233884d0d17b47088562990","key":"organizationId"},{"value":"Ahead of Thyme","key":"siteName"},{"value":"AdThrive Edge","key":"service"},{"value":"on","key":"bidding"},{"value":["Food"],"key":"verticals"}],"breakpoints":{"tablet":768,"desktop":1024},"adUnits":[{"sequence":1,"targeting":[{"value":["Sidebar"],"key":"location"}],"devices":["desktop"],"name":"Sidebar_1","sticky":false,"location":"Sidebar","dynamic":{"pageSelector":"","spacing":0,"max":1,"lazyMax":null,"enable":true,"lazy":false,"elementSelector":".sidebar-primary > .widget","skip":1,"classNames":["widget"],"position":"afterend","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[160,600],[336,280],[320,50],[300,600],[250,250],[1,1],[320,100],[300,1050],[300,50],[300,420],[300,250]],"priority":299,"autosize":true},{"sequence":9,"targeting":[{"value":["Sidebar"],"key":"location"},{"value":true,"key":"sticky"}],"devices":["desktop"],"name":"Sidebar_9","sticky":true,"location":"Sidebar","dynamic":{"pageSelector":"","spacing":0,"max":1,"lazyMax":null,"enable":true,"lazy":false,"elementSelector":".sidebar-primary","skip":0,"classNames":["widget"],"position":"beforeend","every":1,"enabled":true},"stickyOverlapSelector":"footer","adSizes":[[160,600],[336,280],[320,50],[300,600],[250,250],[1,1],[320,100],[300,1050],[300,50],[300,420],[300,250]],"priority":291,"autosize":true},{"sequence":null,"targeting":[{"value":["Content"],"key":"location"}],"devices":["desktop"],"name":"Content","sticky":false,"location":"Content","dynamic":{"pageSelector":"body.home","spacing":0.85,"max":0,"lazyMax":10,"enable":true,"lazy":true,"elementSelector":".entry-content > h2, .entry-content > .wp-block-group","skip":2,"classNames":[],"position":"beforebegin","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[728,90],[336,280],[320,50],[468,60],[970,90],[250,250],[1,1],[320,100],[970,250],[1,2],[300,50],[300,300],[552,334],[728,250],[300,250]],"priority":199,"autosize":true},{"sequence":null,"targeting":[{"value":["Content"],"key":"location"}],"devices":["tablet","phone"],"name":"Content","sticky":false,"location":"Content","dynamic":{"pageSelector":"body.home","spacing":0.85,"max":0,"lazyMax":10,"enable":true,"lazy":true,"elementSelector":".entry-content > h2, .entry-content > .wp-block-group","skip":2,"classNames":[],"position":"beforebegin","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[728,90],[336,280],[320,50],[468,60],[970,90],[250,250],[1,1],[320,100],[970,250],[1,2],[300,50],[300,300],[552,334],[728,250],[300,250]],"priority":199,"autosize":true},{"sequence":null,"targeting":[{"value":["Content"],"key":"location"}],"devices":["desktop"],"name":"Content","sticky":false,"location":"Content","dynamic":{"pageSelector":"body.single, body.page:not(.home)","spacing":0.85,"max":5,"lazyMax":15,"enable":true,"lazy":true,"elementSelector":".entry-content > *:not(h2):not(h3):not(.swp_hidden_pin_image):not(.swp_social_panel):not(.tasty-recipes-quick-links):not(span):not(style):not(noscript):not(.adthrive), .entry-content .mv-list-single","skip":4,"classNames":[],"position":"afterend","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[728,90],[336,280],[320,50],[468,60],[970,90],[250,250],[1,1],[320,100],[970,250],[1,2],[300,50],[300,300],[552,334],[728,250],[300,250]],"priority":199,"autosize":true},{"sequence":null,"targeting":[{"value":["Content"],"key":"location"}],"devices":["tablet","phone"],"name":"Content","sticky":false,"location":"Content","dynamic":{"pageSelector":"body.single, body.page:not(.home)","spacing":0.85,"max":3,"lazyMax":17,"enable":true,"lazy":true,"elementSelector":".entry-content > *:not(h2):not(h3):not(.swp_hidden_pin_image):not(.swp_social_panel):not(.tasty-recipes-quick-links):not(span):not(style):not(noscript):not(.adthrive), .entry-content .mv-list-single","skip":4,"classNames":[],"position":"afterend","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[728,90],[336,280],[320,50],[468,60],[970,90],[250,250],[1,1],[320,100],[970,250],[1,2],[300,50],[300,300],[552,334],[728,250],[300,250]],"priority":199,"autosize":true},{"sequence":null,"targeting":[{"value":["Recipe"],"key":"location"}],"devices":["tablet","desktop"],"name":"Recipe","sticky":false,"location":"Recipe","dynamic":{"pageSelector":"body:not(.tasty-recipes-print-view)","spacing":0.5,"max":3,"lazyMax":1,"enable":true,"lazy":true,"elementSelector":".tasty-recipes-ingredients li, .tasty-recipes-instructions li, .tasty-recipes-notes li, .tasty-recipes-notes p","skip":0,"classNames":[],"position":"beforebegin","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[320,50],[250,250],[1,1],[320,100],[1,2],[300,50],[320,300],[300,390],[300,250]],"priority":-101,"autosize":true},{"sequence":4,"targeting":[{"value":["Recipe"],"key":"location"}],"devices":["phone"],"name":"Recipe_4","sticky":false,"location":"Recipe","dynamic":{"pageSelector":"body:not(.tasty-recipes-print-view)","spacing":0,"max":1,"lazyMax":null,"enable":true,"lazy":false,"elementSelector":".tasty-recipes-ingredients","skip":0,"classNames":[],"position":"beforebegin","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[320,50],[250,250],[1,1],[320,100],[1,2],[300,50],[320,300],[300,390],[300,250]],"priority":-104,"autosize":true},{"sequence":1,"targeting":[{"value":["Recipe"],"key":"location"}],"devices":["phone"],"name":"Recipe_1","sticky":false,"location":"Recipe","dynamic":{"pageSelector":"body:not(.tasty-recipes-print-view)","spacing":0.8,"max":0,"lazyMax":3,"enable":true,"lazy":true,"elementSelector":".tasty-recipes-ingredients, .tasty-recipes-instructions li, .tasty-recipes-notes li, .tasty-recipes-notes p","skip":0,"classNames":[],"position":"afterend","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[320,50],[250,250],[1,1],[320,100],[1,2],[300,50],[320,300],[300,390],[300,250]],"priority":-101,"autosize":true},{"sequence":null,"targeting":[{"value":["Below Post"],"key":"location"}],"devices":["phone","tablet","desktop"],"name":"Below_Post","sticky":false,"location":"Below Post","dynamic":{"pageSelector":"body.single, body.page","spacing":0,"max":0,"lazyMax":1,"enable":true,"lazy":true,"elementSelector":".entry-comments","skip":0,"classNames":[],"position":"beforebegin","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[728,90],[336,280],[320,50],[468,60],[250,250],[1,1],[320,100],[300,250],[970,250],[728,250]],"priority":99,"autosize":true},{"sequence":null,"targeting":[{"value":["Footer"],"key":"location"},{"value":true,"key":"sticky"}],"devices":["tablet","phone","desktop"],"name":"Footer","sticky":true,"location":"Footer","dynamic":{"pageSelector":"body:not(.tasty-recipes-print-view)","spacing":0,"max":1,"lazyMax":null,"enable":true,"lazy":false,"elementSelector":"body","skip":0,"classNames":[],"position":"beforeend","every":1,"enabled":true},"stickyOverlapSelector":"","adSizes":[[320,50],[320,100],[728,90],[970,90],[468,60],[1,1],[300,50]],"priority":-1,"autosize":true}],"adDensityLayout":{"mobile":{"adDensity":0.25,"onePerViewport":false},"pageOverrides":[{"mobile":{"adDensity":0.3,"onePerViewport":false},"note":null,"pageSelector":"body.blog, body.search, body.archive","desktop":{"adDensity":0.28,"onePerViewport":false}}],"desktop":{"adDensity":0.25,"onePerViewport":false}},"adDensityEnabled":true,"siteExperiments":[],"adTypes":{"sponsorTileDesktop":true,"interscrollerDesktop":true,"nativeDesktopContent":true,"outstreamDesktop":true,"nativeBelowPostDesktop":true,"miniscroller":true,"animatedFooter":true,"largeFormatsMobile":true,"nativeMobileContent":true,"inRecipeRecommendationMobile":true,"nativeMobileRecipe":true,"expandableFooter":true,"nativeDesktopSidebar":true,"sponsorTileMobile":true,"expandableCatalogAdsMobile":false,"interscroller":true,"nativeDesktopRecipe":true,"outstreamMobile":true,"nativeHeaderDesktop":true,"nativeHeaderMobile":true,"nativeBelowPostMobile":true,"expandableCatalogAdsDesktop":false,"largeFormatsDesktop":true,"inRecipeRecommendationDesktop":true},"adOptions":{"theTradeDesk":true,"rtbhouse":true,"undertone":true,"sidebarConfig":{"dynamicStickySidebar":{"minHeight":1800,"enabled":true,"blockedSelectors":[]}},"footerCloseButton":false,"teads":true,"pmp":true,"thirtyThreeAcross":true,"sharethrough":true,"optimizeVideoPlayersForEarnings":true,"removeVideoTitleWrapper":true,"pubMatic":true,"infiniteScroll":false,"yahoossp":true,"improvedigital":true,"spa":false,"stickyContainerConfig":{"recipeDesktop":{"minHeight":null,"enabled":false},"blockedSelectors":[],"stickyHeaderSelectors":[],"content":{"minHeight":null,"enabled":false},"recipeMobile":{"minHeight":null,"enabled":false}},"sonobi":true,"yieldmo":true,"footerSelector":"","amazonUAM":true,"gamMCMEnabled":true,"gamMCMChildNetworkCode":"22533862586","stickyContainerAds":false,"rubicon":true,"conversant":true,"openx":true,"customCreativeEnabled":false,"mobileHeaderHeight":1,"secColor":"#000000","unruly":true,"mediaGrid":true,"bRealTime":true,"gumgum":true,"comscoreFooter":true,"desktopInterstitial":false,"footerCloseButtonDesktop":false,"ozone":true,"isAutoOptimized":false,"adform":true,"comscoreTAL":true,"targetaff":false,"bgColor":"#FFFFFF","advancePlaylistOptions":{"playlistPlayer":{"enabled":true},"relatedPlayer":{"enabled":true,"applyToFirst":false}},"amazonASR":false,"kargo":true,"liveRampATS":true,"footerCloseButtonMobile":false,"interstitialBlockedPageSelectors":"","allowSmallerAdSizes":true,"comscore":"Food","wakeLock":{"desktopEnabled":true,"mobileValue":15,"mobileEnabled":true,"desktopValue":30},"mobileInterstitial":false,"tripleLift":true,"sensitiveCategories":["alc","gamv"],"liveRamp":true,"adthriveEmailIdentity":true,"criteo":true,"nativo":true,"infiniteScrollOptions":{"selector":"","heightThreshold":0},"siteAttributes":{"mobileHeaderSelectors":[],"desktopHeaderSelectors":[]},"dynamicContentSlotLazyLoading":true,"clsOptimizedAds":true,"aidem":false,"verticals":["Food"],"inImage":false,"usCMP":{"enabled":false,"regions":[]},"advancePlaylist":true,"flipp":true,"delayLoading":true,"inImageZone":null,"appNexus":true,"rise":true,"liveRampId":"","infiniteScrollRefresh":false,"indexExchange":true},"siteAdsProfiles":[],"videoPlayers":{"contextual":{"autoplayCollapsibleEnabled":true,"overrideEmbedLocation":false,"defaultPlayerType":"static"},"videoEmbed":"wordpress","footerSelector":"","contentSpecificPlaylists":[],"players":[{"playlistId":"","pageSelector":"","devices":["desktop"],"description":"","skip":0,"title":"","type":"stickyRelated","enabled":true,"elementSelector":".wp-block-image","id":4080505,"position":"afterend","saveVideoCloseState":false,"shuffle":false,"mobileHeaderSelector":null,"playerId":"K3uuZ2iY"},{"playlistId":"","pageSelector":"","devices":["mobile"],"mobileLocation":"top-center","description":"","skip":0,"title":"Sticky related player - mobile","type":"stickyRelated","enabled":true,"elementSelector":".entry-content > *","id":4054689,"position":"afterend","saveVideoCloseState":false,"shuffle":false,"mobileHeaderSelector":".feastmobilenavbar","playerId":"K3uuZ2iY"},{"devices":["desktop","mobile"],"description":"","id":4054687,"title":"Stationary related player - desktop and mobile","type":"stationaryRelated","enabled":true,"playerId":"K3uuZ2iY"},{"playlistId":"9IwDuTv5","pageSelector":"body.single, body.page:not(.home)","devices":["mobile"],"mobileLocation":"top-center","description":"","skip":0,"title":"MY LATEST VIDEOS","type":"stickyPlaylist","enabled":true,"footerSelector":"","elementSelector":".wp-block-image","id":4054691,"position":"afterend","saveVideoCloseState":false,"shuffle":true,"mobileHeaderSelector":".feastmobilenavbar","playerId":"25kEzI4q"},{"playlistId":"9IwDuTv5","pageSelector":"body.single, body.page:not(.home)","devices":["desktop"],"description":"","skip":0,"title":"MY LATEST VIDEOS","type":"stickyPlaylist","enabled":true,"footerSelector":"","elementSelector":".wp-block-image","id":4054690,"position":"afterend","saveVideoCloseState":false,"shuffle":true,"playerId":"25kEzI4q"}],"partners":{"theTradeDesk":true,"yahoossp":true,"criteo":true,"unruly":true,"mediaGrid":true,"improvedigital":true,"undertone":true,"gumgum":true,"aidem":false,"yieldmo":true,"adform":true,"pmp":true,"amazonUAM":true,"kargo":true,"thirtyThreeAcross":true,"stickyOutstream":{"desktop":{"enabled":true},"blockedPageSelectors":"","mobileLocation":"bottom-left","allowOnHomepage":false,"mobile":{"enabled":true},"saveVideoCloseState":false,"mobileHeaderSelector":".feastmobilenavbar","allowForPageWithStickyPlayer":{"enabled":true}},"sharethrough":true,"rubicon":true,"appNexus":true,"rise":true,"tripleLift":true,"openx":true,"pubMatic":true,"indexExchange":true}}};</script>
+
+<script data-no-optimize="1" data-cfasync="false">
+(function(w, d) {
+	w.adthrive = w.adthrive || {};
+	w.adthrive.cmd = w.adthrive.cmd || [];
+	w.adthrive.plugin = 'adthrive-ads-3.6.2';
+	w.adthrive.host = 'ads.adthrive.com';
+	w.adthrive.integration = 'plugin';
+
+	var commitParam = (w.adthriveCLS && w.adthriveCLS.bucket !== 'prod' && w.adthriveCLS.branch) ? '&commit=' + w.adthriveCLS.branch : '';
+
+	var s = d.createElement('script');
+	s.async = true;
+	s.referrerpolicy='no-referrer-when-downgrade';
+	s.src = 'https://' + w.adthrive.host + '/sites/580689dc6a82ff856e76b4ac/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href) + commitParam + '&cb=' + (Math.floor(Math.random() * 100) + 1) + '';
+	var n = d.getElementsByTagName('script')[0];
+	n.parentNode.insertBefore(s, n);
+})(window, document);
+</script>
+<link rel="dns-prefetch" href="https://ads.adthrive.com/"><link rel="preconnect" href="https://ads.adthrive.com/"><link rel="preconnect" href="https://ads.adthrive.com/" crossorigin>
+<!-- Social Warfare v4.5.4 https://warfareplugins.com - BEGINNING OF OUTPUT -->
+<style>
+@font-face{font-family:'sw-icon-font';font-display:swap;
+		src:url("/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.5.4");
+		src:url("/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.5.4#iefix") format("embedded-opentype"),
+		url("/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=4.5.4") format("woff"),
+		url("/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=4.5.4") format("truetype"),
+		url("/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=4.5.4#1445203416") format("svg");
+		font-weight: normal;
+		font-style: normal;
+		font-display:block;
+	}
+</style>
+<!-- Social Warfare v4.5.4 https://warfareplugins.com - END OF OUTPUT -->
+
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v24.3 (Yoast SEO v24.3) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found - Ahead of Thyme</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - Ahead of Thyme" />
+	<meta property="og:site_name" content="Ahead of Thyme" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.aheadofthyme.com/#website","url":"https://www.aheadofthyme.com/","name":"Ahead of Thyme","description":"Quick and easy recipes to help busy people eat real food.","publisher":{"@id":"https://www.aheadofthyme.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.aheadofthyme.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.aheadofthyme.com/#organization","name":"Ahead of Thyme","url":"https://www.aheadofthyme.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.aheadofthyme.com/#/schema/logo/image/","url":"https://www.aheadofthyme.com/wp-content/uploads/2020/04/aheadofthyme-logo-1000px.jpg","contentUrl":"https://www.aheadofthyme.com/wp-content/uploads/2020/04/aheadofthyme-logo-1000px.jpg","width":1000,"height":1000,"caption":"Ahead of Thyme"},"image":{"@id":"https://www.aheadofthyme.com/#/schema/logo/image/"},"sameAs":["http://www.facebook.com/aheadofthyme","https://x.com/aheadofthyme","http://www.instagram.com/aheadofthyme","http://www.pinterest.com/aheadofthyme"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Ahead of Thyme &raquo; Feed" href="https://www.aheadofthyme.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ahead of Thyme &raquo; Comments Feed" href="https://www.aheadofthyme.com/comments/feed/" />
+<style>
+@media screen and (min-width: 1100px) {
+  slick-content-grid {
+   min-height:570px;
+  }
+}
+.genesis-nav-menu .menu-item {
+    display: inline-block;
+    text-align: left;
+  }
+.genesis-nav-menu li {
+    float: none;
+    list-style-type: none;
+}
+@media only screen and (min-width: 1023px){
+.genesis-nav-menu .sub-menu a, .genesis-nav-menu a {
+    font-size: .8em;
+}}
+
+.simple-social-icons svg[class^='social-'], .simple-social-icons svg[class*=' social-'] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill}
+
+.nav-primary .genesis-nav-menu .menu-item {
+    vertical-align: middle;
+}
+
+  .genesis-nav-menu a {
+    color: #979599;
+    display: block;
+    font-family: 'Rubik',sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 25px 15px;
+}
+.site-header .wrap {
+    margin: 0 auto;
+    max-width: 1065px;
+}
+
+.nav-primary {
+    float: right;
+    margin: 0 auto;
+    text-align: right;
+    width: 810px;
+}
+
+.site-header .wrap {
+    margin: 0 auto;
+    max-width: 1065px;
+}
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 55px;
+    padding: 11px 37px;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+#simple-social-icons-3 ul li a {
+padding: 7px;
+}
+ </style><link href='https://ads.adthrive.com' rel='preconnect' crossorigin><link href='https://dstik9906m659.cloudfront.net' rel='preconnect' crossorigin>
+<link href='https://cronvass.edvfwlacluo.com' rel='preconnect' crossorigin>
+<link href='https://l6s968.edvfwlacluo.com' rel='preconnect' crossorigin>
+<link href='https://c.amazon-adsystem.com' rel='preconnect' crossorigin><link href='https://s3.amazonaws.com' rel='preconnect' crossorigin><link href='https://bidder.criteo.com' rel='preconnect' crossorigin><link href='https://ib.adnxs.com' rel='preconnect' crossorigin><link href='https://prebid.adnxs.com' rel='preconnect' crossorigin><link href='https://apex.go.sonobi.com' rel='preconnect' crossorigin><link href='https://fastlane.rubiconproject.com' rel='preconnect' crossorigin><link href='https://ib.3lift.com' rel='preconnect' crossorigin><link href='https://acdn.adnxs.com' rel='preconnect' crossorigin><link href='https://tpc.googlesyndication.com' rel='preconnect' crossorigin><link href='https://aax.amazon-adsystem.com' rel='preconnect' crossorigin>
+<link href='https://as-sec.casalemedia.com' rel='preconnect' crossorigin>
+<link href='https://eb2.3lift.com' rel='preconnect' crossorigin><link href='https://dmx.districtm.io' rel='preconnect' crossorigin><link href='https://cm.g.doubleclick.net' rel='preconnect' crossorigin><link href='https://sb.scorecardresearch.com' rel='preconnect' crossorigin><link href='https://g2.gumgum.com' rel='preconnect' crossorigin><link href='https://insight.adsrvr.org' rel='preconnect' crossorigin><link href='https://ap.lijit.com' rel='preconnect' crossorigin><link href='https://cafemedia-d.openx.net' rel='preconnect' crossorigin>
+<link href='https://js.agkn.com' rel='preconnect' crossorigin><link href='https://marmalade.adthrive.com' rel='preconnect' crossorigin><link href='https://logger.adthrive.com' rel='preconnect' crossorigin><link href='https://track.adthrive.com' rel='preconnect' crossorigin><link href='https://d.agkn.com' rel='preconnect' crossorigin><link href='https://aa.agkn.com' rel='preconnect' crossorigin><link href='https://hb.emxdgt.com' rel='preconnect' crossorigin><link href='https://tlx.3lift.com' rel='preconnect' crossorigin><link href='https://pixel-sync.sitescout.com' rel='preconnect' crossorigin><link href='https://static.criteo.net' rel='preconnect' crossorigin><link href='https://ad.turn.com' rel='preconnect' crossorigin><link href='https://cdn.districtm.io' rel='preconnect' crossorigin>
+<link href='https://sync.mathtag.com' rel='preconnect' crossorigin>
+<link href='https://sync-tm.everesttech.net' rel='preconnect' crossorigin>
+<link href='https://pixel.mathtag.com' rel='preconnect' crossorigin>
+<link href='https://secure.adnxs.com' rel='preconnect' crossorigin><link href='https://x.bidswitch.net' rel='preconnect' crossorigin><link href='https://bttrack.com' rel='preconnect' crossorigin><link href='https://eus.rubiconproject.com' rel='preconnect' crossorigin><link href='https://clarium.global.ssl.fastly.net' rel='preconnect' crossorigin><link href='https://sync.ipredictive.com' rel='preconnect' crossorigin>
+<link href='https://biddr.brealtime.com' rel='preconnect' crossorigin><link href='https://edba.brealtime.com' rel='preconnect' crossorigin><link href='https://loadm.exelator.com' rel='preconnect' crossorigin><link href='https://dpm.demdex.net' rel='preconnect' crossorigin><link href='https://tags.bluekai.com' rel='preconnect' crossorigin>
+<link href='https://stags.bluekai.com' rel='preconnect' crossorigin>
+<link href='https://fls-na.amazon-adsystem.com' rel='preconnect' crossorigin>
+<link href='https://z-na.amazon-adsystem.com' rel='preconnect' crossorigin>
+<link href='https://aax-us-east.amazon-adsystem.com' rel='preconnect' crossorigin>
+<link href='https://ir-na.amazon-adsystem.com' rel='preconnect' crossorigin>
+<link rel="alternate" type="application/rss+xml" title="Ahead of Thyme &raquo; Stories Feed" href="https://www.aheadofthyme.com/web-stories/feed/"><link rel='stylesheet' id='seasoned-pro-theme-css' href='https://www.aheadofthyme.com/wp-content/themes/seasonedpro-v440/style.css' type='text/css' media='all' />
+<style id='seasoned-pro-theme-inline-css' type='text/css'>
+.before-header, .footer-widgets, .form-allowed-tags, .more-from-category, .enews-widget, blockquote::before{background:#efeae8;}.genesis-nav-menu a:hover, .genesis-nav-menu a:focus, .genesis-nav-menu .current-menu-item > a, .nav-primary .genesis-nav-menu .sub-menu a:focus, .nav-primary .genesis-nav-menu .sub-menu a:hover{color:#2e5543;}.button, button, .enews-widget input[type="submit"], a.more-link, input[type="submit"], input[type="button"]{border-color:#2e5543;color:#2e5543;}.button:hover, button:hover, .button:focus, .button:active, button:focus, button:active, .enews-widget input[type="submit"]:hover, .enews-widget input[type="submit"]:focus, a.more-link:hover, a.more-link:focus, .before-header .enews-widget input[type="submit"], .content .enews-widget input[type="submit"]:hover, .content .enews-widget input[type="submit"]:focus, .sidebar .enews-widget input[type="submit"]:hover, .sidebar .enews-widget input[type="submit"]:focus, .more-from-category, .home-top article:not(.simple-grid) .entry-title:before, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active, input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active{background:#2e5543;}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.aheadofthyme.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.is-style-full-width-slanted { position: relative; z-index: 1; padding: 11px; margin-top: 60px; margin-bottom: 60px; } .content .is-style-full-width-slanted::after, .is-style-full-width-slanted::before { position: absolute; -webkit-backface-visibility: hidden; background: inherit; content: ""; display: block; height: 100%; right: -50%; left: -50%; z-index: -1; } .content .is-style-full-width-slanted::after { position: absolute; background: #F5F5F5; bottom: 60px; -ms-transform: skewY(3.5deg); -webkit-transform: skewY(3.5deg); transform: skewY(3.5deg); -ms-transform-origin: 0 100%; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; } .is-style-full-width-slanted::before { position: absolute; background: #F5F5F5; top: 60px; -ms-transform: skewY(3.5deg); -webkit-transform: skewY(3.5deg); transform: skewY(3.5deg); -ms-transform-origin: 100% 0; -webkit-transform-origin: 100% 0; transform-origin: 100% 0; }
+ .is-style-feast-inline-heading-group h2:first-of-type { transform: translateY(-0.7em);  background: #FFF; display: inline-block; padding: 0 0.5em 0; margin: 0 0.5em; } .is-style-feast-inline-heading-group { border: 2px solid #CCC; padding: 0 1em 1em; margin: 3em 0 2em; } .is-style-feast-inline-heading-group h2:first-child+* { margin-top: 0; }
+.is-style-button-right-arrow .wp-element-button::after { content: "→"; position: relative; margin-left: 0.2em; }
+.is-style-button-external-arrow .wp-element-button::after { content: "↗"; position: relative; margin-left: 0.2em; }
+.is-style-paragraph-right-arrow a::after { content: " →"; position: relative; margin-left: 0; }
+.is-style-paragraph-external-arrow a::after { content: " ↗"; position: relative; margin-left: 0; }
+</style>
+<link rel='stylesheet' id='tasty-links-featured-links-block-css' href='https://www.aheadofthyme.com/wp-content/plugins/tasty-links/assets/css/featured-links-block.css' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id='feast-global-styles-inline-css' type='text/css'>
+.feast-plugin a {
+	word-break: break-word;
+}
+.feast-plugin ul.menu a {
+	word-break: initial;
+}
+	p.is-variation-fancy-text {
+		font-style: italic;
+	}
+body {
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;;
+}.single .content a,
+.category .content a,
+.feast-modern-category-layout a,
+aside a, 
+.site-footer a {
+	text-decoration: underline;
+}
+.feast-social-media {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	column-gap: 18px;
+	row-gap: 9px;
+	width: 100%;
+	padding: 27px 0;
+}
+.feast-social-media.feast-social-media--align-left {
+	justify-content: flex-start;
+}
+.feast-social-media.feast-social-media--align-right {
+	justify-content: flex-end;
+}
+.feast-social-media a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px;
+}
+@media(max-width:600px) {
+	.feast-social-media a {
+		min-height: 50px;
+		min-width: 50px;
+	}
+}
+.feast-remove-top-padding {
+	padding-top: 0 !important;
+}
+.feast-remove-bottom-padding {
+	padding-bottom: 0 !important;
+}
+.feast-remove-top-margin {
+	margin-top: 0 !important;
+}
+.feast-remove-bottom-margin {
+	margin-bottom: 0 !important;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+	line-height: 1.2;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio {
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__media {
+	display: flex;
+	justify-content: center;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__content {
+	padding: 16px 24px 28px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	box-sizing: border-box;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__content h3,
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__content h2 {
+	font-size: 1.625em;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__content * {
+	margin: 0;
+	max-width: 100%;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__content p {
+	line-height: 1.5;
+}
+@media only screen and (max-width: 335px) {
+	.site-inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+@media only screen and (max-width:1023px) {
+	.feast-layout--modern-footer {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.site-container .feast-layout--modern-footer .is-style-full-width-feature-wrapper,
+	.site-container .feast-layout--modern-footer .is-style-full-width-custom-background-feature-wrapper {
+		margin: var(--feast-spacing-xl) -5%;
+	}
+}
+a.wprm-recipe-jump:hover {
+	opacity: 1.0 !important;
+}
+.wp-block-media-text.is-variation-media-text-sidebar-bio .wp-block-media-text__media img {
+	border-radius: 178px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+.feast-modern-category-layout {
+	text-align: initial;
+}
+@media(min-width:1080px) {
+}
+
+</style>
+<link rel='stylesheet' id='social_warfare-css' href='https://www.aheadofthyme.com/wp-content/plugins/social-warfare/assets/css/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-social-icons-font-css' href='https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.aheadofthyme.com/wp-content/themes/seasonedpro-v440/../mill_font_awesome.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<style></style><style>@font-face{font-family:fontello;font-display:swap;src:url(/wp-content/themes/fontello.eot);src:url(/wp-content/themes/fontello.eot?#iefix) format('embedded-opentype'),url('') format('woff'),url(/wp-content/themes/fontello.ttf) format('truetype'),url(/wp-content/themes/fontello.svg#fontello) format('svg');font-weight:400;font-style:normal}</style><link rel="https://api.w.org/" href="https://www.aheadofthyme.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.aheadofthyme.com/xmlrpc.php?rsd" />
+<style id='feast-blockandfront-styles'>.feast-about-author { background-color: #f2f2f2; color: #32373c; padding: 17px; margin-top: 57px; display: grid; grid-template-columns: 1fr 3fr !important; } .feast-about-author h2 { margin-top: 7px !important;} .feast-about-author img{ border-radius: 50% !important; }aside .feast-about-author { grid-template-columns: 1fr !important; }.wp-block-search .wp-block-search__input { max-width: 100%; background: #FFF; color: #000; }.wp-block-separator { color: #D6D6D6; border-bottom: none; margin-top: 16px; margin-bottom: 16px; }.screen-reader-text { width: 1px; height: 1px; }footer ul li, .site-footer ul li { list-style-type: none; }footer ul li, .site-footer ul li { list-style-type: none; }aside .wp-block-search { display: grid; grid-template-columns: 1fr; margin: 37px 0;  } aside .wp-block-search__inside-wrapper { display: grid !important; grid-template-columns: 1fr; } aside input { min-height: 50px; }  ​aside .wp-block-search__label, aside .wp-block-search__button { display: none; } aside p, aside div, aside ul { margin: 17px 0; }@media only screen and (max-width: 600px) { aside .wp-block-search { grid-template-columns: 1fr; } aside input { min-height: 50px; margin-bottom: 17px;} }.feast-button a { border: 2px solid #CCC; padding: 7px 14px; border-radius: 20px; text-decoration: none !important; font-weight: bold; } .feast-button { padding: 27px 7px; }a.wp-block-button__link { text-decoration: none !important; }.feast-box-primary {  padding: 17px !important; margin: 17px 0 !important;  }.feast-box-secondary { padding: 17px !important; margin: 17px 0 !important;  }.feast-box-primary li, .feast-box-secondary li {margin-left: 17px !important; }.feast-checklist li::marker { color: transparent; } .feast-checklist li:before { content: '✓'; margin-right: 17px; }.schema-faq-question { font-size: 1.2em; display: block; margin-bottom: 7px;} .schema-faq-section { margin: 37px 0; }</style>
+<style type="text/css">
+	.feast-category-index-list, .fsri-list {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr) );
+		grid-gap: 57px 17px;
+		list-style: none;
+		list-style-type: none;
+		margin: 17px 0 !important;
+	}
+	.feast-category-index-list li, .fsri-list li {
+		min-height: 150px;
+		text-align: center;
+		position: relative;
+		list-style: none !important;
+		margin-left: 0 !important;
+		list-style-type: none !important;
+		overflow: hidden;
+	}
+	.feast-category-index-list li a.title {
+		text-decoration: none;
+	}
+	.feast-category-index-list-overlay .fsci-title {
+		position: absolute;
+		top: 88%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: #FFF;
+		padding: 5px;
+		color: #333;
+		font-weight: bold;
+		border: 2px solid #888;
+		text-transform: uppercase;
+		width: 80%;
+	}
+	.listing-item:focus-within, .wp-block-search__input:focus {outline: 2px solid #555; }
+	.listing-item a:focus, .listing-item a:focus .fsri-title, .listing-item a:focus img { opacity: 0.8; outline: none; }
+	.listing-item a, .feast-category-index-list a { text-decoration: none !important; word-break: break-word; }
+	li.listing-item:before { content: none !important; } /* needs to override theme */
+	.fsri-list { padding-left: 0 !important; }
+	.fsri-list .listing-item { margin: 0; }
+	.fsri-list .listing-item img { display: block; }
+	.fsri-list .feast_3x4_thumbnail { object-fit: cover; width: 100%; aspect-ratio: 3/4; }
+	.fsri-list .feast_2x3_thumbnail { object-fit: cover; width: 100%; aspect-ratio: 2/3; }
+	.fsri-list .feast_4x3_thumbnail { object-fit: cover; width: 100%; aspect-ratio: 4/3; }
+	.fsri-list .feast_1x1_thumbnail { object-fit: cover; width: 100%; aspect-ratio: 1/1; }
+	.fsri-title, .fsci-title { text-wrap: balance; }
+	.listing-item { display: grid; } .fsri-rating, .fsri-time { place-self: end center; } /* align time + rating bottom */
+	.feast-recipe-index .feast-category-link { text-align: right; }
+	.feast-recipe-index .feast-category-link a { text-decoration: underline; }
+	.feast-image-frame, .feast-image-border { border: 3px solid #DDD; }
+	.feast-image-round, .feast-image-round img, .feast-media-text-image-round .wp-block-media-text__media img { border-radius: 50%; }
+	.feast-image-shadow { box-shadow: 3px 3px 5px #AAA; }
+	.feast-line-through { text-decoration: line-through; }
+	.feast-grid-full, .feast-grid-half, .feast-grid-third, .feast-grid-fourth, .feast-grid-fifth { display: grid; grid-gap: 57px 17px; }
+	.feast-grid-full { grid-template-columns: 1fr !important; }
+	.feast-grid-half { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+	.feast-grid-third { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+	.feast-grid-fourth { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+	.feast-grid-fifth { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+	@media only screen and (max-width:601px) {
+		.feast-grid-full-horizontal { grid-template-columns: 1fr !important; }
+		.feast-grid-full-horizontal .listing-item { min-height: 0; }
+		.feast-grid-full-horizontal .listing-item a { display: flex; align-items: center; }
+		.feast-grid-full-horizontal .listing-item a > img { width: 33%; }
+		.feast-grid-full-horizontal .listing-item a > .fsri-title { width: 67%; padding: 0; text-align: left; margin-top: 0 !important; padding: 0 16px; }
+		.feast-grid-full-horizontal .fsri-rating, .feast-grid-full-horizontal .fsri-time, .feast-grid-full-horizontal .fsri-recipe-keys, .feast-grid-full-horizontal .fsri-recipe-cost { display: none !important; }
+	}
+	@media only screen and (min-width: 600px) {
+		.feast-category-index-list { grid-template-columns: repeat(4, minmax(0, 1fr) ); }
+		.feast-desktop-grid-full { grid-template-columns: 1fr !important; }
+		.feast-desktop-grid-half { grid-template-columns: repeat(2, 1fr) !important; }
+		.feast-desktop-grid-third { grid-template-columns: repeat(3, 1fr) !important; }
+		.feast-desktop-grid-fourth { grid-template-columns: repeat(4, 1fr) !important; }
+		.feast-desktop-grid-fifth { grid-template-columns: repeat(5, 1fr) !important; }
+		.feast-desktop-grid-sixth { grid-template-columns: repeat(6, 1fr) !important; }
+		.feast-desktop-grid-half-horizontal, .feast-desktop-grid-third-horizontal { grid-template-columns: repeat(2, 1fr) !important; }
+		.feast-desktop-grid-full-horizontal { grid-template-columns: 1fr !important; }
+		.feast-desktop-grid-half-horizontal .listing-item a, .feast-desktop-grid-full-horizontal .listing-item a, .feast-desktop-grid-third-horizontal .listing-item a { display: flex; align-items: center; }
+		.feast-desktop-grid-half-horizontal .listing-item a > img, .feast-desktop-grid-full-horizontal a > img, .feast-desktop-grid-third-horizontal .listing-item a > img { width: 33%; margin-bottom: 0; }
+		.feast-desktop-grid-half-horizontal .listing-item a > .fsri-title, .feast-desktop-grid-full-horizontal a > .fsri-title, .feast-desktop-grid-third-horizontal .listing-item a > .fsri-title { width: 67%; padding: 0 16px; text-align: left; margin-top: 0 !important; }
+		.feast-desktop-grid-half-horizontal .fsri-rating, .feast-desktop-grid-half-horizontal .fsri-time, .feast-desktop-grid-half-horizontal .fsri-recipe-keys, .feast-desktop-grid-half-horizontal .fsri-recipe-cost { display: none !important; }
+		.feast-desktop-grid-third-horizontal .fsri-rating, .feast-desktop-grid-third-horizontal .fsri-time, .feast-desktop-grid-third-horizontal .fsri-recipe-keys, .feast-desktop-grid-third-horizontal .fsri-recipe-cost { display: none !important; }
+		.feast-desktop-grid-full-horizontal .fsri-rating, .feast-desktop-grid-full-horizontal .fsri-time, .feast-desktop-grid-full-horizontal .fsri-recipe-keys, .feast-desktop-grid-full-horizontal .fsri-recipe-cost { display: none !important; }
+	}
+	@media only screen and (min-width:900px) {
+		.feast-desktop-grid-third-horizontal { grid-template-columns: repeat(3, 1fr) !important; }
+	}
+	@media only screen and (min-width:900px) and (max-width:1200px) {
+		.feast-desktop-grid-third-horizontal .listing-item a > img {
+			width: 44%;
+		}
+	}
+	@media only screen and (min-width:600px) and (max-width:775px) {
+		.feast-desktop-grid-third-horizontal .listing-item a > img,
+		.feast-desktop-grid-half-horizontal .listing-item a > img {
+			width: 44%;
+		}
+	}
+	@media only screen and (min-width: 1100px) { .full-width-content main.content { width: 1080px; max-width: 1080px; } .full-width-content .sidebar-primary { display: none;  } }
+	@media only screen and (max-width: 600px) { .entry-content :not(.wp-block-gallery) .wp-block-image { width: 100% !important; } }
+	@media only screen and (min-width: 1024px) {
+		.feast-full-width-wrapper { width: 100vw; position: relative; left: 50%; right: 50%; margin: 37px -50vw; background: #F5F5F5; padding: 17px 0; }
+		.feast-full-width-wrapper .feast-recipe-index { width: 1140px; margin: 0 auto; }
+		.feast-full-width-wrapper .listing-item { background: #FFF; padding: 17px; }
+	}
+	.feast-prev-next { display: grid; grid-template-columns: 1fr;  border-bottom: 1px solid #CCC; margin: 57px 0;  }
+	.feast-prev-post, .feast-next-post { padding: 37px 17px; border-top: 1px solid #CCC; }
+	.feast-next-post { text-align: right; }
+	@media only screen and (min-width: 600px) {
+		.feast-prev-next { grid-template-columns: 1fr 1fr; border-bottom: none; }
+		.feast-next-post { border-left: 1px solid #CCC;}
+		.feast-prev-post, .feast-next-post { padding: 37px; }
+	}
+	.has-background { padding: 1.25em 2.375em; margin: 1em 0; }
+	figure { margin: 0 0 1em; }
+	@media only screen and (max-width: 1023px) {
+		.content-sidebar .content, .sidebar-primary { float: none; clear: both; }
+		.has-background { padding: 1em; margin: 1em 0; }
+	}
+	hr.has-background { padding: inherit; margin: inherit; }
+	body { -webkit-animation: none !important; animation: none !important; }
+	@media only screen and (max-width: 600px) {
+		body {
+			--wp--preset--font-size--small: 16px !important;
+		}
+	}
+	@media only screen and (max-width: 600px) { .feast-desktop-only { display: none; } }
+	@media only screen and (min-width: 600px) { .feast-mobile-only { display: none; } }
+	summary { display: list-item; }
+	.comment-form-cookies-consent > label {
+		display: inline-block;
+		margin-left: 30px;
+	}
+	@media only screen and (max-width: 600px) { .comment-form-cookies-consent { display: grid; grid-template-columns: 1fr 12fr; } }
+	.bypostauthor .comment-author-name { color: unset; }
+	.comment-list article header { overflow: auto; }
+	.fsri-rating .wprm-recipe-rating { pointer-events: none; }
+	.fsri-tasty-recipe-count {
+		display: block;
+		width: 100%;
+		font-size: .8em;
+	}
+	nav#breadcrumbs { margin: 5px 0 15px; }	.fsri-rating .mv-reviews-stars { display: inline-block; }
+	.fsri-rating .mv-stars { max-width: 100%; max-height: 25px; text-align: center; }
+	.fsri-rating .mv-stars svg { width: auto; max-height: 25px; width: 150px; height: 22px; }
+	.fsri-rating div.mv-star-ratings.mv-rating-user-5 .rating-5,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-4-5 .rating-4-5,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-4 .rating-4,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-3-5 .rating-3-5,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-3 .rating-3,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-2-5 .rating-2-5,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-2 .rating-2,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-1-5 .rating-1-5,
+	.fsri-rating div.mv-star-ratings.mv-rating-user-1 .rating-1 { fill: var(--mv-star-fill-hover, #f8ce46); }</style><style type="text/css" id='feastbreadcrumbstylesoverride'>
+@media only screen and (max-width: 940px) {
+	nav#breadcrumbs {
+		display: block;
+	}
+}
+</style>		<style>
+			:root {
+				--mv-create-radius: 0;
+			}
+		</style>
+		<!-- [slickstream] Page Generated at: 2/10/2025, 9:12:52 AM EST -->		<script>console.info(`[slickstream] Page Generated at: 2/10/2025, 9:12:52 AM EST`);</script>
+		<script>console.info(`[slickstream] Current timestamp: ${(new Date).toLocaleString('en-US', { timeZone: 'America/New_York' })} EST`);</script>
+<!-- [slickstream] Page Boot Data: -->
+<script class='slickstream-script'>
+(function() {
+    "slickstream";
+    const win = window;
+    win.$slickBoot = win.$slickBoot || {};
+    win.$slickBoot.d = {"bestBy":1739198560976,"epoch":1700252454444,"siteCode":"YWZPSMNX","services":{"engagementCacheableApiDomain":"https:\/\/c02f.app.slickstream.com\/","engagementNonCacheableApiDomain":"https:\/\/c02b.app.slickstream.com\/","engagementResourcesDomain":"https:\/\/c02f.app.slickstream.com\/","storyCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyNonCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyResourcesDomain":"https:\/\/stories.slickstream.com\/","websocketUri":"wss:\/\/c02b-wss.app.slickstream.com\/socket?site=YWZPSMNX"},"bootUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/boot-loader.js","appUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/app.js","adminUrl":"","allowList":["aheadofthyme.com"],"abTests":[{"_id":"67a370d43e8530eaab853caa","id":"c2c4a721-23f3-42c2-b2c1-eec8665871ef","type":"feature-switches","feature":"inline-search","fraction":95,"startDate":1738818000000,"endDate":1739422800000,"includeSites":null,"excludeSites":["R5MAV0Z7","H0C6SBKF","9J3AXZ8B","UGS2VGHL","9LUFT7H6","TH98WLES","UTESX23V","VWHMMQZH","J9LCGELD","KBPNSKP5","LXTCTVZR","MR6141R5","H5PR7HJQ","188YWALQ","8EL02J60","MZ02ZNGF","NS6YK5H7","TPDSH95N","L8EAVD26","QCZ3H7Z7","L9LWDWR9","VUWHN67V","L7T65V6E","2M100P02","717PL89C","MK33XNMR","03XXE0QN","6DNFWRY3","P49MPDD8","QQ2GT249","F9T6P4AS","HG1JRBRE","JA1YSFU7","KWC2J25C","YWZPSMNX","6ERGB664","TRF11T5M","APWM5SG8","UEZP9P70","BX1S81NB","YNW7K84Q","KSMD07P2","TUKDXTE5","A5PEEJV7","VVLCUEGX","H45AS4KF","7NL4ZU6P","A3N6MZ45","03W1KUFU","RL5Q09CR","HJGYF938","CZL2W79Z","0AZMTWJJ","8BB5593U","PYQK73ZF","MGD9RQF2","UM5PVDTR","KWGH5P0M","YTTURXH1","M4RA4P87","PWBR5SR0","MAR7TZHH","HLGNPQ2Z","FQ1PDT4Z","1UKE2G1S","MY8VYZB5","6ZXSY5UT","TX0RQ5ZZ","1FMA936N","9ED5GMCM","HC3E36C0","ASFHPXBJ","6RXV2XQ4","ZCCPQJ62","89B7Z58W","LHA4XEV3","UELT7CLV","482DFTZQ","EVRZF23V","CPTHKD1B","29T7AWS6","CYCBEYZM","NW41N695","5520822S","M69FLGY8","7YPPXP8Z","0PG5A2ZU","Z3CL4E5J","4DQYZDQY","L6F66B18","WXCSMCQC"],"addedAt":1738764500104,"updatedAt":1738764500104,"devices":["desktop","phone"]}],"v2":{"phone":{"placeholders":[],"bootTriggerTimeout":250,"bestBy":1739198560976,"epoch":1700252454444,"siteCode":"YWZPSMNX","services":{"engagementCacheableApiDomain":"https:\/\/c02f.app.slickstream.com\/","engagementNonCacheableApiDomain":"https:\/\/c02b.app.slickstream.com\/","engagementResourcesDomain":"https:\/\/c02f.app.slickstream.com\/","storyCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyNonCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyResourcesDomain":"https:\/\/stories.slickstream.com\/","websocketUri":"wss:\/\/c02b-wss.app.slickstream.com\/socket?site=YWZPSMNX"},"bootUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/boot-loader.js","appUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/app.js","adminUrl":"","allowList":["aheadofthyme.com"],"abTests":[{"_id":"67a370d43e8530eaab853caa","id":"c2c4a721-23f3-42c2-b2c1-eec8665871ef","type":"feature-switches","feature":"inline-search","fraction":95,"startDate":1738818000000,"endDate":1739422800000,"includeSites":null,"excludeSites":["R5MAV0Z7","H0C6SBKF","9J3AXZ8B","UGS2VGHL","9LUFT7H6","TH98WLES","UTESX23V","VWHMMQZH","J9LCGELD","KBPNSKP5","LXTCTVZR","MR6141R5","H5PR7HJQ","188YWALQ","8EL02J60","MZ02ZNGF","NS6YK5H7","TPDSH95N","L8EAVD26","QCZ3H7Z7","L9LWDWR9","VUWHN67V","L7T65V6E","2M100P02","717PL89C","MK33XNMR","03XXE0QN","6DNFWRY3","P49MPDD8","QQ2GT249","F9T6P4AS","HG1JRBRE","JA1YSFU7","KWC2J25C","YWZPSMNX","6ERGB664","TRF11T5M","APWM5SG8","UEZP9P70","BX1S81NB","YNW7K84Q","KSMD07P2","TUKDXTE5","A5PEEJV7","VVLCUEGX","H45AS4KF","7NL4ZU6P","A3N6MZ45","03W1KUFU","RL5Q09CR","HJGYF938","CZL2W79Z","0AZMTWJJ","8BB5593U","PYQK73ZF","MGD9RQF2","UM5PVDTR","KWGH5P0M","YTTURXH1","M4RA4P87","PWBR5SR0","MAR7TZHH","HLGNPQ2Z","FQ1PDT4Z","1UKE2G1S","MY8VYZB5","6ZXSY5UT","TX0RQ5ZZ","1FMA936N","9ED5GMCM","HC3E36C0","ASFHPXBJ","6RXV2XQ4","ZCCPQJ62","89B7Z58W","LHA4XEV3","UELT7CLV","482DFTZQ","EVRZF23V","CPTHKD1B","29T7AWS6","CYCBEYZM","NW41N695","5520822S","M69FLGY8","7YPPXP8Z","0PG5A2ZU","Z3CL4E5J","4DQYZDQY","L6F66B18","WXCSMCQC"],"addedAt":1738764500104,"updatedAt":1738764500104,"devices":["desktop","phone"]}]},"tablet":{"placeholders":[],"bootTriggerTimeout":250,"bestBy":1739198560976,"epoch":1700252454444,"siteCode":"YWZPSMNX","services":{"engagementCacheableApiDomain":"https:\/\/c02f.app.slickstream.com\/","engagementNonCacheableApiDomain":"https:\/\/c02b.app.slickstream.com\/","engagementResourcesDomain":"https:\/\/c02f.app.slickstream.com\/","storyCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyNonCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyResourcesDomain":"https:\/\/stories.slickstream.com\/","websocketUri":"wss:\/\/c02b-wss.app.slickstream.com\/socket?site=YWZPSMNX"},"bootUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/boot-loader.js","appUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/app.js","adminUrl":"","allowList":["aheadofthyme.com"],"abTests":[{"_id":"67a370d43e8530eaab853caa","id":"c2c4a721-23f3-42c2-b2c1-eec8665871ef","type":"feature-switches","feature":"inline-search","fraction":95,"startDate":1738818000000,"endDate":1739422800000,"includeSites":null,"excludeSites":["R5MAV0Z7","H0C6SBKF","9J3AXZ8B","UGS2VGHL","9LUFT7H6","TH98WLES","UTESX23V","VWHMMQZH","J9LCGELD","KBPNSKP5","LXTCTVZR","MR6141R5","H5PR7HJQ","188YWALQ","8EL02J60","MZ02ZNGF","NS6YK5H7","TPDSH95N","L8EAVD26","QCZ3H7Z7","L9LWDWR9","VUWHN67V","L7T65V6E","2M100P02","717PL89C","MK33XNMR","03XXE0QN","6DNFWRY3","P49MPDD8","QQ2GT249","F9T6P4AS","HG1JRBRE","JA1YSFU7","KWC2J25C","YWZPSMNX","6ERGB664","TRF11T5M","APWM5SG8","UEZP9P70","BX1S81NB","YNW7K84Q","KSMD07P2","TUKDXTE5","A5PEEJV7","VVLCUEGX","H45AS4KF","7NL4ZU6P","A3N6MZ45","03W1KUFU","RL5Q09CR","HJGYF938","CZL2W79Z","0AZMTWJJ","8BB5593U","PYQK73ZF","MGD9RQF2","UM5PVDTR","KWGH5P0M","YTTURXH1","M4RA4P87","PWBR5SR0","MAR7TZHH","HLGNPQ2Z","FQ1PDT4Z","1UKE2G1S","MY8VYZB5","6ZXSY5UT","TX0RQ5ZZ","1FMA936N","9ED5GMCM","HC3E36C0","ASFHPXBJ","6RXV2XQ4","ZCCPQJ62","89B7Z58W","LHA4XEV3","UELT7CLV","482DFTZQ","EVRZF23V","CPTHKD1B","29T7AWS6","CYCBEYZM","NW41N695","5520822S","M69FLGY8","7YPPXP8Z","0PG5A2ZU","Z3CL4E5J","4DQYZDQY","L6F66B18","WXCSMCQC"],"addedAt":1738764500104,"updatedAt":1738764500104,"devices":["desktop","phone"]}]},"desktop":{"placeholders":[],"bootTriggerTimeout":250,"bestBy":1739198560976,"epoch":1700252454444,"siteCode":"YWZPSMNX","services":{"engagementCacheableApiDomain":"https:\/\/c02f.app.slickstream.com\/","engagementNonCacheableApiDomain":"https:\/\/c02b.app.slickstream.com\/","engagementResourcesDomain":"https:\/\/c02f.app.slickstream.com\/","storyCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyNonCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyResourcesDomain":"https:\/\/stories.slickstream.com\/","websocketUri":"wss:\/\/c02b-wss.app.slickstream.com\/socket?site=YWZPSMNX"},"bootUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/boot-loader.js","appUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/app.js","adminUrl":"","allowList":["aheadofthyme.com"],"abTests":[{"_id":"67a370d43e8530eaab853caa","id":"c2c4a721-23f3-42c2-b2c1-eec8665871ef","type":"feature-switches","feature":"inline-search","fraction":95,"startDate":1738818000000,"endDate":1739422800000,"includeSites":null,"excludeSites":["R5MAV0Z7","H0C6SBKF","9J3AXZ8B","UGS2VGHL","9LUFT7H6","TH98WLES","UTESX23V","VWHMMQZH","J9LCGELD","KBPNSKP5","LXTCTVZR","MR6141R5","H5PR7HJQ","188YWALQ","8EL02J60","MZ02ZNGF","NS6YK5H7","TPDSH95N","L8EAVD26","QCZ3H7Z7","L9LWDWR9","VUWHN67V","L7T65V6E","2M100P02","717PL89C","MK33XNMR","03XXE0QN","6DNFWRY3","P49MPDD8","QQ2GT249","F9T6P4AS","HG1JRBRE","JA1YSFU7","KWC2J25C","YWZPSMNX","6ERGB664","TRF11T5M","APWM5SG8","UEZP9P70","BX1S81NB","YNW7K84Q","KSMD07P2","TUKDXTE5","A5PEEJV7","VVLCUEGX","H45AS4KF","7NL4ZU6P","A3N6MZ45","03W1KUFU","RL5Q09CR","HJGYF938","CZL2W79Z","0AZMTWJJ","8BB5593U","PYQK73ZF","MGD9RQF2","UM5PVDTR","KWGH5P0M","YTTURXH1","M4RA4P87","PWBR5SR0","MAR7TZHH","HLGNPQ2Z","FQ1PDT4Z","1UKE2G1S","MY8VYZB5","6ZXSY5UT","TX0RQ5ZZ","1FMA936N","9ED5GMCM","HC3E36C0","ASFHPXBJ","6RXV2XQ4","ZCCPQJ62","89B7Z58W","LHA4XEV3","UELT7CLV","482DFTZQ","EVRZF23V","CPTHKD1B","29T7AWS6","CYCBEYZM","NW41N695","5520822S","M69FLGY8","7YPPXP8Z","0PG5A2ZU","Z3CL4E5J","4DQYZDQY","L6F66B18","WXCSMCQC"],"addedAt":1738764500104,"updatedAt":1738764500104,"devices":["desktop","phone"]}]},"unknown":{"placeholders":[],"bootTriggerTimeout":250,"bestBy":1739198560976,"epoch":1700252454444,"siteCode":"YWZPSMNX","services":{"engagementCacheableApiDomain":"https:\/\/c02f.app.slickstream.com\/","engagementNonCacheableApiDomain":"https:\/\/c02b.app.slickstream.com\/","engagementResourcesDomain":"https:\/\/c02f.app.slickstream.com\/","storyCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyNonCacheableApiDomain":"https:\/\/stories.slickstream.com\/","storyResourcesDomain":"https:\/\/stories.slickstream.com\/","websocketUri":"wss:\/\/c02b-wss.app.slickstream.com\/socket?site=YWZPSMNX"},"bootUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/boot-loader.js","appUrl":"https:\/\/c.slickstream.com\/app\/2.13.104\/app.js","adminUrl":"","allowList":["aheadofthyme.com"],"abTests":[{"_id":"67a370d43e8530eaab853caa","id":"c2c4a721-23f3-42c2-b2c1-eec8665871ef","type":"feature-switches","feature":"inline-search","fraction":95,"startDate":1738818000000,"endDate":1739422800000,"includeSites":null,"excludeSites":["R5MAV0Z7","H0C6SBKF","9J3AXZ8B","UGS2VGHL","9LUFT7H6","TH98WLES","UTESX23V","VWHMMQZH","J9LCGELD","KBPNSKP5","LXTCTVZR","MR6141R5","H5PR7HJQ","188YWALQ","8EL02J60","MZ02ZNGF","NS6YK5H7","TPDSH95N","L8EAVD26","QCZ3H7Z7","L9LWDWR9","VUWHN67V","L7T65V6E","2M100P02","717PL89C","MK33XNMR","03XXE0QN","6DNFWRY3","P49MPDD8","QQ2GT249","F9T6P4AS","HG1JRBRE","JA1YSFU7","KWC2J25C","YWZPSMNX","6ERGB664","TRF11T5M","APWM5SG8","UEZP9P70","BX1S81NB","YNW7K84Q","KSMD07P2","TUKDXTE5","A5PEEJV7","VVLCUEGX","H45AS4KF","7NL4ZU6P","A3N6MZ45","03W1KUFU","RL5Q09CR","HJGYF938","CZL2W79Z","0AZMTWJJ","8BB5593U","PYQK73ZF","MGD9RQF2","UM5PVDTR","KWGH5P0M","YTTURXH1","M4RA4P87","PWBR5SR0","MAR7TZHH","HLGNPQ2Z","FQ1PDT4Z","1UKE2G1S","MY8VYZB5","6ZXSY5UT","TX0RQ5ZZ","1FMA936N","9ED5GMCM","HC3E36C0","ASFHPXBJ","6RXV2XQ4","ZCCPQJ62","89B7Z58W","LHA4XEV3","UELT7CLV","482DFTZQ","EVRZF23V","CPTHKD1B","29T7AWS6","CYCBEYZM","NW41N695","5520822S","M69FLGY8","7YPPXP8Z","0PG5A2ZU","Z3CL4E5J","4DQYZDQY","L6F66B18","WXCSMCQC"],"addedAt":1738764500104,"updatedAt":1738764500104,"devices":["desktop","phone"]}]}}};
+    win.$slickBoot.s = 'plugin';
+    win.$slickBoot._bd = performance.now();
+})();
+</script>
+<!-- [slickstream] END Page Boot Data -->
+
+<meta property='slick:wpversion' content='2.0.3' />
+<!-- [slickstream] Bootloader: -->
+<script class='slickstream-script'>'use strict';
+(async(e,t)=>{if(location.search.indexOf("no-slick")>=0){return}let s;const a=()=>performance.now();let c=window.$slickBoot=window.$slickBoot||{};c.rt=e;c._es=a();c.ev="2.0.1";c.l=async(e,t)=>{try{let c=0;if(!s&&"caches"in self){s=await caches.open("slickstream-code")}if(s){let o=await s.match(e);if(!o){c=a();await s.add(e);o=await s.match(e);if(o&&!o.ok){o=undefined;s.delete(e)}}if(o){const e=o.headers.get("x-slickstream-consent");return{t:c,d:t?await o.blob():await o.json(),c:e||"na"}}}}catch(e){console.log(e)}return{}};const o=e=>new Request(e,{cache:"no-store"});if(!c.d||c.d.bestBy<Date.now()){const s=o(`${e}/d/page-boot-data?site=${t}&url=${encodeURIComponent(location.href.split("#")[0])}`);let{t:i,d:n,c:l}=await c.l(s);if(n){if(n.bestBy<Date.now()){n=undefined}else if(i){c._bd=i;c.c=l}}if(!n){c._bd=a();const e=await fetch(s);const t=e.headers.get("x-slickstream-consent");c.c=t||"na";n=await e.json()}if(n){c.d=n;c.s="embed"}}if(c.d){let e=c.d.bootUrl;const{t:t,d:s}=await c.l(o(e),true);if(s){c.bo=e=URL.createObjectURL(s);if(t){c._bf=t}}else{c._bf=a()}const i=document.createElement("script");i.className="slickstream-script";i.src=e;document.head.appendChild(i)}else{console.log("[slickstream] Boot failed")}})
+("https://app.slickstream.com","YWZPSMNX");
+</script>
+<!-- [slickstream] END Bootloader -->
+<!-- [slickstream] Page Metadata: -->
+<meta property="slick:wppostid" content="64755" />
+<meta property="slick:featured_image" content="https://www.aheadofthyme.com/wp-content/uploads/2025/01/what-recipes-to-cook-in-january.jpg" />
+<script type="application/x-slickstream+json">{"@context":"https://slickstream.com","@graph":[{"@type":"Plugin","version":"2.0.3"},{"@type":"Site","name":"Ahead of Thyme","url":"https://www.aheadofthyme.com","description":"Quick and easy recipes to help busy people eat real food.","atomUrl":"https://www.aheadofthyme.com/feed/atom/","rtl":false},{"@type":"WebPage","@id":64755,"isFront":false,"isHome":false,"isCategory":false,"isTag":false,"isSingular":false,"date":"2025-01-17T14:45:54-08:00","modified":"2025-01-17T14:45:02-08:00","title":"What Recipes to Cook in January","pageType":"other","postType":"post","featured_image":"https://www.aheadofthyme.com/wp-content/uploads/2025/01/what-recipes-to-cook-in-january.jpg","author":"Sam Hu | Ahead of Thyme"}]}</script>
+<!-- [slickstream] END Page Metadata -->
+<script class='slickstream-script'>
+(function() {
+    const slickstreamRocketPluginScripts = document.querySelectorAll('script.slickstream-script[type=rocketlazyloadscript]');
+    const slickstreamRocketExternalScripts = document.querySelectorAll('script[type=rocketlazyloadscript][src*="app.slickstream.com"]');
+    if (slickstreamRocketPluginScripts.length > 0 || slickstreamRocketExternalScripts.length > 0) {
+        console.warn('[slickstream]' + ['Slickstream scripts. This ', 'may cause undesirable behavior, ', 'such as increased CLS scores.',' WP-Rocket is deferring one or more ',].sort().join(''));
+    }
+})();
+</script><link rel="pingback" href="https://www.aheadofthyme.com/xmlrpc.php" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9M6XNXT01N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+gtag('config', 'G-9M6XNXT01N')
+  gtag('config', 'UA-71222061-1');
+</script>
+
+<script type="text/javascript">
+(function($) {
+	$(function() {
+		var jumpID = $( '.tasty-recipes-display' ).attr( 'id' );
+		if( jumpID ) {
+			$( 'body' ).addClass( 'skipLink' );
+			$( '.content .entry-title' ).append( '<a href="#' + jumpID + '" class="skip"> Jump to Recipe</a>' );
+		}
+	});
+})(jQuery);
+</script>
+
+<style type="text/css">
+.skipLink .content .entry-title a.skip {
+    display: block;
+    font-size: 11px;
+  position: relative;
+        top: 50%;
+        left: 0%;
+
+    height: 26px;
+    width: 130px;
+    background: #efeae8;
+    color: #2E5543;
+    padding: 5px;
+    line-height: 15px;
+    vertical-align: middle;
+    text-align: left;
+    text-transform: uppercase;
+   margin-top: 10px; 
+margin: 10px 0px 0px 0px;
+}
+</style>
+
+<meta name="google-site-verification" content="Uaub8-pi8je55OMbFfSsCkmO2ZGzm1wHlpx4AAewDq8" />
+
+<script>function lazymcjs(){console.log("load mcjs");
+["mousemove","resize"].forEach(function(e){window.removeEventListener(e,lazymcjs)});
+document.removeEventListener("scroll",lazymcjsSC);
+var s=document.createElement("script");s.async=true;s.defer=true;s.onload=function(){};s.src="//chimpstatic.com/mcjs-connected/js/users/bbc1c57467f581be09fac1712/819e42735ada2ba0628f71072.js";document.head.appendChild(s)}
+function lazymcjsSC(){if(window.scrollY>544)lazymcjs()}
+document.addEventListener("scroll",lazymcjsSC);
+["mousemove","resize"].forEach(function(e){window.addEventListener(e,lazymcjs)})</script>
+
+
+	<style>
+		/* Add animation (Chrome, Safari, Opera) */
+		@-webkit-keyframes openmenu {
+			from {left:-100px;opacity: 0;}
+			to {left:0px;opacity:1;}
+		}
+		@-webkit-keyframes closebutton {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+
+		/* Add animation (Standard syntax) */
+		@keyframes openmenu {
+			from {left:-100px;opacity: 0;}
+			to {left:0px;opacity:1;}
+		}
+		@keyframes closebutton {
+			0% {opacity: 0;}
+			100% {opacity: 1;}
+		}
+
+		.mmmadminlinks {
+			position: absolute;
+			left: 20px;
+			top: 0;
+			width: 200px;
+			line-height: 25px;
+			text-align: left;
+			display: none;
+		}
+		@media only screen and ( min-width: 1000px ) {
+			.mmmadminlinks { display: block; }
+		}
+
+
+		/* Ensure the jump link is below the fixed nav */
+		html {
+			scroll-padding-top: 90px;
+		}
+
+		/* The mmm's background */
+		.feastmobilemenu-background {
+			display: none;
+			position: fixed;
+			z-index: 9999;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		/* Display the mmm when targeted */
+		.feastmobilemenu-background:target {
+			display: table;
+			position: fixed;
+		}
+
+		/* The mmm box */
+		.mmm-dialog {
+			display: table-cell;
+			vertical-align: top;
+			font-size: 20px;
+		}
+
+		/* The mmm's content */
+		.mmm-dialog .mmm-content {
+			margin: 0;
+			padding: 10px 10px 10px 20px;
+			position: fixed;
+			left: 0;
+			background-color: #FEFEFE;
+			contain: strict;
+			overflow-x: hidden;
+			overflow-y: auto;
+			outline: 0;
+			border-right: 1px #777 solid;
+			border-bottom: 1px #777 solid;
+			text-align: justify;
+			width: 320px;
+			height: 90%;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+			/* Add animation */
+			-webkit-animation-name: openmenu; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 0.6s; /* Chrome, Safari, Opera */
+			animation-name: openmenu;
+			animation-duration: 0.6s;
+		}
+		.mmm-content li {
+			list-style: none;
+		}
+		#menu-feast-modern-mobile-menu li,
+		.desktop-inline-modern-menu > ul.menu li {
+			min-height: 50px;
+			margin-left: 5px;
+			list-style: none;
+		}
+		#menu-feast-modern-mobile-menu li a,
+		.desktop-inline-modern-menu > ul.menu li a {
+			color: inherit;
+			text-decoration: inherit;
+		}
+
+		/* The button used to close the mmm */
+		.closebtn {
+			text-decoration: none;
+			float: right;
+			margin-right: 10px;
+			font-size: 50px;
+			font-weight: bold;
+			color: #333;
+			z-index: 1301;
+			top: 0;
+			position: fixed;
+			left: 270px;
+			-webkit-animation-name: closebutton; /* Chrome, Safari, Opera */
+			-webkit-animation-duration: 1.5s; /* Chrome, Safari, Opera */
+			animation-name: closebutton;
+			animation-duration: 1.5s;
+		}
+
+		.closebtn:hover,
+		.closebtn:focus {
+			color: #555;
+			cursor: pointer;
+		}
+		@media (prefers-reduced-motion) { /* accessibility animation fix */
+			.mmm-dialog .mmm-content, .closebtn {
+			animation: none !important;
+			}
+		}
+		.mmmheader {
+			font-size: 25px;
+			color: #FFF;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+		}
+		#mmmlogo {
+			max-width: 200px;
+			max-height: 70px;
+		}
+		#feast-mobile-search {
+			margin-bottom: 17px;
+			min-height: 50px;
+			overflow: auto;
+		}
+		#feast-mobile-search input[type=submit] {
+			display: none;
+		}
+		#feast-mobile-search input[type=search] {
+			width: 100%;
+		}
+
+		#feast-mobile-menu-social-icons {
+			margin-top: 17px;
+		}
+
+		#feast-social .simple-social-icons {
+			list-style: none;
+			margin: 0 !important;
+		}
+
+		.feastmobilenavbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1300;
+			width: 100%;
+			height: 80px;
+			padding: 0;
+			margin: 0 auto;
+			box-sizing: border-box;
+			border-top: 1px solid #CCC;
+			border-bottom: 1px solid #CCC;
+			background: #FFF;
+			display: grid;
+			grid-template-columns: repeat(7, minmax(50px, 1fr));
+			text-align: center;
+			contain: strict;
+			overflow: hidden;
+		}
+		.feastmobilenavbar > div { height: 80px; }
+		.admin-bar .feastmobilenavbar {
+			top: 32px;
+		}
+		@media screen and (max-width:782px) {
+			.admin-bar .feastmobilenavbar {
+				top: 0;
+				position: sticky;
+			}
+			.admin-bar .site-container, .admin-bar .body-template-content {
+				margin-top: 0;
+			}
+		}
+		.feastmobilenavbar a img {
+			margin-bottom: inherit !important;
+		}
+		.feastmenutoggle, .feastsearchtoggle, .feastsubscribebutton {
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			justify-content: center;
+		}
+
+		
+		.feastsearchtoggle svg, .feastmenutoggle svg {
+			width: 30px;
+			height: 30px;
+			padding: 10px;
+			box-sizing: content-box;
+			color: black;
+		}
+		.feastsubscribebutton {
+			overflow: hidden;
+		}
+		.feastsubscribebutton img {
+			max-width: 90px;
+			padding: 15px;
+			margin: 1px;
+		}
+		.feastsubscribebutton svg {
+			color: #000;
+		}
+				.feastmenulogo {
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			grid-column-end: span 5;
+		}
+
+		
+		@media only screen and ( max-width: 1199px ) {
+			.feastmenulogo {grid-column-end: span 5; }
+			.feastsubscribebutton { grid-column-end: span 2; }
+		}
+		@media only screen and (max-width: 359px) { /* 320px fix */
+			.feastmobilenavbar {
+				grid-template-columns: repeat(6, minmax(50px, 1fr));
+			}
+			.feastmenulogo {grid-column-end: span 4; }		}
+				@media only screen and ( min-width: 1200px ) {
+			.feastmobilenavbar { display: none; }
+		}
+		@media only screen and ( max-width: 1199px ) {
+			header.site-header, .nav-primary  { display: none !important; visibility: hidden; }
+			.site-container, .body-template-content {  margin-top: 80px;  /* prevents menu overlapping content */ }
+		}
+			</style>
+
+	<style id="feast-edit-font-sizes">body { font-size: 16px; }</style>	<style id='feast-increase-content-width'>@media only screen and (min-width: 1200px) { #genesis-content { min-width: 728px; } #content-container { min-width: 728px; }  }</style>
+	<style id="uagb-style-conditional-extension">@media (min-width: 1025px){body .uag-hide-desktop.uagb-google-map__wrap,body .uag-hide-desktop{display:none !important}}@media (min-width: 768px) and (max-width: 1024px){body .uag-hide-tab.uagb-google-map__wrap,body .uag-hide-tab{display:none !important}}@media (max-width: 767px){body .uag-hide-mob.uagb-google-map__wrap,body .uag-hide-mob{display:none !important}}</style><link rel="icon" href="https://www.aheadofthyme.com/wp-content/uploads/2021/10/cropped-aheadofthyme-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.aheadofthyme.com/wp-content/uploads/2021/10/cropped-aheadofthyme-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.aheadofthyme.com/wp-content/uploads/2021/10/cropped-aheadofthyme-icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.aheadofthyme.com/wp-content/uploads/2021/10/cropped-aheadofthyme-icon-270x270.png" />
+<style>.eicon-menu-bar,.elementor-menu-toggle.elementor-active i{display:inline-block;font-family:fontawesome;font-size:inherit;font-weight:400;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.eicon-menu-bar:before{content:'\f0c9'}div.elementor-menu-toggle.elementor-active i:before{content:'\f00d'}.elementor-nav-menu--burger.elementor-invisible.elementor-widget.elementor-widget-nav-menu{visibility:visible}</style><script data-no-optimize='1' data-cfasync='false' id='cls-disable-ads-091846e'>var cls_disable_ads=function(e){"use strict";var t,i,o,r,a,n,s,l,d,c,u,p,h,_,S,g,y,m,v,f;function O(){return O=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var i=arguments[t];for(var o in i)Object.prototype.hasOwnProperty.call(i,o)&&(e[o]=i[o])}return e},O.apply(this,arguments)}window.adthriveCLS.buildDate="2025-02-06",function(e){e.amznbid="amznbid",e.amzniid="amzniid",e.amznp="amznp",e.amznsz="amznsz"}(t||(t={})),function(e){e.ThirtyThreeAcross="33across",e.Adform="adform",e.Aidem="aidem",e.AidemServer="aidem_ss",e.AppNexus="appnexus",e.AmazonTAM="amazon",e.AmazonUAM="AmazonUAM",e.AmazonASR="AmazonASR",e.Conversant="conversant",e.Concert="concert",e.Criteo="criteo",e.CriteoServer="crit_ss",e.GumGum="gumgum",e.ImproveDigital="improvedigital",e.ImproveDigitalServer="improve_ss",e.IndexExchange="ix",e.Kargo="kargo",e.KargoServer="krgo_ss",e.MediaGrid="grid",e.MediaGridVideo="gridvid",e.Nativo="nativo",e.Ogury="ogury",e.OpenX="openx",e.OpenXServer="opnx_ss",e.Ozone="ozone",e.Pubmatic="pubmatic",e.PubmaticServer="pubm_ss",e.ResetDigital="resetdigital",e.Rise="rise",e.Rtbhouse="rtbhouse",e.Rubicon="rubicon",e.RubiconServer="rubi_ss",e.Seedtag="seedtag",e.Sharethrough="sharethrough",e.SharethroughServer="share_ss",e.Teads="teads",e.Triplelift="triplelift",e.TripleliftServer="tripl_ss",e.TTD="ttd",e.Undertone="undertone",e.UndertoneServer="under_ss",e.Unruly="unruly",e.YahooSSP="yahoossp",e.YahooSSPServer="yah_ss",e.Verizon="verizon",e.Yieldmo="yieldmo",e.Flipp="flipp"}(i||(i={})),function(e){e.Prebid="prebid",e.GAM="gam",e.Amazon="amazon",e.Marmalade="marmalade",e.Floors="floors",e.CMP="cmp",e.Optable="optable",e.OptimalBidder="optimalBidder"}(o||(o={})),function(e){e.cm="cm",e.fbrap="fbrap",e.rapml="rapml"}(r||(r={})),function(e){e.lazy="lazy",e.raptive="raptive",e.refresh="refresh",e.session="session",e.crossDomain="crossdomain",e.highSequence="highsequence",e.lazyBidPool="lazyBidPool"}(a||(a={})),function(e){e.lazy="l",e.raptive="rapml",e.refresh="r",e.session="s",e.crossdomain="c",e.highsequence="hs",e.lazyBidPool="lbp"}(n||(n={})),function(e){e.Version="Version",e.SharingNotice="SharingNotice",e.SaleOptOutNotice="SaleOptOutNotice",e.SharingOptOutNotice="SharingOptOutNotice",e.TargetedAdvertisingOptOutNotice="TargetedAdvertisingOptOutNotice",e.SensitiveDataProcessingOptOutNotice="SensitiveDataProcessingOptOutNotice",e.SensitiveDataLimitUseNotice="SensitiveDataLimitUseNotice",e.SaleOptOut="SaleOptOut",e.SharingOptOut="SharingOptOut",e.TargetedAdvertisingOptOut="TargetedAdvertisingOptOut",e.SensitiveDataProcessing="SensitiveDataProcessing",e.KnownChildSensitiveDataConsents="KnownChildSensitiveDataConsents",e.PersonalDataConsents="PersonalDataConsents",e.MspaCoveredTransaction="MspaCoveredTransaction",e.MspaOptOutOptionMode="MspaOptOutOptionMode",e.MspaServiceProviderMode="MspaServiceProviderMode",e.SubSectionType="SubsectionType",e.Gpc="Gpc"}(s||(s={})),function(e){e[e.NA=0]="NA",e[e.OptedOut=1]="OptedOut",e[e.OptedIn=2]="OptedIn"}(l||(l={})),function(e){e.AdDensity="addensity",e.AdLayout="adlayout",e.FooterCloseButton="footerclose",e.Interstitial="interstitial",e.RemoveVideoTitleWrapper="removevideotitlewrapper",e.StickyOutstream="stickyoutstream",e.StickyOutstreamOnStickyPlayer="sospp",e.VideoAdvancePlaylistRelatedPlayer="videoadvanceplaylistrp",e.MobileStickyPlayerPosition="mspp"}(d||(d={})),function(e){e.Below_Post_1="Below_Post_1",e.Below_Post="Below_Post",e.Content="Content",e.Content_1="Content_1",e.Content_2="Content_2",e.Content_3="Content_3",e.Content_4="Content_4",e.Content_5="Content_5",e.Content_6="Content_6",e.Content_7="Content_7",e.Content_8="Content_8",e.Content_9="Content_9",e.Recipe="Recipe",e.Recipe_1="Recipe_1",e.Recipe_2="Recipe_2",e.Recipe_3="Recipe_3",e.Recipe_4="Recipe_4",e.Recipe_5="Recipe_5",e.Native_Recipe="Native_Recipe",e.Footer_1="Footer_1",e.Footer="Footer",e.Header_1="Header_1",e.Header_2="Header_2",e.Header="Header",e.Sidebar_1="Sidebar_1",e.Sidebar_2="Sidebar_2",e.Sidebar_3="Sidebar_3",e.Sidebar_4="Sidebar_4",e.Sidebar_5="Sidebar_5",e.Sidebar_9="Sidebar_9",e.Sidebar="Sidebar",e.Interstitial_1="Interstitial_1",e.Interstitial="Interstitial",e.Video_StickyOutstream_1="Video_StickyOutstream_1",e.Video_StickyOutstream="Video_StickyOutstream",e.Video_StickyInstream="Video_StickyInstream",e.Sponsor_Tile="Sponsor_Tile"}(c||(c={})),function(e){e.Desktop="desktop",e.Mobile="mobile"}(u||(u={})),function(e){e.Video_Collapse_Autoplay_SoundOff="Video_Collapse_Autoplay_SoundOff",e.Video_Individual_Autoplay_SOff="Video_Individual_Autoplay_SOff",e.Video_Coll_SOff_Smartphone="Video_Coll_SOff_Smartphone",e.Video_In_Post_ClicktoPlay_SoundOn="Video_In-Post_ClicktoPlay_SoundOn",e.Video_Collapse_Autoplay_SoundOff_15s="Video_Collapse_Autoplay_SoundOff_15s",e.Video_Individual_Autoplay_SOff_15s="Video_Individual_Autoplay_SOff_15s",e.Video_Coll_SOff_Smartphone_15s="Video_Coll_SOff_Smartphone_15s",e.Video_In_Post_ClicktoPlay_SoundOn_15s="Video_In-Post_ClicktoPlay_SoundOn_15s"}(p||(p={})),function(e){e.vpaidAdPlayError="vpaidAdPlayError",e.adError="adError",e.adLoaded="adLoaded"}(h||(h={})),function(e){e.Float="adthrive-collapse-float",e.Sticky="adthrive-collapse-sticky",e.Mobile="adthrive-collapse-mobile"}(_||(_={})),function(e){e.Small="adthrive-collapse-small",e.Medium="adthrive-collapse-medium"}(S||(S={})),function(e){e.BottomRight="adthrive-collapse-bottom-right"}(g||(g={})),function(e){e[e.Unstarted=0]="Unstarted",e[e.UncollapsedPlay=1]="UncollapsedPlay",e[e.CollapsedPlay=2]="CollapsedPlay",e[e.UserPauseUncollapsed=3]="UserPauseUncollapsed",e[e.UserPauseCollapsed=4]="UserPauseCollapsed",e[e.PausedNotVisible=5]="PausedNotVisible",e[e.Overlapped=6]="Overlapped",e[e.Closed=7]="Closed",e[e.NonLinearAdPlay=8]="NonLinearAdPlay",e[e.NonLinearAdPaused=9]="NonLinearAdPaused",e[e.NonLinearAdOverlapped=10]="NonLinearAdOverlapped",e[e.UserUnPaused=11]="UserUnPaused"}(y||(y={})),function(e){e[e.Play=0]="Play",e[e.UserClick=1]="UserClick",e[e.PageSwitch=2]="PageSwitch",e[e.OutOfView=3]="OutOfView",e[e.InView=4]="InView",e[e.Close=5]="Close",e[e.Overlapping=6]="Overlapping",e[e.OtherVideoPlaying=7]="OtherVideoPlaying"}(m||(m={})),function(e){e.None="none"}(v||(v={})),function(e){e.Default="default",e.AZ_Animals="5daf495ed42c8605cfc74b0b",e.Natashas_Kitchen="55bccc97303edab84afd77e2",e.RecipeTin_Eats="55cb7e3b4bc841bd0c4ea577",e.Sallys_Baking_Recipes="566aefa94856897050ee7303",e.Spend_With_Pennies="541917f5a90318f9194874cf"}(f||(f={}));const w=new class{info(e,t,...i){this.call(console.info,e,t,...i)}warn(e,t,...i){this.call(console.warn,e,t,...i)}error(e,t,...i){this.call(console.error,e,t,...i),this.sendErrorLogToCommandQueue(e,t,...i)}event(e,t,...i){var o;"debug"===(null==(o=window.adthriveCLS)?void 0:o.bucket)&&this.info(e,t)}sendErrorLogToCommandQueue(e,t,...i){window.adthrive=window.adthrive||{},window.adthrive.cmd=window.adthrive.cmd||[],window.adthrive.cmd.push((()=>{void 0!==window.adthrive.logError&&"function"==typeof window.adthrive.logError&&window.adthrive.logError(e,t,i)}))}call(e,t,i,...o){const r=[`%c${t}::${i} `],a=["color: #999; font-weight: bold;"];o.length>0&&"string"==typeof o[0]&&r.push(o.shift()),a.push(...o);try{Function.prototype.apply.call(e,console,[r.join(""),...a])}catch(e){return void console.error(e)}}};class C{}const b=["mcmpfreqrec"];new class extends C{init(e){this._gdpr="true"===e.gdpr,this._shouldQueue=this._gdpr}clearQueue(e){e&&(this._shouldQueue=!1,this._sessionStorageHandlerQueue.forEach((e=>{this.setSessionStorage(e.key,e.value)})),this._localStorageHandlerQueue.forEach((e=>{if("adthrive_abgroup"===e.key){const t=Object.keys(e.value)[0],i=e.value[t],o=e.value[`${t}_weight`];this.getOrSetABGroupLocalStorageValue(t,i,o,{value:24,unit:"hours"})}else e.expiry?"internal"===e.type?this.setExpirableInternalLocalStorage(e.key,e.value,{expiry:e.expiry,resetOnRead:e.resetOnRead}):this.setExpirableExternalLocalStorage(e.key,e.value,{expiry:e.expiry,resetOnRead:e.resetOnRead}):"internal"===e.type?this.setInternalLocalStorage(e.key,e.value):this.setExternalLocalStorage(e.key,e.value)})),this._cookieHandlerQueue.forEach((e=>{"internal"===e.type?this.setInternalCookie(e.key,e.value):this.setExternalCookie(e.key,e.value)}))),this._sessionStorageHandlerQueue=[],this._localStorageHandlerQueue=[],this._cookieHandlerQueue=[]}readInternalCookie(e){return this._verifyInternalKey(e),this._readCookie(e)}readExternalCookie(e){return this._readCookie(e)}readInternalLocalStorage(e){return this._verifyInternalKey(e),this._readFromLocalStorage(e)}readExternalLocalStorage(e){return this._readFromLocalStorage(e)}readSessionStorage(e){const t=window.sessionStorage.getItem(e);if(!t)return null;try{return JSON.parse(t)}catch(e){return t}}deleteCookie(e){document.cookie=`${e}=; SameSite=None; Secure; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`}deleteLocalStorage(e){window.localStorage.removeItem(e)}deleteSessionStorage(e){window.sessionStorage.removeItem(e)}setInternalCookie(e,t,i){this._verifyInternalKey(e),this._setCookieValue("internal",e,t,i)}setExternalCookie(e,t,i){this._setCookieValue("external",e,t,i)}setInternalLocalStorage(e,t){if(this._verifyInternalKey(e),this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"internal"};this._localStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.localStorage.setItem(e,i)}}setExternalLocalStorage(e,t){if(this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"external"};this._localStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.localStorage.setItem(e,i)}}setExpirableInternalLocalStorage(e,t,i){this._verifyInternalKey(e);try{var o;const a=null!=(o=null==i?void 0:i.expiry)?o:{value:400,unit:"days"};var r;const n=null!=(r=null==i?void 0:i.resetOnRead)&&r;if(this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"internal",expires:this._getExpiryDate(a),expiry:a,resetOnRead:n};this._localStorageHandlerQueue.push(i)}else{const i={value:t,type:"internal",expires:this._getExpiryDate(a),expiry:a,resetOnRead:n};window.localStorage.setItem(e,JSON.stringify(i))}}catch(e){console.error(e)}}setExpirableExternalLocalStorage(e,t,i){try{var o;const a=null!=(o=null==i?void 0:i.expiry)?o:{value:400,unit:"days"};var r;const n=null!=(r=null==i?void 0:i.resetOnRead)&&r;if(this._gdpr&&this._shouldQueue){const i={key:e,value:JSON.stringify(t),type:"external",expires:this._getExpiryDate(a),expiry:a,resetOnRead:n};this._localStorageHandlerQueue.push(i)}else{const i={value:t,type:"external",expires:this._getExpiryDate(a),expiry:a,resetOnRead:n};window.localStorage.setItem(e,JSON.stringify(i))}}catch(e){console.error(e)}}setSessionStorage(e,t){if(this._gdpr&&this._shouldQueue){const i={key:e,value:t};this._sessionStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.sessionStorage.setItem(e,i)}}getOrSetABGroupLocalStorageValue(e,t,i,o,r=!0){const a="adthrive_abgroup",n=this.readInternalLocalStorage(a);if(null!==n){const t=n[e];var s;const i=null!=(s=n[`${e}_weight`])?s:null;if(this._isValidABGroupLocalStorageValue(t))return[t,i]}const l=O({},n,{[e]:t,[`${e}_weight`]:i});return o?this.setExpirableInternalLocalStorage(a,l,{expiry:o,resetOnRead:r}):this.setInternalLocalStorage(a,l),[t,i]}_isValidABGroupLocalStorageValue(e){return null!=e&&!("number"==typeof e&&isNaN(e))}_getExpiryDate({value:e,unit:t}){const i=new Date;return"milliseconds"===t?i.setTime(i.getTime()+e):"seconds"==t?i.setTime(i.getTime()+1e3*e):"minutes"===t?i.setTime(i.getTime()+60*e*1e3):"hours"===t?i.setTime(i.getTime()+60*e*60*1e3):"days"===t?i.setTime(i.getTime()+24*e*60*60*1e3):"months"===t&&i.setTime(i.getTime()+30*e*24*60*60*1e3),i.toUTCString()}_resetExpiry(e){return e.expires=this._getExpiryDate(e.expiry),e}_readCookie(e){const t=document.cookie.split("; ").find((t=>t.split("=")[0]===e));if(!t)return null;const i=t.split("=")[1];if(i)try{return JSON.parse(decodeURIComponent(i))}catch(e){return decodeURIComponent(i)}return null}_readFromLocalStorage(e){const t=window.localStorage.getItem(e);if(!t)return null;try{const o=JSON.parse(t),r=o.expires&&(new Date).getTime()>new Date(o.expires).getTime();if("adthrive_abgroup"===e&&o.created)return window.localStorage.removeItem(e),null;if(o.resetOnRead&&o.expires&&!r){const t=this._resetExpiry(o);var i;return window.localStorage.setItem(e,JSON.stringify(o)),null!=(i=t.value)?i:t}if(r)return window.localStorage.removeItem(e),null;if(!o.hasOwnProperty("value"))return o;try{return JSON.parse(o.value)}catch(e){return o.value}}catch(e){return t}}_setCookieValue(e,t,i,o){try{if(this._gdpr&&this._shouldQueue){const o={key:t,value:i,type:e};this._cookieHandlerQueue.push(o)}else{var r;const e=this._getExpiryDate(null!=(r=null==o?void 0:o.expiry)?r:{value:400,unit:"days"});var a;const s=null!=(a=null==o?void 0:o.sameSite)?a:"None";var n;const l=null==(n=null==o?void 0:o.secure)||n,d="object"==typeof i?JSON.stringify(i):i;document.cookie=`${t}=${d}; SameSite=${s}; ${l?"Secure;":""} expires=${e}; path=/`}}catch(e){}}_verifyInternalKey(e){const t=e.startsWith("adthrive_"),i=e.startsWith("adt_");if(!t&&!i&&!b.includes(e))throw new Error('When reading an internal cookie, the key must start with "adthrive_" or "adt_" or be part of the allowed legacy keys.')}constructor(...e){super(...e),this.name="BrowserStorage",this.disable=!1,this.gdprPurposes=[1],this._sessionStorageHandlerQueue=[],this._localStorageHandlerQueue=[],this._cookieHandlerQueue=[],this._shouldQueue=!1}};const P=e=>{const t=window.location.href;return e.some((e=>new RegExp(e,"i").test(t)))};window.adthrive.windowPerformance=window.adthrive.windowPerformance||new class{resetTimeOrigin(){this._timeOrigin=window.performance.now()}now(){try{return Math.round(window.performance.now()-this._timeOrigin)}catch(e){return 0}}constructor(){this._timeOrigin=0}};const x=window.adthrive.windowPerformance;x.now.bind(x);class k{checkCommandQueue(){this.adthrive&&this.adthrive.cmd&&this.adthrive.cmd.forEach((e=>{const t=e.toString(),i=this.extractAPICall(t,"disableAds");i&&this.disableAllAds(this.extractPatterns(i));const o=this.extractAPICall(t,"disableContentAds");o&&this.disableContentAds(this.extractPatterns(o));const r=this.extractAPICall(t,"disablePlaylistPlayers");r&&this.disablePlaylistPlayers(this.extractPatterns(r))}))}extractPatterns(e){const t=e.match(/["'](.*?)['"]/g);if(null!==t)return t.map((e=>e.replace(/["']/g,"")))}extractAPICall(e,t){const i=new RegExp(t+"\\((.*?)\\)","g"),o=e.match(i);return null!==o&&o[0]}disableAllAds(e){e&&!P(e)||(this.all=!0,this.reasons.add("all_page"))}disableContentAds(e){e&&!P(e)||(this.content=!0,this.recipe=!0,this.locations.add(c.Content),this.locations.add(c.Recipe),this.reasons.add("content_plugin"))}disablePlaylistPlayers(e){e&&!P(e)||(this.video=!0,this.locations.add("Video"),this.reasons.add("video_page"))}urlHasEmail(e){if(!e)return!1;return null!==/([A-Z0-9._%+-]+(@|%(25)*40)[A-Z0-9.-]+\.[A-Z]{2,})/i.exec(e)}constructor(e){this.adthrive=e,this.all=!1,this.content=!1,this.recipe=!1,this.video=!1,this.locations=new Set,this.reasons=new Set,(this.urlHasEmail(window.location.href)||this.urlHasEmail(window.document.referrer))&&(this.all=!0,this.reasons.add("all_email"));try{this.checkCommandQueue(),null!==document.querySelector(".tag-novideo")&&(this.video=!0,this.locations.add("Video"),this.reasons.add("video_tag"))}catch(e){w.error("ClsDisableAds","checkCommandQueue",e)}}}const A=window.adthriveCLS;return A&&(A.disableAds=new k(window.adthrive)),e.ClsDisableAds=k,e}({});
+</script>		<style type="text/css" id="wp-custom-css">
+			/* NerdPress Edit -  remove padding from the media/text blocks on the homepage 1.14.2022 */
+.home .has-background{
+	padding:0px;
+}
+
+.home .wp-block-button__link.has-background.no-border-radius{
+padding: calc(.334em + 2px) calc(.665em + 2px);
+}
+
+/*NerdPress edit - add header color CD 12.3.21*/
+.tasty-recipes-entry-header, .tasty-recipes-footer-content {
+	background: #2E5543 !important;
+}
+.tasty-recipes, .tasty-recipes-image img{
+	border: 5px solid #2E5543 !important; 
+}
+h2 {
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+h1 {
+		font-size: 24px;
+		letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.site-container > footer, body > footer {
+background: #2E5543;
+padding: 27px 0;
+color: white !important;
+text-transform: inherit !important;
+letter-spacing: inherit !important;
+	
+}
+.site-container > footer a, body > footer a {
+	color: white
+	
+}
+
+.color-box {float:left; background-color:#efeae8; width:100%; height:auto; padding:30px; padding-top:20px; padding-bottom:20px}
+
+@media only screen and (min-width: 1024px) {
+	.content {
+		width: 728px;
+	}
+}
+
+
+a:hover {
+  color: #E0D9D6;
+}
+
+body{
+    -webkit-animation:none!important;
+    animation:none!important;
+}
+
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+/*NerdPress fix for changing header for the printer verison of recipe card to white - CD 12.3.21*/
+
+.tasty-recipes-print .tasty-recipes-entry-header{
+background: #fff !important;
+}
+
+/*NP Search item border fix - TR  - 1-12-22*/
+.wp-block-search {
+    margin: 27px 0 !important;
+    padding: 30px !important;
+    background: #2E5543 !important;
+}
+
+.no-underline:before {
+    border-top: none;
+}
+
+/*NP footer social icons fix 3/13/23 TR */
+.wp-block-social-links, .wp-block-social-links.has-normal-icon-size {
+    display: flex;
+    gap: 0.5em;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script mill_end>console.log('\/plugins\/instagram\-feed\-pro\/js\/sbi\-scripts\.min\.js')</script></head>
+<body class="error404 adthrive-disable-all custom-header header-image header-full-width content-sidebar genesis-breadcrumbs-hidden genesis-footer-widgets-hidden seasoned-pro feast-plugin wp-6-7-1 fp-12-1-5"><div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li><li><a href="#genesis-sidebar-primary" class="screen-reader-shortcut"> Skip to primary sidebar</a></li></ul><header class="site-header"><div class="wrap"><div class="title-area"><p class="site-title"><a href="https://www.aheadofthyme.com/" title="Ahead of Thyme" ><img src="https://www.aheadofthyme.com/wp-content/uploads/2021/10/cropped-aheadofthyme-retina-logo.png" title="Ahead of Thyme" alt="Ahead of Thyme logo" data-pin-nopin="true" /></a></p></div><nav class="nav-primary" aria-label="Main" id="genesis-nav-primary"><div class="wrap"><ul id="menu-header" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-878" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-878"><a href="https://www.aheadofthyme.com"><span >Home</span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12"><a href="https://www.aheadofthyme.com/about/"><span >About</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-4178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4178"><a href="https://www.aheadofthyme.com/about/"><span >About Me</span></a></li>
+	<li id="menu-item-4176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4176"><a href="https://www.aheadofthyme.com/work-with-me/"><span >Work With Us</span></a></li>
+	<li id="menu-item-13743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13743"><a href="https://www.aheadofthyme.com/press/"><span >Press</span></a></li>
+</ul>
+</li>
+<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="https://www.aheadofthyme.com/recipes/"><span >Recipes</span></a></li>
+<li id="menu-item-3976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3976"><a href="https://www.aheadofthyme.com/kitchen-essentials/"><span >Shop</span></a></li>
+<li id="menu-item-34756" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34756"><a href="https://foodbloggerbusinessschool.com"><span >Resources</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-34757" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34757"><a href="https://foodbloggerbusinessschool.com"><span >Food Blogger Business School</span></a></li>
+</ul>
+</li>
+<li id="seasoned-social" class="seasoned-social menu-item"><aside class="widget-area"><h2 class="genesis-sidebar-title screen-reader-text">Nav Social Menu</h2><section id="simple-social-icons-3" class="widget simple-social-icons"><div class="widget-wrap"><ul class="aligncenter"><li class="ssi-facebook"><a href="http://www.facebook.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-facebook" aria-labelledby="social-facebook-3"><title id="social-facebook-3">Facebook</title><use xlink:href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-facebook"></use></svg></a></li><li class="ssi-instagram"><a href="http://www.instagram.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-instagram" aria-labelledby="social-instagram-3"><title id="social-instagram-3">Instagram</title><use xlink:href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-instagram"></use></svg></a></li><li class="ssi-pinterest"><a href="http://www.pinterest.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-pinterest" aria-labelledby="social-pinterest-3"><title id="social-pinterest-3">Pinterest</title><use xlink:href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-pinterest"></use></svg></a></li><li class="ssi-youtube"><a href="https://www.youtube.com/channel/UCoNZiynYarCQW1tq7EZaDEg?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-youtube" aria-labelledby="social-youtube-3"><title id="social-youtube-3">YouTube</title><use xlink:href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-youtube"></use></svg></a></li></ul></div></section>
+</aside></li><li id="seasoned-search" class="seasoned-search menu-item"><form class="search-form" method="get" action="https://www.aheadofthyme.com/" role="search"><label class="search-form-label screen-reader-text" for="searchform-1">search...</label><input class="search-form-input" type="search" name="s" id="searchform-1" placeholder="search..."><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.aheadofthyme.com/?s={s}"></form></li></ul></div></nav></div></header><div class="feastmobilenavbar"><div class="feastmenutoggle"><a href="#feastmobilemenu"><?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve" aria-labelledby="menuicon" role="img">
+	<title id="menuicon">menu icon</title>
+	<g id="menu">
+		<path fill="currentColor" d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
+	</g>
+</svg>
+</a></div><div class="feastmenulogo"><a href="https://www.aheadofthyme.com"><img src="https://www.aheadofthyme.com/wp-content/uploads/2021/10/aheadofthyme-logo.png" srcset="https://www.aheadofthyme.com/wp-content/uploads/2021/10/aheadofthyme-retina-logo.png 2x" alt="go to homepage" data-skip-lazy data-pin-nopin="true" height="70" width="200" /></a></div><div class="feastsearchtoggle"><a href="#feastmobilemenu"><svg xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" xml:space="preserve" xmlns:svg="//www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100" aria-labelledby="searchicon" role="img">
+  <title id="searchicon">search icon</title>
+  <g transform="translate(0,-952.36218)">
+    <path fill="currentColor" d="M 40 11 C 24.007431 11 11 24.00743 11 40 C 11 55.9926 24.007431 69 40 69 C 47.281794 69 53.935267 66.28907 59.03125 61.84375 L 85.59375 88.40625 C 86.332786 89.16705 87.691654 89.1915 88.4375 88.4375 C 89.183345 87.6834 89.175154 86.2931 88.40625 85.5625 L 61.875 59.03125 C 66.312418 53.937244 69 47.274551 69 40 C 69 24.00743 55.992569 11 40 11 z M 40 15 C 53.830808 15 65 26.16919 65 40 C 65 53.8308 53.830808 65 40 65 C 26.169192 65 15 53.8308 15 40 C 15 26.16919 26.169192 15 40 15 z " transform="translate(0,952.36218)">
+    </path>
+  </g>
+</svg>
+</a></div></div><div id="feastmobilemenu" class="feastmobilemenu-background" aria-label="main"><div class="mmm-dialog"><div class="mmm-content"><a href="https://www.aheadofthyme.com"><img id="mmmlogo" src="https://www.aheadofthyme.com/wp-content/uploads/2021/10/aheadofthyme-logo.png" srcset="https://www.aheadofthyme.com/wp-content/uploads/2021/10/aheadofthyme-retina-logo.png 2x" alt="Homepage link" data-pin-nopin="true" /></a><div id="feast-mobile-search"><form class="search-form" method="get" action="https://www.aheadofthyme.com/" role="search"><label class="search-form-label screen-reader-text" for="searchform-2">search...</label><input class="search-form-input" type="search" name="s" id="searchform-2" placeholder="search..."><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.aheadofthyme.com/?s={s}"></form></div><ul id="menu-feast-modern-mobile-menu" class="menu"><li id="menu-item-9522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9522"><a href="https://www.aheadofthyme.com/about/">About</a></li>
+<li id="menu-item-9521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9521"><a href="https://www.aheadofthyme.com/recipes/">Recipes</a></li>
+<li id="menu-item-9523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9523"><a href="https://www.aheadofthyme.com/kitchen-essentials/">Shop</a></li>
+<li id="menu-item-37976" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37976"><a href="https://foodbloggerbusinessschool.com">Resources</a></li>
+</ul><div id="feast-mobile-menu-social-icons"><div id="feast-social"><li id="simple-social-icons-4" class="widget simple-social-icons"><ul class="alignleft"><li class="ssi-facebook"><a data-wpel-link="ignore" href="//www.facebook.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-facebook" aria-labelledby="social-facebook-4"><title id="social-facebook-4">Facebook</title><use xlink:data-wpel-link="ignore" href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-facebook"></use></svg></a></li><li class="ssi-instagram"><a data-wpel-link="ignore" href="//www.instagram.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-instagram" aria-labelledby="social-instagram-4"><title id="social-instagram-4">Instagram</title><use xlink:data-wpel-link="ignore" href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-instagram"></use></svg></a></li><li class="ssi-pinterest"><a data-wpel-link="ignore" href="//www.pinterest.com/aheadofthyme" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-pinterest" aria-labelledby="social-pinterest-4"><title id="social-pinterest-4">Pinterest</title><use xlink:data-wpel-link="ignore" href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-pinterest"></use></svg></a></li><li class="ssi-youtube"><a data-wpel-link="ignore" href="https://www.youtube.com/channel/UC6ce8ermLH1yGWByZgRifAA" target="_blank" rel="noopener noreferrer"><svg role="img" class="social-youtube" aria-labelledby="social-youtube-4"><title id="social-youtube-4">YouTube</title><use xlink:data-wpel-link="ignore" href="https://www.aheadofthyme.com/wp-content/plugins/simple-social-icons/symbol-defs.svg#social-youtube"></use></svg></a></li></ul></li>
+</div></div><a href="#" class="closebtn">×</a></div></div></div><div class="site-inner"><div class="content-sidebar-wrap"><main class="content" id="genesis-content"><nav id="breadcrumbs" aria-label="breadcrumbs"><span><span><a href="https://www.aheadofthyme.com/">Home</a></span> » <span class="breadcrumb_last" aria-current="page">Error 404: Page not found</span></span></nav><article class="entry"><h1 class="entry-title">Not found, error 404</h1><div class="entry-content"><p>The page you are looking for no longer exists. Perhaps you can return back to the <a href="https://www.aheadofthyme.com/">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below.</p><form class="search-form" method="get" action="https://www.aheadofthyme.com/" role="search"><label class="search-form-label screen-reader-text" for="searchform-3">search...</label><input class="search-form-input" type="search" name="s" id="searchform-3" placeholder="search..."><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.aheadofthyme.com/?s={s}"></form></div></article></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" id="genesis-sidebar-primary"><h2 class="genesis-sidebar-title screen-reader-text">Primary Sidebar</h2><section id="custom_html-10" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><h3 class="widgettitle widget-title">Welcome!</h3>
+<div class="textwidget custom-html-widget"><div style="text-align:center;">
+<img src="https://www.aheadofthyme.com/wp-content/uploads/2021/11/sam-and-dan-hu-aheadofthyme-16.jpg" alt="Quick and easy recipes for the everyday home cook, using fresh, seasonal and wholesome ingredients -- from healthy meals to take-out to comfort foods. | aheadofthyme.com" height="540" width="360">
+</div>
+<p><font size=2>
+Hi, we're Sam and Dan! We like to <b> help busy people eat real food that tastes good.</b>  Here, you can find hundreds of delicious, <b>quick and easy recipes</b>, using quality and wholesome ingredients.
+	<a href="https://aheadofthyme.com/about/">Read more about us</a></font>
+</p></div></div></section>
+<section id="search-7" class="widget widget_search"><div class="widget-wrap"><form class="search-form" method="get" action="https://www.aheadofthyme.com/" role="search"><label class="search-form-label screen-reader-text" for="searchform-4">search...</label><input class="search-form-input" type="search" name="s" id="searchform-4" placeholder="search..."><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.aheadofthyme.com/?s={s}"></form></div></section>
+<section id="custom_html-11" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#f9eee5; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://aheadofthyme.us12.list-manage.com/subscribe/post?u=bbc1c57467f581be09fac1712&amp;id=7d80666525" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<h2>Stay Updated</h2>
+Subscribe now to receive all the latest recipes, tips and news directly to your inbox.
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">Name </label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group input-group">
+<strong>How often would you like to receive recipe updates </strong>
+<ul><li><input type="checkbox" value="1" name="group[2][1]" id="mce-group[2]-2-0"><label for="mce-group[2]-2-0">as soon as they are posted</label></li>
+<li><input type="checkbox" value="2" name="group[2][2]" id="mce-group[2]-2-1"><label for="mce-group[2]-2-1">weekly recipe updates</label></li>
+</ul>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bbc1c57467f581be09fac1712_7d80666525" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script>mcsfInited=!1;
+function loadmcf(){var i=function(t){if(!t)return;var n=t.getBoundingClientRect();return 1888>n.top||-1900>n.top};
+if(mcsfInited||!i(document.querySelector("#mc_embed_signup"))||!window.jQuery)return;var s=document.createElement("script");s.onload=function(){};s.src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";document.head.appendChild(s);
+mcsfInited=!0;console.log("load maichimp form");
+postLoadMCF()
+}
+document.addEventListener("mousemove",loadmcf);document.addEventListener("scroll",function(){if(window.scrollY>11)loadmcf()})</script><script type='text/javascript'>function postLoadMCF(){console.log('postLoadMCF');
+(function($){window.fnames=new Array();window.ftypes=new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text'}(jQuery));window.$mcj=jQuery.noConflict(true)}</script>
+<!--End mc_embed_signup--></div></div></section>
+<section id="text-35" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><p><img fetchpriority="high" decoding="async" width="1000" height="500" class="wp-image-34758 size-medium" src="https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup.png" alt="Food Blogger Business School | foodbloggerbusinessschool.com" srcset="https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup.png 1000w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-300x150.png 300w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-768x384.png 768w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-600x300.png 600w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-720x360.png 720w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-360x180.png 360w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-180x90.png 180w, https://www.aheadofthyme.com/wp-content/uploads/2022/08/Food-Blogger-Business-School-Course-Mockup-150x75.png 150w" sizes="(max-width: 1000px) 100vw, 1000px" /></p>
+<h4 id="h-food-blogger-business-school" class="has-black-color has-text-color">Food Blogger Business School</h4>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:heading {"level":3,"textColor":"black"} --></p>
+<h3 class="has-black-color has-text-color">A step-by-step program that teaches food bloggers how to grow and scale their blogs into a full-time business</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph {"textColor":"black"} --></p>
+<p class="has-black-color has-text-color"><em>in less time and without posting endless content until you burn out.</em></p>
+<p><!-- wp:buttons {"contentJustification":"center","align":"wide"} --></p>
+<div class="wp-block-buttons alignwide is-content-justification-center">
+<p><!-- wp:button {"style":{"color":{"background":"#2e5543"},"border":{"radius":0}}} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-background no-border-radius" style="background-color: #2e5543;" href="https://foodbloggerbusinessschool.com" target="_blank" rel="noreferrer noopener">LEARN MORE</a></div>
+<p><!-- /wp:button --></p>
+</div>
+<p><!-- /wp:buttons --></p>
+</div>
+</div>
+		</div></section>
+</aside></div></div><footer class="site-footer"><div class="wrap"><h2 class="screen-reader-text">Footer</h2><div class="feast-modern-footer">
+<p class="has-text-align-center"><a href="#" rel="nofollow">↑ back to top</a></p>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:50%">
+<h3 class="has-text-align-left wp-block-heading" id="h-about-ahead-of-thyme">About Ahead of Thyme</h3>
+
+
+
+<p class="has-text-align-left">Hello and welcome! I'm Sam -- the founder of Ahead of Thyme, where&nbsp;<strong>we help busy people eat real food that tastes good.</strong>&nbsp;Here, you will find hundreds of delicious,&nbsp;<strong>quick and easy recipes</strong>, using quality and wholesome ingredients. So stay a while, browse around, and make something tasty for dinner tonight.</p>
+
+
+
+<ul class="wp-block-social-links alignleft has-icon-color is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex"><li style="color: #ffffff; " class="wp-social-link wp-social-link-feed has-white-color wp-block-social-link"><a href="https://aheadofthyme.com/feed/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M2,8.667V12c5.515,0,10,4.485,10,10h3.333C15.333,14.637,9.363,8.667,2,8.667z M2,2v3.333 c9.19,0,16.667,7.477,16.667,16.667H22C22,10.955,13.045,2,2,2z M4.5,17C3.118,17,2,18.12,2,19.5S3.118,22,4.5,22S7,20.88,7,19.5 S5.882,17,4.5,17z"></path></svg><span class="wp-block-social-link-label screen-reader-text">RSS Feed</span></a></li>
+
+<li style="color: #ffffff; " class="wp-social-link wp-social-link-instagram has-white-color wp-block-social-link"><a href="https://instagram.com/aheadofthyme/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+
+<li style="color: #ffffff; " class="wp-social-link wp-social-link-pinterest has-white-color wp-block-social-link"><a href="https://www.pinterest.com/aheadofthyme/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12.289,2C6.617,2,3.606,5.648,3.606,9.622c0,1.846,1.025,4.146,2.666,4.878c0.25,0.111,0.381,0.063,0.439-0.169 c0.044-0.175,0.267-1.029,0.365-1.428c0.032-0.128,0.017-0.237-0.091-0.362C6.445,11.911,6.01,10.75,6.01,9.668 c0-2.777,2.194-5.464,5.933-5.464c3.23,0,5.49,2.108,5.49,5.122c0,3.407-1.794,5.768-4.13,5.768c-1.291,0-2.257-1.021-1.948-2.277 c0.372-1.495,1.089-3.112,1.089-4.191c0-0.967-0.542-1.775-1.663-1.775c-1.319,0-2.379,1.309-2.379,3.059 c0,1.115,0.394,1.869,0.394,1.869s-1.302,5.279-1.54,6.261c-0.405,1.666,0.053,4.368,0.094,4.604 c0.021,0.126,0.167,0.169,0.25,0.063c0.129-0.165,1.699-2.419,2.142-4.051c0.158-0.59,0.817-2.995,0.817-2.995 c0.43,0.784,1.681,1.446,3.013,1.446c3.963,0,6.822-3.494,6.822-7.833C20.394,5.112,16.849,2,12.289,2"></path></svg><span class="wp-block-social-link-label screen-reader-text">Pinterest</span></a></li>
+
+<li style="color: #ffffff; " class="wp-social-link wp-social-link-facebook has-white-color wp-block-social-link"><a href="https://facebook.com/aheadofthyme/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h3.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h3.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
+
+<li style="color: #ffffff; " class="wp-social-link wp-social-link-twitter has-white-color wp-block-social-link"><a href="https://twitter.com/aheadofthyme/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
+
+<li style="color: #ffffff; " class="wp-social-link wp-social-link-youtube has-white-color wp-block-social-link"><a href="https://www.youtube.com/channel/UCoNZiynYarCQW1tq7EZaDEg?sub_confirmation=1" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="wp-block-social-link-label screen-reader-text">YouTube</span></a></li></ul>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading" id="h-learn-more">Learn More</h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.aheadofthyme.com/about/">About Us</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/work-with-me/">Work with Us</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/kitchen-essentials/">Shop</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/privacy-policy/">Privacy Policy</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/contact/">Contact</a></li>
+
+
+
+<li><a href="https://foodbloggerbusinessschool.com" target="_blank" rel="noreferrer noopener">Food Blogger Business School</a></li>
+
+
+
+<li><a href="http://eepurl.com/bONTB5" target="_blank" rel="noreferrer noopener">Newsletter</a></li>
+</ul>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h3 class="wp-block-heading" id="h-browse">Browse</h3>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.aheadofthyme.com/60-easy-dinner-ideas/">60+ Easy Dinners</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/60-best-chicken-recipes/">60+ Chicken Recipes</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/25-best-ground-beef-recipes/">25+ Ground Beef Recipes</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/40-best-pasta-recipes/">40+ Pasta Recipes</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/50-best-bread-recipes-ever/">50+ Bread Recipes</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/25-easy-air-fryer-recipes/">25+ Air Fryer Recipes</a></li>
+
+
+
+<li><a href="https://www.aheadofthyme.com/dessert-recipes/">Dessert</a></li>
+</ul>
+
+
+
+<p></p>
+</div>
+</div>
+
+
+
+<p class="has-text-align-center">As an Amazon Associate I earn from qualifying purchases, at no additional cost to you.</p>
+
+
+
+<p class="has-text-align-center"><strong><a href="https://www.aheadofthyme.com/copyright/">Copyright © 2023 Ahead of Thyme Incorporated</a></strong></p>
+</div></div></footer></div><script data-no-optimize='1' data-cfasync='false' id='cls-insertion-091846e'>!function(){"use strict";function e(){return e=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var i=arguments[t];for(var n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n])}return e},e.apply(this,arguments)}var t,i,n,s,o,r,a,l,c,d,u,h,p,m,_,g,y,f,v,S;window.adthriveCLS.buildDate="2025-02-06",function(e){e.amznbid="amznbid",e.amzniid="amzniid",e.amznp="amznp",e.amznsz="amznsz"}(t||(t={})),function(e){e.ThirtyThreeAcross="33across",e.Adform="adform",e.Aidem="aidem",e.AidemServer="aidem_ss",e.AppNexus="appnexus",e.AmazonTAM="amazon",e.AmazonUAM="AmazonUAM",e.AmazonASR="AmazonASR",e.Conversant="conversant",e.Concert="concert",e.Criteo="criteo",e.CriteoServer="crit_ss",e.GumGum="gumgum",e.ImproveDigital="improvedigital",e.ImproveDigitalServer="improve_ss",e.IndexExchange="ix",e.Kargo="kargo",e.KargoServer="krgo_ss",e.MediaGrid="grid",e.MediaGridVideo="gridvid",e.Nativo="nativo",e.Ogury="ogury",e.OpenX="openx",e.OpenXServer="opnx_ss",e.Ozone="ozone",e.Pubmatic="pubmatic",e.PubmaticServer="pubm_ss",e.ResetDigital="resetdigital",e.Rise="rise",e.Rtbhouse="rtbhouse",e.Rubicon="rubicon",e.RubiconServer="rubi_ss",e.Seedtag="seedtag",e.Sharethrough="sharethrough",e.SharethroughServer="share_ss",e.Teads="teads",e.Triplelift="triplelift",e.TripleliftServer="tripl_ss",e.TTD="ttd",e.Undertone="undertone",e.UndertoneServer="under_ss",e.Unruly="unruly",e.YahooSSP="yahoossp",e.YahooSSPServer="yah_ss",e.Verizon="verizon",e.Yieldmo="yieldmo",e.Flipp="flipp"}(i||(i={})),function(e){e.Prebid="prebid",e.GAM="gam",e.Amazon="amazon",e.Marmalade="marmalade",e.Floors="floors",e.CMP="cmp",e.Optable="optable",e.OptimalBidder="optimalBidder"}(n||(n={})),function(e){e.cm="cm",e.fbrap="fbrap",e.rapml="rapml"}(s||(s={})),function(e){e.lazy="lazy",e.raptive="raptive",e.refresh="refresh",e.session="session",e.crossDomain="crossdomain",e.highSequence="highsequence",e.lazyBidPool="lazyBidPool"}(o||(o={})),function(e){e.lazy="l",e.raptive="rapml",e.refresh="r",e.session="s",e.crossdomain="c",e.highsequence="hs",e.lazyBidPool="lbp"}(r||(r={})),function(e){e.Version="Version",e.SharingNotice="SharingNotice",e.SaleOptOutNotice="SaleOptOutNotice",e.SharingOptOutNotice="SharingOptOutNotice",e.TargetedAdvertisingOptOutNotice="TargetedAdvertisingOptOutNotice",e.SensitiveDataProcessingOptOutNotice="SensitiveDataProcessingOptOutNotice",e.SensitiveDataLimitUseNotice="SensitiveDataLimitUseNotice",e.SaleOptOut="SaleOptOut",e.SharingOptOut="SharingOptOut",e.TargetedAdvertisingOptOut="TargetedAdvertisingOptOut",e.SensitiveDataProcessing="SensitiveDataProcessing",e.KnownChildSensitiveDataConsents="KnownChildSensitiveDataConsents",e.PersonalDataConsents="PersonalDataConsents",e.MspaCoveredTransaction="MspaCoveredTransaction",e.MspaOptOutOptionMode="MspaOptOutOptionMode",e.MspaServiceProviderMode="MspaServiceProviderMode",e.SubSectionType="SubsectionType",e.Gpc="Gpc"}(a||(a={})),function(e){e[e.NA=0]="NA",e[e.OptedOut=1]="OptedOut",e[e.OptedIn=2]="OptedIn"}(l||(l={})),function(e){e.AdDensity="addensity",e.AdLayout="adlayout",e.FooterCloseButton="footerclose",e.Interstitial="interstitial",e.RemoveVideoTitleWrapper="removevideotitlewrapper",e.StickyOutstream="stickyoutstream",e.StickyOutstreamOnStickyPlayer="sospp",e.VideoAdvancePlaylistRelatedPlayer="videoadvanceplaylistrp",e.MobileStickyPlayerPosition="mspp"}(c||(c={})),function(e){e.Below_Post_1="Below_Post_1",e.Below_Post="Below_Post",e.Content="Content",e.Content_1="Content_1",e.Content_2="Content_2",e.Content_3="Content_3",e.Content_4="Content_4",e.Content_5="Content_5",e.Content_6="Content_6",e.Content_7="Content_7",e.Content_8="Content_8",e.Content_9="Content_9",e.Recipe="Recipe",e.Recipe_1="Recipe_1",e.Recipe_2="Recipe_2",e.Recipe_3="Recipe_3",e.Recipe_4="Recipe_4",e.Recipe_5="Recipe_5",e.Native_Recipe="Native_Recipe",e.Footer_1="Footer_1",e.Footer="Footer",e.Header_1="Header_1",e.Header_2="Header_2",e.Header="Header",e.Sidebar_1="Sidebar_1",e.Sidebar_2="Sidebar_2",e.Sidebar_3="Sidebar_3",e.Sidebar_4="Sidebar_4",e.Sidebar_5="Sidebar_5",e.Sidebar_9="Sidebar_9",e.Sidebar="Sidebar",e.Interstitial_1="Interstitial_1",e.Interstitial="Interstitial",e.Video_StickyOutstream_1="Video_StickyOutstream_1",e.Video_StickyOutstream="Video_StickyOutstream",e.Video_StickyInstream="Video_StickyInstream",e.Sponsor_Tile="Sponsor_Tile"}(d||(d={})),function(e){e.Desktop="desktop",e.Mobile="mobile"}(u||(u={})),function(e){e.Video_Collapse_Autoplay_SoundOff="Video_Collapse_Autoplay_SoundOff",e.Video_Individual_Autoplay_SOff="Video_Individual_Autoplay_SOff",e.Video_Coll_SOff_Smartphone="Video_Coll_SOff_Smartphone",e.Video_In_Post_ClicktoPlay_SoundOn="Video_In-Post_ClicktoPlay_SoundOn",e.Video_Collapse_Autoplay_SoundOff_15s="Video_Collapse_Autoplay_SoundOff_15s",e.Video_Individual_Autoplay_SOff_15s="Video_Individual_Autoplay_SOff_15s",e.Video_Coll_SOff_Smartphone_15s="Video_Coll_SOff_Smartphone_15s",e.Video_In_Post_ClicktoPlay_SoundOn_15s="Video_In-Post_ClicktoPlay_SoundOn_15s"}(h||(h={})),function(e){e.vpaidAdPlayError="vpaidAdPlayError",e.adError="adError",e.adLoaded="adLoaded"}(p||(p={})),function(e){e.Float="adthrive-collapse-float",e.Sticky="adthrive-collapse-sticky",e.Mobile="adthrive-collapse-mobile"}(m||(m={})),function(e){e.Small="adthrive-collapse-small",e.Medium="adthrive-collapse-medium"}(_||(_={})),function(e){e.BottomRight="adthrive-collapse-bottom-right"}(g||(g={})),function(e){e[e.Unstarted=0]="Unstarted",e[e.UncollapsedPlay=1]="UncollapsedPlay",e[e.CollapsedPlay=2]="CollapsedPlay",e[e.UserPauseUncollapsed=3]="UserPauseUncollapsed",e[e.UserPauseCollapsed=4]="UserPauseCollapsed",e[e.PausedNotVisible=5]="PausedNotVisible",e[e.Overlapped=6]="Overlapped",e[e.Closed=7]="Closed",e[e.NonLinearAdPlay=8]="NonLinearAdPlay",e[e.NonLinearAdPaused=9]="NonLinearAdPaused",e[e.NonLinearAdOverlapped=10]="NonLinearAdOverlapped",e[e.UserUnPaused=11]="UserUnPaused"}(y||(y={})),function(e){e[e.Play=0]="Play",e[e.UserClick=1]="UserClick",e[e.PageSwitch=2]="PageSwitch",e[e.OutOfView=3]="OutOfView",e[e.InView=4]="InView",e[e.Close=5]="Close",e[e.Overlapping=6]="Overlapping",e[e.OtherVideoPlaying=7]="OtherVideoPlaying"}(f||(f={})),function(e){e.None="none"}(v||(v={})),function(e){e.Default="default",e.AZ_Animals="5daf495ed42c8605cfc74b0b",e.Natashas_Kitchen="55bccc97303edab84afd77e2",e.RecipeTin_Eats="55cb7e3b4bc841bd0c4ea577",e.Sallys_Baking_Recipes="566aefa94856897050ee7303",e.Spend_With_Pennies="541917f5a90318f9194874cf"}(S||(S={}));const b=e=>{const t={};return function(...i){const n=JSON.stringify(i);if(t[n])return t[n];const s=e.apply(this,i);return t[n]=s,s}};const C=new class{info(e,t,...i){this.call(console.info,e,t,...i)}warn(e,t,...i){this.call(console.warn,e,t,...i)}error(e,t,...i){this.call(console.error,e,t,...i),this.sendErrorLogToCommandQueue(e,t,...i)}event(e,t,...i){var n;"debug"===(null==(n=window.adthriveCLS)?void 0:n.bucket)&&this.info(e,t)}sendErrorLogToCommandQueue(e,t,...i){window.adthrive=window.adthrive||{},window.adthrive.cmd=window.adthrive.cmd||[],window.adthrive.cmd.push((()=>{void 0!==window.adthrive.logError&&"function"==typeof window.adthrive.logError&&window.adthrive.logError(e,t,i)}))}call(e,t,i,...n){const s=[`%c${t}::${i} `],o=["color: #999; font-weight: bold;"];n.length>0&&"string"==typeof n[0]&&s.push(n.shift()),o.push(...n);try{Function.prototype.apply.call(e,console,[s.join(""),...o])}catch(e){return void console.error(e)}}},O=(e,t)=>null==e||e!=e?t:e,w=e=>{const t=e.offsetHeight,i=e.offsetWidth,n=e.getBoundingClientRect(),s=document.body,o=document.documentElement,r=window.pageYOffset||o.scrollTop||s.scrollTop,a=window.pageXOffset||o.scrollLeft||s.scrollLeft,l=o.clientTop||s.clientTop||0,c=o.clientLeft||s.clientLeft||0,d=Math.round(n.top+r-l),u=Math.round(n.left+a-c);return{top:d,left:u,bottom:d+t,right:u+i,width:i,height:t}},x=e=>{let t={};const i=((e=window.location.search)=>{const t=0===e.indexOf("?")?1:0;return e.slice(t).split("&").reduce(((e,t)=>{const[i,n]=t.split("=");return e.set(i,n),e}),new Map)})().get(e);if(i)try{const n=decodeURIComponent(i).replace(/\+/g,"");t=JSON.parse(n),C.event("ExperimentOverridesUtil","getExperimentOverrides",e,t)}catch(e){}return t},A=b(((e=navigator.userAgent)=>/Windows NT|Macintosh/i.test(e))),E=b((()=>{const e=navigator.userAgent,t=/Tablet|iPad|Playbook|Nook|webOS|Kindle|Android (?!.*Mobile).*Safari|CrOS/i.test(e);return/Mobi|iP(hone|od)|Opera Mini/i.test(e)&&!t})),P=(e,t,i=document)=>{const n=((e=document)=>{const t=e.querySelectorAll("article");if(0===t.length)return null;const i=Array.from(t).reduce(((e,t)=>t.offsetHeight>e.offsetHeight?t:e));return i&&i.offsetHeight>1.5*window.innerHeight?i:null})(i),s=n?[n]:[],o=[];e.forEach((e=>{const n=Array.from(i.querySelectorAll(e.elementSelector)).slice(0,e.skip);var r;(r=e.elementSelector,r.includes(",")?r.split(","):[r]).forEach((r=>{const a=i.querySelectorAll(r);for(let i=0;i<a.length;i++){const r=a[i];if(t.map.some((({el:e})=>e.isEqualNode(r))))continue;const l=r&&r.parentElement;l&&l!==document.body?s.push(l):s.push(r),-1===n.indexOf(r)&&o.push({dynamicAd:e,element:r})}}))}));const r=((e=document)=>(e===document?document.body:e).getBoundingClientRect().top)(i),a=o.sort(((e,t)=>e.element.getBoundingClientRect().top-r-(t.element.getBoundingClientRect().top-r)));return[s,a]};class k{}const D=["mcmpfreqrec"];const R=new class extends k{init(e){this._gdpr="true"===e.gdpr,this._shouldQueue=this._gdpr}clearQueue(e){e&&(this._shouldQueue=!1,this._sessionStorageHandlerQueue.forEach((e=>{this.setSessionStorage(e.key,e.value)})),this._localStorageHandlerQueue.forEach((e=>{if("adthrive_abgroup"===e.key){const t=Object.keys(e.value)[0],i=e.value[t],n=e.value[`${t}_weight`];this.getOrSetABGroupLocalStorageValue(t,i,n,{value:24,unit:"hours"})}else e.expiry?"internal"===e.type?this.setExpirableInternalLocalStorage(e.key,e.value,{expiry:e.expiry,resetOnRead:e.resetOnRead}):this.setExpirableExternalLocalStorage(e.key,e.value,{expiry:e.expiry,resetOnRead:e.resetOnRead}):"internal"===e.type?this.setInternalLocalStorage(e.key,e.value):this.setExternalLocalStorage(e.key,e.value)})),this._cookieHandlerQueue.forEach((e=>{"internal"===e.type?this.setInternalCookie(e.key,e.value):this.setExternalCookie(e.key,e.value)}))),this._sessionStorageHandlerQueue=[],this._localStorageHandlerQueue=[],this._cookieHandlerQueue=[]}readInternalCookie(e){return this._verifyInternalKey(e),this._readCookie(e)}readExternalCookie(e){return this._readCookie(e)}readInternalLocalStorage(e){return this._verifyInternalKey(e),this._readFromLocalStorage(e)}readExternalLocalStorage(e){return this._readFromLocalStorage(e)}readSessionStorage(e){const t=window.sessionStorage.getItem(e);if(!t)return null;try{return JSON.parse(t)}catch(e){return t}}deleteCookie(e){document.cookie=`${e}=; SameSite=None; Secure; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`}deleteLocalStorage(e){window.localStorage.removeItem(e)}deleteSessionStorage(e){window.sessionStorage.removeItem(e)}setInternalCookie(e,t,i){this._verifyInternalKey(e),this._setCookieValue("internal",e,t,i)}setExternalCookie(e,t,i){this._setCookieValue("external",e,t,i)}setInternalLocalStorage(e,t){if(this._verifyInternalKey(e),this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"internal"};this._localStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.localStorage.setItem(e,i)}}setExternalLocalStorage(e,t){if(this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"external"};this._localStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.localStorage.setItem(e,i)}}setExpirableInternalLocalStorage(e,t,i){this._verifyInternalKey(e);try{var n;const o=null!=(n=null==i?void 0:i.expiry)?n:{value:400,unit:"days"};var s;const r=null!=(s=null==i?void 0:i.resetOnRead)&&s;if(this._gdpr&&this._shouldQueue){const i={key:e,value:t,type:"internal",expires:this._getExpiryDate(o),expiry:o,resetOnRead:r};this._localStorageHandlerQueue.push(i)}else{const i={value:t,type:"internal",expires:this._getExpiryDate(o),expiry:o,resetOnRead:r};window.localStorage.setItem(e,JSON.stringify(i))}}catch(e){console.error(e)}}setExpirableExternalLocalStorage(e,t,i){try{var n;const o=null!=(n=null==i?void 0:i.expiry)?n:{value:400,unit:"days"};var s;const r=null!=(s=null==i?void 0:i.resetOnRead)&&s;if(this._gdpr&&this._shouldQueue){const i={key:e,value:JSON.stringify(t),type:"external",expires:this._getExpiryDate(o),expiry:o,resetOnRead:r};this._localStorageHandlerQueue.push(i)}else{const i={value:t,type:"external",expires:this._getExpiryDate(o),expiry:o,resetOnRead:r};window.localStorage.setItem(e,JSON.stringify(i))}}catch(e){console.error(e)}}setSessionStorage(e,t){if(this._gdpr&&this._shouldQueue){const i={key:e,value:t};this._sessionStorageHandlerQueue.push(i)}else{const i="string"==typeof t?t:JSON.stringify(t);window.sessionStorage.setItem(e,i)}}getOrSetABGroupLocalStorageValue(t,i,n,s,o=!0){const r="adthrive_abgroup",a=this.readInternalLocalStorage(r);if(null!==a){const e=a[t];var l;const i=null!=(l=a[`${t}_weight`])?l:null;if(this._isValidABGroupLocalStorageValue(e))return[e,i]}const c=e({},a,{[t]:i,[`${t}_weight`]:n});return s?this.setExpirableInternalLocalStorage(r,c,{expiry:s,resetOnRead:o}):this.setInternalLocalStorage(r,c),[i,n]}_isValidABGroupLocalStorageValue(e){return null!=e&&!("number"==typeof e&&isNaN(e))}_getExpiryDate({value:e,unit:t}){const i=new Date;return"milliseconds"===t?i.setTime(i.getTime()+e):"seconds"==t?i.setTime(i.getTime()+1e3*e):"minutes"===t?i.setTime(i.getTime()+60*e*1e3):"hours"===t?i.setTime(i.getTime()+60*e*60*1e3):"days"===t?i.setTime(i.getTime()+24*e*60*60*1e3):"months"===t&&i.setTime(i.getTime()+30*e*24*60*60*1e3),i.toUTCString()}_resetExpiry(e){return e.expires=this._getExpiryDate(e.expiry),e}_readCookie(e){const t=document.cookie.split("; ").find((t=>t.split("=")[0]===e));if(!t)return null;const i=t.split("=")[1];if(i)try{return JSON.parse(decodeURIComponent(i))}catch(e){return decodeURIComponent(i)}return null}_readFromLocalStorage(e){const t=window.localStorage.getItem(e);if(!t)return null;try{const n=JSON.parse(t),s=n.expires&&(new Date).getTime()>new Date(n.expires).getTime();if("adthrive_abgroup"===e&&n.created)return window.localStorage.removeItem(e),null;if(n.resetOnRead&&n.expires&&!s){const t=this._resetExpiry(n);var i;return window.localStorage.setItem(e,JSON.stringify(n)),null!=(i=t.value)?i:t}if(s)return window.localStorage.removeItem(e),null;if(!n.hasOwnProperty("value"))return n;try{return JSON.parse(n.value)}catch(e){return n.value}}catch(e){return t}}_setCookieValue(e,t,i,n){try{if(this._gdpr&&this._shouldQueue){const n={key:t,value:i,type:e};this._cookieHandlerQueue.push(n)}else{var s;const e=this._getExpiryDate(null!=(s=null==n?void 0:n.expiry)?s:{value:400,unit:"days"});var o;const a=null!=(o=null==n?void 0:n.sameSite)?o:"None";var r;const l=null==(r=null==n?void 0:n.secure)||r,c="object"==typeof i?JSON.stringify(i):i;document.cookie=`${t}=${c}; SameSite=${a}; ${l?"Secure;":""} expires=${e}; path=/`}}catch(e){}}_verifyInternalKey(e){const t=e.startsWith("adthrive_"),i=e.startsWith("adt_");if(!t&&!i&&!D.includes(e))throw new Error('When reading an internal cookie, the key must start with "adthrive_" or "adt_" or be part of the allowed legacy keys.')}constructor(...e){super(...e),this.name="BrowserStorage",this.disable=!1,this.gdprPurposes=[1],this._sessionStorageHandlerQueue=[],this._localStorageHandlerQueue=[],this._cookieHandlerQueue=[],this._shouldQueue=!1}},I=(e,t,i)=>{switch(t){case c.AdDensity:return((e,t)=>{const i=e.adDensityEnabled,n=e.adDensityLayout.pageOverrides.find((e=>!!document.querySelector(e.pageSelector)&&(e[t].onePerViewport||"number"==typeof e[t].adDensity)));return!i||!n})(e,i);case c.StickyOutstream:return(e=>{var t,i,n;const s=null==(n=e.videoPlayers)||null==(i=n.partners)||null==(t=i.stickyOutstream)?void 0:t.blockedPageSelectors;return!s||!document.querySelector(s)})(e);case c.Interstitial:return(e=>{const t=e.adOptions.interstitialBlockedPageSelectors;return!t||!document.querySelector(t)})(e);default:return!0}},M=t=>{try{return{valid:!0,elements:document.querySelectorAll(t)}}catch(t){return e({valid:!1},t)}},L=e=>""===e?{valid:!0}:M(e),T=(e,t)=>{if(!e)return!1;const i=!!e.enabled,n=null==e.dateStart||Date.now()>=e.dateStart,s=null==e.dateEnd||Date.now()<=e.dateEnd,o=null===e.selector||""!==e.selector&&!!document.querySelector(e.selector),r="mobile"===e.platform&&"mobile"===t,a="desktop"===e.platform&&"desktop"===t,l=null===e.platform||"all"===e.platform||r||a,c="bernoulliTrial"===e.experimentType?1===e.variants.length:(e=>{const t=e.reduce(((e,t)=>t.weight?t.weight+e:e),0);return e.length>0&&e.every((e=>{const t=e.value,i=e.weight;return!(null==t||"number"==typeof t&&isNaN(t)||!i)}))&&100===t})(e.variants);return c||C.error("SiteTest","validateSiteExperiment","experiment presented invalid choices for key:",e.key,e.variants),i&&n&&s&&o&&l&&c},V=["siteId","siteName","adOptions","breakpoints","adUnits"];window.adthrive.windowPerformance=window.adthrive.windowPerformance||new class{resetTimeOrigin(){this._timeOrigin=window.performance.now()}now(){try{return Math.round(window.performance.now()-this._timeOrigin)}catch(e){return 0}}constructor(){this._timeOrigin=0}};const N=window.adthrive.windowPerformance,j=N.now.bind(N);class H{}class G extends H{get(){if(this._probability<0||this._probability>1)throw new Error(`Invalid probability: ${this._probability}`);return Math.random()<this._probability}constructor(e){super(),this._probability=e}}class F{get siteFeatureRollouts(){return this._featureRollouts}_isRolloutEnabled(e){if(this._doesRolloutExist(e)){const t=this._featureRollouts[e];let i=t.enabled;const n=t.data;if(this._doesRolloutHaveConfig(e)&&this._isFeatureRolloutConfigType(n)){const e=n.pct_enabled?n.pct_enabled/100:1;i=i&&new G(e).get()}return i}return!1}isRolloutEnabled(e){var t;const i=null!=(t=this._checkedFeatureRollouts.get(e))?t:this._isRolloutEnabled(e);return void 0===this._checkedFeatureRollouts.get(e)&&this._checkedFeatureRollouts.set(e,i),i}_doesRolloutExist(e){return this._featureRollouts&&!!this._featureRollouts[e]}_doesRolloutHaveConfig(e){return this._doesRolloutExist(e)&&"data"in this._featureRollouts[e]}_isFeatureRolloutConfigType(e){return null!=e&&"object"==typeof e&&!!Object.keys(e).length}getSiteRolloutConfig(e){var t;return this.isRolloutEnabled(e)&&null!=(t=this._featureRollouts[e].data)?t:{}}get enabledFeatureRolloutIds(){return this._enabledFeatureRolloutIds}constructor(){this._featureRollouts={},this._checkedFeatureRollouts=new Map,this._enabledFeatureRolloutIds=[]}}class z extends F{_setEnabledFeatureRolloutIds(){Object.entries(this._featureRollouts).forEach((([e,t])=>{this.isRolloutEnabled(e)&&void 0!==t.featureRolloutId&&this._enabledFeatureRolloutIds.push(t.featureRolloutId)}))}constructor(e){super(),this._featureRollouts=e,this._setEnabledFeatureRolloutIds()}}class B{get enabled(){return!!this._clsGlobalData&&!!this._clsGlobalData.siteAds&&((e,t=V)=>{if(!e)return!1;for(let i=0;i<t.length;i++)if(!e[t[i]])return!1;return!0})(this._clsGlobalData.siteAds)}get error(){return!(!this._clsGlobalData||!this._clsGlobalData.error)}set siteAds(e){this._clsGlobalData.siteAds=e}get siteAds(){return this._clsGlobalData.siteAds}set disableAds(e){this._clsGlobalData.disableAds=e}get disableAds(){return this._clsGlobalData.disableAds}set enabledLocations(e){this._clsGlobalData.enabledLocations=e}get enabledLocations(){return this._clsGlobalData.enabledLocations}get injectedFromPlugin(){return this._clsGlobalData.injectedFromPlugin}set injectedFromPlugin(e){this._clsGlobalData.injectedFromPlugin=e}get injectedFromSiteAds(){return this._clsGlobalData.injectedFromSiteAds}set injectedFromSiteAds(e){this._clsGlobalData.injectedFromSiteAds=e}overwriteInjectedSlots(e){this._clsGlobalData.injectedSlots=e}setInjectedSlots(e){this._clsGlobalData.injectedSlots=this._clsGlobalData.injectedSlots||[],this._clsGlobalData.injectedSlots.push(e)}get injectedSlots(){return this._clsGlobalData.injectedSlots}setInjectedVideoSlots(e){this._clsGlobalData.injectedVideoSlots=this._clsGlobalData.injectedVideoSlots||[],this._clsGlobalData.injectedVideoSlots.push(e)}get injectedVideoSlots(){return this._clsGlobalData.injectedVideoSlots}setInjectedScripts(e){this._clsGlobalData.injectedScripts=this._clsGlobalData.injectedScripts||[],this._clsGlobalData.injectedScripts.push(e)}get getInjectedScripts(){return this._clsGlobalData.injectedScripts}setExperiment(e,t,i=!1){this._clsGlobalData.experiments=this._clsGlobalData.experiments||{},this._clsGlobalData.siteExperiments=this._clsGlobalData.siteExperiments||{};(i?this._clsGlobalData.siteExperiments:this._clsGlobalData.experiments)[e]=t}getExperiment(e,t=!1){const i=t?this._clsGlobalData.siteExperiments:this._clsGlobalData.experiments;return i&&i[e]}setWeightedChoiceExperiment(e,t,i=!1){this._clsGlobalData.experimentsWeightedChoice=this._clsGlobalData.experimentsWeightedChoice||{},this._clsGlobalData.siteExperimentsWeightedChoice=this._clsGlobalData.siteExperimentsWeightedChoice||{};(i?this._clsGlobalData.siteExperimentsWeightedChoice:this._clsGlobalData.experimentsWeightedChoice)[e]=t}getWeightedChoiceExperiment(e,t=!1){var i,n;const s=t?null==(i=this._clsGlobalData)?void 0:i.siteExperimentsWeightedChoice:null==(n=this._clsGlobalData)?void 0:n.experimentsWeightedChoice;return s&&s[e]}get branch(){return this._clsGlobalData.branch}get bucket(){return this._clsGlobalData.bucket}set videoDisabledFromPlugin(e){this._clsGlobalData.videoDisabledFromPlugin=e}get videoDisabledFromPlugin(){return this._clsGlobalData.videoDisabledFromPlugin}set targetDensityLog(e){this._clsGlobalData.targetDensityLog=e}get targetDensityLog(){return this._clsGlobalData.targetDensityLog}shouldHalveIOSDensity(){const e=new z(this.enabled&&this._clsGlobalData&&this._clsGlobalData.siteAds&&"featureRollouts"in this._clsGlobalData.siteAds&&this._clsGlobalData.siteAds.featureRollouts||{});return((e=navigator.userAgent)=>/iP(hone|od|ad)/i.test(e))()&&e.isRolloutEnabled("iOS-Resolution")}getTargetDensity(e){return this.shouldHalveIOSDensity()?e/2:e}get removeVideoTitleWrapper(){return this._clsGlobalData.siteAds.adOptions.removeVideoTitleWrapper}constructor(){this._clsGlobalData=window.adthriveCLS}}class U{static getScrollTop(){return(window.pageYOffset||document.documentElement.scrollTop)-(document.documentElement.clientTop||0)}static getScrollBottom(){return this.getScrollTop()+(document.documentElement.clientHeight||0)}static shufflePlaylist(e){let t,i,n=e.length;for(;0!==n;)i=Math.floor(Math.random()*e.length),n-=1,t=e[n],e[n]=e[i],e[i]=t;return e}static isMobileLandscape(){return window.matchMedia("(orientation: landscape) and (max-height: 480px)").matches}static playerViewable(e){const t=e.getBoundingClientRect();return this.isMobileLandscape()?window.innerHeight>t.top+t.height/2&&t.top+t.height/2>0:window.innerHeight>t.top+t.height/2}static createQueryString(e){return Object.keys(e).map((t=>`${t}=${e[t]}`)).join("&")}static createEncodedQueryString(e){return Object.keys(e).map((t=>`${t}=${encodeURIComponent(e[t])}`)).join("&")}static setMobileLocation(e){return"top-left"===(e=e||"bottom-right")?e="adthrive-collapse-top-left":"top-right"===e?e="adthrive-collapse-top-right":"bottom-left"===e?e="adthrive-collapse-bottom-left":"bottom-right"===e?e="adthrive-collapse-bottom-right":"top-center"===e&&(e=E()?"adthrive-collapse-top-center":"adthrive-collapse-bottom-right"),e}static addMaxResolutionQueryParam(e){const t=`max_resolution=${E()?"320":"1280"}`,[i,n]=String(e).split("?");return`${i}?${n?n+`&${t}`:t}`}}class W{constructor(e){this._clsOptions=e,this.removeVideoTitleWrapper=O(this._clsOptions.siteAds.adOptions.removeVideoTitleWrapper,!1);const t=this._clsOptions.siteAds.videoPlayers;this.footerSelector=O(t&&t.footerSelector,""),this.players=O(t&&t.players.map((e=>(e.mobileLocation=U.setMobileLocation(e.mobileLocation),e))),[]),this.relatedSettings=t&&t.contextual}}class q{constructor(e){this.mobileStickyPlayerOnPage=!1,this.playlistPlayerAdded=!1,this.relatedPlayerAdded=!1,this.footerSelector="",this.removeVideoTitleWrapper=!1,this.videoAdOptions=new W(e),this.players=this.videoAdOptions.players,this.relatedSettings=this.videoAdOptions.relatedSettings,this.removeVideoTitleWrapper=this.videoAdOptions.removeVideoTitleWrapper,this.footerSelector=this.videoAdOptions.footerSelector}}class Q{setExperimentKey(e=!1){this._clsOptions.setExperiment(this.abgroup,this.result,e)}constructor(){this._clsOptions=new B,this.shouldUseCoreExperimentsConfig=!1}}class K extends Q{get result(){return this._result}run(){return new G(.1).get()}constructor(){super(),this._result=!1,this._choices=[{choice:!0},{choice:!1}],this.key="RemoveLargeSize",this.abgroup="smhd100",this._result=this.run(),this.setExperimentKey()}}function J(e,t,i,n){var s,o=arguments.length,r=o<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,i):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)r=Reflect.decorate(e,t,i,n);else for(var a=e.length-1;a>=0;a--)(s=e[a])&&(r=(o<3?s(r):o>3?s(t,i,r):s(t,i))||r);return o>3&&r&&Object.defineProperty(t,i,r),r}function Y(e,t){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(e,t)}"function"==typeof SuppressedError&&SuppressedError;const X=(e,t,i,n,s,o)=>{const r=Math.round(o-s),a=[],l=[];a.push("(",i.map((()=>"%o")).join(", "),")"),l.push(...i),void 0!==n&&(a.push(" => %o"),l.push(n)),a.push(` %c(${r}ms)`),l.push("color: #999;")},Z=(e,t,i)=>{const n=void 0!==i.get?i.get:i.value;return function(...i){try{const s=j(),o=n.apply(this,i);if(o instanceof Promise)return o.then((e=>{const t=j();return X(0,0,i,e,s,t),Promise.resolve(e)})).catch((i=>{throw i.logged||(C.error(e,t,i),i.logged=!0),i}));{const e=j();return X(0,0,i,o,s,e),o}}catch(i){throw i.logged||(C.error(e,t,i),i.logged=!0),i}}},ee=(t,i=!1)=>n=>{const s=Object.getOwnPropertyNames(n.prototype).filter((e=>i||0!==e.indexOf("_"))).map((e=>[e,Object.getOwnPropertyDescriptor(n.prototype,e)]));for(const[i,o]of s)void 0!==o&&"function"==typeof o.value?n.prototype[i]=Z(t,i,o):void 0!==o&&void 0!==o.get&&"function"==typeof o.get&&Object.defineProperty(n.prototype,i,e({},o,{get:Z(t,i,o)}))};class te extends Q{get result(){return this._result}run(){return new G(this.weight).get()}constructor(e){super(),this._result=!1,this.key="ParallaxAdsExperiment",this.abgroup="parallax",this._choices=[{choice:!0},{choice:!1}],this.weight=.5;!!E()&&e.largeFormatsMobile&&(this._result=this.run(),this.setExperimentKey())}}te=J([ee("ParallaxAdsExperiment"),Y("design:type",Function),Y("design:paramtypes",["undefined"==typeof AdTypes?Object:AdTypes])],te);class ie extends Q{get result(){return this._result}run(){return new G(1).get()}constructor(){super(),this._result=!1,this._choices=[{choice:!0},{choice:!1}],this.key="mrsf",this.abgroup="mrsf",E()&&(this._result=this.run(),this.setExperimentKey())}}const ne=[[728,90],[300,250],[300,600],[320,50],[970,250],[160,600],[300,1050],[336,280],[970,90],[300,50],[320,100],[468,60],[250,250],[120,240],[1,1],[300,300],[552,334],[300,420],[728,250],[320,300],[300,390]],se=[[300,600],[160,600]],oe=new Map([[d.Footer,1],[d.Header,2],[d.Sidebar,3],[d.Content,4],[d.Recipe,5],["Sidebar_sticky",6],["Below Post",7]]),re=(e,t)=>{const{location:i,sticky:n}=e;if(i===d.Recipe&&t){const{recipeMobile:e,recipeDesktop:i}=t;if(E()&&(null==e?void 0:e.enabled))return!0;if(!E()&&(null==i?void 0:i.enabled))return!0}return i===d.Footer||n},ae=(e,t)=>{const i=t.adUnits,n=(e=>!!e.adTypes&&new te(e.adTypes).result)(t),s=new K,o=new ie;return i.filter((e=>void 0!==e.dynamic&&e.dynamic.enabled)).map((i=>{const r=i.location.replace(/\s+/g,"_"),a="Sidebar"===r?0:2;return{auctionPriority:oe.get(r)||8,location:r,sequence:O(i.sequence,1),sizes:(l=i.adSizes,ne.filter((([e,t])=>l.some((([i,n])=>e===i&&t===n))))).filter((t=>((e,[t,i],n,s,o)=>{const{location:r,sequence:a}=e;if(r===d.Footer)return!("phone"===n&&320===t&&100===i);if(r===d.Header)return!(i>100&&s.result);if(r===d.Recipe)return!(o.result&&"phone"===n&&(300===t&&390===i||320===t&&300===i));if(r===d.Sidebar){const t=e.adSizes.some((([,e])=>e<=300)),n=i>300;return!(!n||t)||9===a||(a&&a<=5?!n||e.sticky:!n)}return!0})(i,t,e,s,o))).concat(n&&i.location===d.Content?se:[]),devices:i.devices,pageSelector:O(i.dynamic.pageSelector,"").trim(),elementSelector:O(i.dynamic.elementSelector,"").trim(),position:O(i.dynamic.position,"beforebegin"),max:Math.floor(O(i.dynamic.max,0)),spacing:O(i.dynamic.spacing,0),skip:Math.floor(O(i.dynamic.skip,0)),every:Math.max(Math.floor(O(i.dynamic.every,1)),1),classNames:i.dynamic.classNames||[],sticky:re(i,t.adOptions.stickyContainerConfig),stickyOverlapSelector:O(i.stickyOverlapSelector,"").trim(),autosize:i.autosize,special:O(i.targeting,[]).filter((e=>"special"===e.key)).reduce(((e,t)=>e.concat(...t.value)),[]),lazy:O(i.dynamic.lazy,!1),lazyMax:O(i.dynamic.lazyMax,a),lazyMaxDefaulted:0!==i.dynamic.lazyMax&&!i.dynamic.lazyMax,name:i.name};var l}))},le=(e,t)=>{const i=(e=>{let t=e.clientWidth;if(getComputedStyle){const i=getComputedStyle(e,null);t-=parseFloat(i.paddingLeft||"0")+parseFloat(i.paddingRight||"0")}return t})(t),n=e.sticky&&e.location===d.Sidebar;return e.sizes.filter((t=>{const s=!e.autosize||(t[0]<=i||t[0]<=320),o=!n||t[1]<=window.innerHeight-100;return s&&o}))};class ce{constructor(e){this.clsOptions=e,this.enabledLocations=[d.Below_Post,d.Content,d.Recipe,d.Sidebar]}}const de=e=>`adthrive-${e.location.replace("_","-").toLowerCase()}`,ue=e=>`${de(e)}-${e.sequence}`;function he(e,t){void 0===t&&(t={});var i=t.insertAt;if(e&&"undefined"!=typeof document){var n=document.head||document.getElementsByTagName("head")[0],s=document.createElement("style");s.type="text/css","top"===i&&n.firstChild?n.insertBefore(s,n.firstChild):n.appendChild(s),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(document.createTextNode(e))}}const pe=e=>e.some((e=>null!==document.querySelector(e)));class me extends Q{get result(){return this._result}run(){return new G(1).get()}constructor(){super(),this._result=!1,this._choices=[{choice:!0},{choice:!1}],this.key="RemoveRecipeCap",this.abgroup="rrc",this._result=this.run(),this.setExperimentKey()}}class _e extends H{static fromArray(e,t){return new _e(e.map((([e,t])=>({choice:e,weight:t}))),t)}addChoice(e,t){this._choices.push({choice:e,weight:t})}get(){const e=(t=0,i=100,Math.random()*(i-t)+t);var t,i;let n=0;for(const{choice:t,weight:i}of this._choices)if(n+=i,n>=e)return t;return this._default}get totalWeight(){return this._choices.reduce(((e,{weight:t})=>e+t),0)}constructor(e=[],t){super(),this._choices=e,this._default=t}}const ge=()=>(e,t,i)=>{const n=i.value;n&&(i.value=function(...e){const t=(e=>{if(null===e)return null;const t=e.map((({choice:e})=>e));return(e=>{let t=5381,i=e.length;for(;i;)t=33*t^e.charCodeAt(--i);return t>>>0})(JSON.stringify(t)).toString(16)})(this._choices),i=this._expConfigABGroup?this._expConfigABGroup:this.abgroup,s=i?i.toLowerCase():this.key?this.key.toLowerCase():"",o=t?`${s}_${t}`:s,r=this.localStoragePrefix?`${this.localStoragePrefix}-${o}`:o,a=R.readInternalLocalStorage("adthrive_branch");!1===(a&&a.enabled)&&R.deleteLocalStorage(r);const l=(()=>n.apply(this,e))(),c=(d=this._choices,u=l,null!=(p=null==(h=d.find((({choice:e})=>e===u)))?void 0:h.weight)?p:null);var d,u,h,p;const[m,_]=R.getOrSetABGroupLocalStorageValue(r,l,c,{value:24,unit:"hours"});return this._stickyResult=m,this._stickyWeight=_,m})};class ye{get enabled(){return void 0!==this.experimentConfig}_isValidResult(e,t=()=>!0){return t()&&(e=>null!=e&&!("number"==typeof e&&isNaN(e)))(e)}}class fe extends ye{_isValidResult(e){return super._isValidResult(e,(()=>this._resultValidator(e)||"control"===e))}run(){if(!this.enabled)return C.error("CLSWeightedChoiceSiteExperiment","run","() => %o","No experiment config found. Defaulting to control."),"control";if(!this._mappedChoices||0===this._mappedChoices.length)return C.error("CLSWeightedChoiceSiteExperiment","run","() => %o","No experiment variants found. Defaulting to control."),"control";const e=new _e(this._mappedChoices).get();return this._isValidResult(e)?e:(C.error("CLSWeightedChoiceSiteExperiment","run","() => %o","Invalid result from experiment choices. Defaulting to control."),"control")}constructor(...e){super(...e),this._resultValidator=()=>!0}}class ve{getSiteExperimentByKey(e){const t=this.siteExperiments.filter((t=>t.key.toLowerCase()===e.toLowerCase()))[0],i=x("at_site_features"),n=(s=(null==t?void 0:t.variants[1])?null==t?void 0:t.variants[1].value:null==t?void 0:t.variants[0].value,o=i[e],typeof s==typeof o);var s,o;return t&&i[e]&&n&&(t.variants=[{displayName:"test",value:i[e],weight:100,id:0}]),t}constructor(e){var t,i;this.siteExperiments=[],this._clsOptions=e,this._device=E()?"mobile":"desktop",this.siteExperiments=null!=(i=null==(t=this._clsOptions.siteAds.siteExperiments)?void 0:t.filter((e=>{const t=e.key,i=T(e,this._device),n=I(this._clsOptions.siteAds,t,this._device);return i&&n})))?i:[]}}class Se extends fe{get result(){return this._result}run(){if(!this.enabled)return C.error("CLSAdLayoutSiteExperiment","run","() => %o","No experiment config found. Defaulting to empty class name."),"";const e=new _e(this._mappedChoices).get();return this._isValidResult(e)?e:(C.error("CLSAdLayoutSiteExperiment","run","() => %o","Invalid result from experiment choices. Defaulting to empty class name."),"")}_mapChoices(){return this._choices.map((({weight:e,value:t})=>({weight:e,choice:t})))}constructor(e){super(),this._choices=[],this._mappedChoices=[],this._result="",this._resultValidator=e=>"string"==typeof e,this.key=c.AdLayout,this.abgroup=c.AdLayout,this._clsSiteExperiments=new ve(e),this.experimentConfig=this._clsSiteExperiments.getSiteExperimentByKey(this.key),this.enabled&&this.experimentConfig&&(this._choices=this.experimentConfig.variants,this._mappedChoices=this._mapChoices(),this._result=this.run(),e.setWeightedChoiceExperiment(this.abgroup,this._result,!0))}}J([ge(),Y("design:type",Function),Y("design:paramtypes",[]),Y("design:returntype",void 0)],Se.prototype,"run",null);class be extends fe{get result(){return this._result}run(){if(!this.enabled)return C.error("CLSTargetAdDensitySiteExperiment","run","() => %o","No experiment config found. Defaulting to control."),"control";const e=new _e(this._mappedChoices).get();return this._isValidResult(e)?e:(C.error("CLSTargetAdDensitySiteExperiment","run","() => %o","Invalid result from experiment choices. Defaulting to control."),"control")}_mapChoices(){return this._choices.map((({weight:e,value:t})=>({weight:e,choice:"number"==typeof t?(t||0)/100:"control"})))}constructor(e){super(),this._choices=[],this._mappedChoices=[],this._result="control",this._resultValidator=e=>"number"==typeof e,this.key=c.AdDensity,this.abgroup=c.AdDensity,this._clsSiteExperiments=new ve(e),this.experimentConfig=this._clsSiteExperiments.getSiteExperimentByKey(this.key),this.enabled&&this.experimentConfig&&(this._choices=this.experimentConfig.variants,this._mappedChoices=this._mapChoices(),this._result=this.run(),e.setWeightedChoiceExperiment(this.abgroup,this._result,!0))}}J([ge(),Y("design:type",Function),Y("design:paramtypes",[]),Y("design:returntype",void 0)],be.prototype,"run",null);class Ce extends Q{get result(){return this._result}run(){return new G(this.weight).get()}constructor(){super(),this._result=!1,this.abgroup="scae",this.key="StickyContainerAds",this._choices=[{choice:!0},{choice:!1}],this.weight=.99,this._result=this.run(),this.setExperimentKey()}}Ce=J([ee("StickyContainerAdsExperiment"),Y("design:type",Function),Y("design:paramtypes",[])],Ce);class Oe extends Q{get result(){return this._result}run(){return new G(this.weight).get()}constructor(){super(),this._result=!1,this.abgroup="scre",this.key="StickyContainerRecipe",this._choices=[{choice:!0},{choice:!1}],this.weight=.99,this._result=this.run(),this.setExperimentKey()}}Oe=J([ee("StickyContainerRecipeExperiment"),Y("design:type",Function),Y("design:paramtypes",[])],Oe);const we="250px";class xe{start(){try{var e,t;(e=>{const t=document.body,i=`adthrive-device-${e}`;if(!t.classList.contains(i))try{t.classList.add(i)}catch(e){C.error("BodyDeviceClassComponent","init",{message:e.message});const t="classList"in document.createElement("_");C.error("BodyDeviceClassComponent","init.support",{support:t})}})(this._device);const s=new Se(this._clsOptions);if(s.enabled){const e=s.result,t=e.startsWith(".")?e.substring(1):e;if((e=>/^[-_a-zA-Z]+[-_a-zA-Z0-9]*$/.test(e))(t))try{document.body.classList.add(t)}catch(e){C.error("ClsDynamicAdsInjector","start",`Uncaught CSS Class error: ${e}`)}else C.error("ClsDynamicAdsInjector","start",`Invalid class name: ${t}`)}const o=ae(this._device,this._clsOptions.siteAds).filter((e=>this._locationEnabled(e))).filter((e=>{return t=e,i=this._device,t.devices.includes(i);var t,i})).filter((e=>{return 0===(t=e).pageSelector.length||null!==document.querySelector(t.pageSelector);var t})),r=this.inject(o);var i,n;if(null==(t=this._clsOptions.siteAds.adOptions.stickyContainerConfig)||null==(e=t.content)?void 0:e.enabled)if(this._stickyContainerAdsExperiment.result&&!pe(this._clsOptions.siteAds.adOptions.stickyContainerConfig.blockedSelectors||[]))he(`\n  .adthrive-device-phone .adthrive-sticky-content {\n    height: 450px !important;\n    margin-bottom: 100px !important;\n  }\n  .adthrive-content.adthrive-sticky {\n    position: -webkit-sticky;\n    position: sticky !important;\n    top: 42px !important;\n    margin-top: 42px !important;\n  }\n  .adthrive-content.adthrive-sticky:after {\n    content: "— Advertisement. Scroll down to continue. —";\n    font-size: 10pt;\n    margin-top: 5px;\n    margin-bottom: 5px;\n    display:block;\n    color: #888;\n  }\n  .adthrive-sticky-container {\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    min-height:${(null==(n=this._clsOptions.siteAds.adOptions.stickyContainerConfig)||null==(i=n.content)?void 0:i.minHeight)||400}px !important;\n    margin: 10px 0 10px 0;\n    background-color: #FAFAFA;\n    padding-bottom:0px;\n  }\n  `);r.forEach((e=>this._clsOptions.setInjectedSlots(e)))}catch(e){C.error("ClsDynamicAdsInjector","start",e)}}inject(e,t=document){this._densityDevice="desktop"===this._device?u.Desktop:u.Mobile,this._overrideDefaultAdDensitySettingsWithSiteExperiment();const i=this._clsOptions.siteAds,n=O(i.adDensityEnabled,!0),s=i.adDensityLayout&&n,o=e.filter((e=>s?e.location!==d.Content:e)),r=e.filter((e=>s?e.location===d.Content:null));return[...o.length?this._injectNonDensitySlots(o,t):[],...r.length?this._injectDensitySlots(r,t):[]]}_injectNonDensitySlots(e,t=document){var i;const n=[],s=[];if(this._stickyContainerRecipeExperiment.result&&e.some((e=>e.location===d.Recipe&&e.sticky))&&!pe((null==(i=this._clsOptions.siteAds.adOptions.stickyContainerConfig)?void 0:i.blockedSelectors)||[])){var o,r;const e=this._clsOptions.siteAds.adOptions.stickyContainerConfig;(e=>{he(`\n  .adthrive-recipe.adthrive-sticky {\n    position: -webkit-sticky;\n    position: sticky !important;\n    top: 42px !important;\n    margin-top: 42px !important;\n  }\n  .adthrive-recipe-sticky-container {\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    min-height:${e||400}px !important;\n    margin: 10px 0 10px 0;\n    background-color: #FAFAFA;\n    padding-bottom:0px;\n  }\n  `)})("phone"===this._device?null==e||null==(o=e.recipeMobile)?void 0:o.minHeight:null==e||null==(r=e.recipeDesktop)?void 0:r.minHeight)}for(const i of e)this._insertNonDensityAds(i,n,s,t);return s.forEach((({location:e,element:t})=>{t.style.minHeight=this.locationToMinHeight[e]})),n}_injectDensitySlots(e,t=document){try{this._calculateMainContentHeightAndAllElements(e,t)}catch(e){return[]}const{onePerViewport:i,targetAll:n,targetDensityUnits:s,combinedMax:o,numberOfUnits:r}=this._getDensitySettings(e,t);return this._absoluteMinimumSpacingByDevice=i?window.innerHeight:this._absoluteMinimumSpacingByDevice,r?(this._adInjectionMap.filterUsed(),this._findElementsForAds(r,i,n,o,s,t),this._insertAds()):[]}_overrideDefaultAdDensitySettingsWithSiteExperiment(){var e;if(null==(e=this._clsTargetAdDensitySiteExperiment)?void 0:e.enabled){const e=this._clsTargetAdDensitySiteExperiment.result;"number"==typeof e&&(this._clsOptions.siteAds.adDensityEnabled=!0,this._clsOptions.siteAds.adDensityLayout[this._densityDevice].adDensity=e)}}_getDensitySettings(e,t=document){const i=this._clsOptions.siteAds.adDensityLayout,n=this._determineOverrides(i.pageOverrides),s=n.length?n[0]:i[this._densityDevice],o=this._clsOptions.getTargetDensity(s.adDensity),r=s.onePerViewport,a=this._shouldTargetAllEligible(o),l=this._getTargetDensityUnits(o,a),c=this._getCombinedMax(e,t),d=Math.min(this._totalAvailableElements.length,l,...c>0?[c]:[]);return this._pubLog={onePerViewport:r,targetDensity:o,targetDensityUnits:l,combinedMax:c},{onePerViewport:r,targetAll:a,targetDensityUnits:l,combinedMax:c,numberOfUnits:d}}_determineOverrides(e){return e.filter((e=>{const t=L(e.pageSelector);return""===e.pageSelector||t.elements&&t.elements.length})).map((e=>e[this._densityDevice]))}_shouldTargetAllEligible(e){return e===this._densityMax}_getTargetDensityUnits(e,t){return t?this._totalAvailableElements.length:Math.floor(e*this._mainContentHeight/(1-e)/this._minDivHeight)-this._recipeCount}_getCombinedMax(e,t=document){return O(e.filter((e=>{let i;try{i=t.querySelector(e.elementSelector)}catch(e){}return i})).map((e=>Number(e.max)+Number(e.lazyMaxDefaulted?0:e.lazyMax))).sort(((e,t)=>t-e))[0],0)}_elementLargerThanMainContent(e){return e.offsetHeight>=this._mainContentHeight&&this._totalAvailableElements.length>1}_elementDisplayNone(e){const t=window.getComputedStyle(e,null).display;return t&&"none"===t||"none"===e.style.display}_isBelowMaxes(e,t){return this._adInjectionMap.map.length<e&&this._adInjectionMap.map.length<t}_findElementsForAds(e,t,i,n,s,o=document){this._clsOptions.targetDensityLog={onePerViewport:t,combinedMax:n,targetDensityUnits:s,targetDensityPercentage:this._pubLog.targetDensity,mainContentHeight:this._mainContentHeight,recipeCount:this._recipeCount,numberOfEls:this._totalAvailableElements.length};const r=e=>{for(const{dynamicAd:t,element:r}of this._totalAvailableElements)if(this._logDensityInfo(r,t.elementSelector,e),!(!i&&this._elementLargerThanMainContent(r)||this._elementDisplayNone(r))){if(!this._isBelowMaxes(n,s))break;this._checkElementSpacing({dynamicAd:t,element:r,insertEvery:e,targetAll:i,target:o})}!this._usedAbsoluteMinimum&&this._smallerIncrementAttempts<5&&(++this._smallerIncrementAttempts,r(this._getSmallerIncrement(e)))},a=this._getInsertEvery(e,t,s);r(a)}_getSmallerIncrement(e){let t=.6*e;return t<=this._absoluteMinimumSpacingByDevice&&(t=this._absoluteMinimumSpacingByDevice,this._usedAbsoluteMinimum=!0),t}_insertNonDensityAds(e,t,i,n=document){let s=0,o=0,r=0;e.spacing>0&&(s=window.innerHeight*e.spacing,o=s);const a=this._repeatDynamicAds(e),l=this.getElements(e.elementSelector,n);e.skip;for(let c=e.skip;c<l.length&&!(r+1>a.length);c+=e.every){let u=l[c];if(s>0){const{bottom:e}=w(u);if(e<=o)continue;o=e+s}const h=a[r],p=`${h.location}_${h.sequence}`;t.some((e=>e.name===p))&&(r+=1);const m=this.getDynamicElementId(h),_=de(e),g=ue(e),y=[e.location===d.Sidebar&&e.sticky&&e.sequence&&e.sequence<=5?"adthrive-sticky-sidebar":"",this._stickyContainerRecipeExperiment.result&&e.location===d.Recipe&&e.sticky?"adthrive-recipe-sticky-container":"",_,g,...e.classNames],f=this.addAd(u,m,e.position,y);if(f){const s=le(h,f);if(s.length){const o={clsDynamicAd:e,dynamicAd:h,element:f,sizes:s,name:p,infinite:n!==document};t.push(o),i.push({location:h.location,element:f}),e.location===d.Recipe&&++this._recipeCount,r+=1}u=f}}}_insertAds(){const e=[];return this._adInjectionMap.filterUsed(),this._adInjectionMap.map.forEach((({el:t,dynamicAd:i,target:n},s)=>{const o=Number(i.sequence)+s,r=i.max,a=i.lazy&&o>r;i.sequence=o,i.lazy=a;const l=this._addContentAd(t,i,n);l&&(i.used=!0,e.push(l))})),e}_getInsertEvery(e,t,i){let n=this._absoluteMinimumSpacingByDevice;return this._moreAvailableElementsThanUnitsToInject(i,e)?(this._usedAbsoluteMinimum=!1,n=this._useWiderSpacing(i,e)):(this._usedAbsoluteMinimum=!0,n=this._useSmallestSpacing(t)),t&&window.innerHeight>n?window.innerHeight:n}_useWiderSpacing(e,t){return this._mainContentHeight/Math.min(e,t)}_useSmallestSpacing(e){return e&&window.innerHeight>this._absoluteMinimumSpacingByDevice?window.innerHeight:this._absoluteMinimumSpacingByDevice}_moreAvailableElementsThanUnitsToInject(e,t){return this._totalAvailableElements.length>e||this._totalAvailableElements.length>t}_logDensityInfo(e,t,i){const{onePerViewport:n,targetDensity:s,targetDensityUnits:o,combinedMax:r}=this._pubLog;this._totalAvailableElements.length}_checkElementSpacing({dynamicAd:t,element:i,insertEvery:n,targetAll:s,target:o=document}){(this._isFirstAdInjected()||this._hasProperSpacing(i,t,s,n))&&this._markSpotForContentAd(i,e({},t),o)}_isFirstAdInjected(){return!this._adInjectionMap.map.length}_markSpotForContentAd(e,t,i=document){const n="beforebegin"===t.position||"afterbegin"===t.position;this._adInjectionMap.add(e,this._getElementCoords(e,n),t,i),this._adInjectionMap.sort()}_hasProperSpacing(e,t,i,n){const s="beforebegin"===t.position||"afterbegin"===t.position,o="beforeend"===t.position||"afterbegin"===t.position,r=i||this._isElementFarEnoughFromOtherAdElements(e,n,s),a=o||this._isElementNotInRow(e,s),l=-1===e.id.indexOf(`AdThrive_${d.Below_Post}`);return r&&a&&l}_isElementFarEnoughFromOtherAdElements(e,t,i){const n=this._getElementCoords(e,i);let s=!1;for(let e=0;e<this._adInjectionMap.map.length;e++){const i=this._adInjectionMap.map[e].coords,o=this._adInjectionMap.map[e+1]&&this._adInjectionMap.map[e+1].coords;if(s=n-t>i&&(!o||n+t<o),s)break}return s}_isElementNotInRow(e,t){const i=e.previousElementSibling,n=e.nextElementSibling,s=t?!i&&n||i&&e.tagName!==i.tagName?n:i:n;return!(!s||0!==e.getBoundingClientRect().height)||(!s||e.getBoundingClientRect().top!==s.getBoundingClientRect().top)}_calculateMainContentHeightAndAllElements(e,t=document){const[i,n]=((e,t,i=document)=>{const[n,s]=P(e,t,i);if(0===n.length)throw Error("No Main Content Elements Found");return[Array.from(n).reduce(((e,t)=>t.offsetHeight>e.offsetHeight?t:e))||document.body,s]})(e,this._adInjectionMap,t);this._mainContentDiv=i,this._totalAvailableElements=n,this._mainContentHeight=((e,t="div #comments, section .comments")=>{const i=e.querySelector(t);return i?e.offsetHeight-i.offsetHeight:e.offsetHeight})(this._mainContentDiv)}_getElementCoords(e,t=!1){const i=e.getBoundingClientRect();return(t?i.top:i.bottom)+window.scrollY}_addContentAd(e,t,i=document){var n,s;let o=null;const r=de(t),a=ue(t),l=(null==(s=this._clsOptions.siteAds.adOptions.stickyContainerConfig)||null==(n=s.content)?void 0:n.enabled)&&this._stickyContainerAdsExperiment.result?"adthrive-sticky-container":"",c=this.addAd(e,this.getDynamicElementId(t),t.position,[l,r,a,...t.classNames]);if(c){const e=le(t,c);if(e.length){c.style.minHeight=this.locationToMinHeight[t.location];o={clsDynamicAd:t,dynamicAd:t,element:c,sizes:e,name:`${t.location}_${t.sequence}`,infinite:i!==document}}}return o}getDynamicElementId(e){return`AdThrive_${e.location}_${e.sequence}_${this._device}`}getElements(e,t=document){return t.querySelectorAll(e)}addAd(e,t,i,n=[]){if(!document.getElementById(t)){const s=`<div id="${t}" class="adthrive-ad ${n.join(" ")}"></div>`;e.insertAdjacentHTML(i,s)}return document.getElementById(t)}_repeatDynamicAds(t){const i=[],n=this._removeRecipeCapExperiment.result&&t.location===d.Recipe?99:this.locationMaxLazySequence.get(t.location),s=t.lazy?O(n,0):0,o=t.max,r=t.lazyMax,a=0===s&&t.lazy?o+r:Math.min(Math.max(s-t.sequence+1,0),o+r),l=Math.max(o,a);for(let n=0;n<l;n++){const s=Number(t.sequence)+n;if("Recipe_1"!==t.name||5!==s){const r=t.lazy&&n>=o;i.push(e({},t,{sequence:s,lazy:r}))}}return i}_locationEnabled(e){const t=this._clsOptions.enabledLocations.includes(e.location),i=this._clsOptions.disableAds&&this._clsOptions.disableAds.all||document.body.classList.contains("adthrive-disable-all"),n=!document.body.classList.contains("adthrive-disable-content")&&!this._clsOptions.disableAds.reasons.has("content_plugin");return t&&!i&&n}constructor(e,t){this._clsOptions=e,this._adInjectionMap=t,this._recipeCount=0,this._mainContentHeight=0,this._mainContentDiv=null,this._totalAvailableElements=[],this._minDivHeight=250,this._densityDevice=u.Desktop,this._pubLog={onePerViewport:!1,targetDensity:0,targetDensityUnits:0,combinedMax:0},this._densityMax=.99,this._smallerIncrementAttempts=0,this._absoluteMinimumSpacingByDevice=250,this._usedAbsoluteMinimum=!1,this._infPageEndOffset=0,this.locationMaxLazySequence=new Map([[d.Recipe,5]]),this.locationToMinHeight={Below_Post:we,Content:we,Recipe:we,Sidebar:we};const{tablet:i,desktop:n}=this._clsOptions.siteAds.breakpoints;this._device=((e,t)=>{const i=window.innerWidth;return i>=t?"desktop":i>=e?"tablet":"phone"})(i,n),this._config=new ce(e),this._clsOptions.enabledLocations=this._config.enabledLocations,this._clsTargetAdDensitySiteExperiment=this._clsOptions.siteAds.siteExperiments?new be(this._clsOptions):null,this._stickyContainerAdsExperiment=new Ce,this._stickyContainerRecipeExperiment=new Oe,this._removeRecipeCapExperiment=new me}}function Ae(e,t){if(null==e)return{};var i,n,s={},o=Object.keys(e);for(n=0;n<o.length;n++)i=o[n],t.indexOf(i)>=0||(s[i]=e[i]);return s}class Ee{get enabled(){return!0}}class Pe extends Ee{setPotentialPlayersMap(){const e=this._videoConfig.players||[],t=this._filterPlayerMap(),i=e.filter((e=>"stationaryRelated"===e.type&&e.enabled));return t.stationaryRelated=i,this._potentialPlayerMap=t,this._potentialPlayerMap}_filterPlayerMap(){const e=this._videoConfig.players,t={stickyRelated:[],stickyPlaylist:[],stationaryRelated:[]};return e&&e.length?e.filter((e=>{var t;return null==(t=e.devices)?void 0:t.includes(this._device)})).reduce(((e,t)=>(e[t.type]||(C.event(this._component,"constructor","Unknown Video Player Type detected",t.type),e[t.type]=[]),t.enabled&&e[t.type].push(t),e)),t):t}_checkPlayerSelectorOnPage(e){const t=this._potentialPlayerMap[e].map((e=>({player:e,playerElement:this._getPlacementElement(e)})));return t.length?t[0]:{player:null,playerElement:null}}_getOverrideElement(e,t,i){if(e&&t){const n=document.createElement("div");t.insertAdjacentElement(e.position,n),i=n}else{const{player:e,playerElement:t}=this._checkPlayerSelectorOnPage("stickyPlaylist");if(e&&t){const n=document.createElement("div");t.insertAdjacentElement(e.position,n),i=n}}return i}_shouldOverrideElement(e){const t=e.getAttribute("override-embed");return"true"===t||"false"===t?"true"===t:!!this._videoConfig.relatedSettings&&this._videoConfig.relatedSettings.overrideEmbedLocation}_checkPageSelector(e,t,i=[]){if(e&&t&&0===i.length){return!("/"===window.location.pathname)&&C.event("VideoUtils","getPlacementElement",new Error(`PSNF: ${e} does not exist on the page`)),!1}return!0}_getElementSelector(e,t,i){return t&&t.length>i?t[i]:(C.event("VideoUtils","getPlacementElement",new Error(`ESNF: ${e} does not exist on the page`)),null)}_getPlacementElement(e){const{pageSelector:t,elementSelector:i,skip:n}=e,s=L(t),{valid:o,elements:r}=s,a=Ae(s,["valid","elements"]),l=M(i),{valid:c,elements:d}=l,u=Ae(l,["valid","elements"]);if(""!==t&&!o)return C.error("VideoUtils","getPlacementElement",new Error(`${t} is not a valid selector`),a),null;if(!c)return C.error("VideoUtils","getPlacementElement",new Error(`${i} is not a valid selector`),u),null;if(!this._checkPageSelector(t,o,r))return null;return this._getElementSelector(i,d,n)||null}_getEmbeddedPlayerType(e){let t=e.getAttribute("data-player-type");return t&&"default"!==t||(t=this._videoConfig.relatedSettings?this._videoConfig.relatedSettings.defaultPlayerType:"static"),this._stickyRelatedOnPage&&(t="static"),t}_getMediaId(e){const t=e.getAttribute("data-video-id");return!!t&&(this._relatedMediaIds.push(t),t)}_createRelatedPlayer(e,t,i,n){"collapse"===t?this._createCollapsePlayer(e,i):"static"===t&&this._createStaticPlayer(e,i,n)}_createCollapsePlayer(t,i){const{player:n,playerElement:s}=this._checkPlayerSelectorOnPage("stickyRelated"),o=n||this._potentialPlayerMap.stationaryRelated[0];if(o&&o.playerId){this._shouldOverrideElement(i)&&(i=this._getOverrideElement(n,s,i)),i=document.querySelector(`#cls-video-container-${t} > div`)||i,this._createStickyRelatedPlayer(e({},o,{mediaId:t}),i)}else C.error(this._component,"_createCollapsePlayer","No video player found")}_createStaticPlayer(t,i,n){if(this._potentialPlayerMap.stationaryRelated.length&&this._potentialPlayerMap.stationaryRelated[0].playerId){const s=this._potentialPlayerMap.stationaryRelated[0];this._createStationaryRelatedPlayer(e({},s,{mediaOrPlaylistId:t}),i,n)}else C.error(this._component,"_createStaticPlayer","No video player found")}_shouldRunAutoplayPlayers(){return!(!this._isVideoAllowedOnPage()||!this._potentialPlayerMap.stickyRelated.length&&!this._potentialPlayerMap.stickyPlaylist.length)}_determineAutoplayPlayers(){const e=this._component,t="VideoManagerComponent"===e,i=this._context;if(this._stickyRelatedOnPage)return void C.event(e,"stickyRelatedOnPage",t&&{device:i&&i.device,isDesktop:this._device}||{});const{player:n,playerElement:s}=this._checkPlayerSelectorOnPage("stickyPlaylist");n&&n.playerId&&n.playlistId&&s?this._createPlaylistPlayer(n,s):Math.random()<.01&&setTimeout((()=>{C.event(e,"noStickyPlaylist",t&&{vendor:"none",device:i&&i.device,isDesktop:this._device}||{})}),1e3)}_initializeRelatedPlayers(e){const t=new Map;for(let i=0;i<e.length;i++){const n=e[i],s=n.offsetParent,o=this._getEmbeddedPlayerType(n),r=this._getMediaId(n);if(s&&r){const e=(t.get(r)||0)+1;t.set(r,e),this._createRelatedPlayer(r,o,n,e)}}}constructor(e,t,i){super(),this._videoConfig=e,this._component=t,this._context=i,this._stickyRelatedOnPage=!1,this._relatedMediaIds=[],this._device=A()?"desktop":"mobile",this._potentialPlayerMap=this.setPotentialPlayersMap()}}class ke extends Pe{init(){this._initializePlayers()}_wrapVideoPlayerWithCLS(e,t,i=0){if(e.parentNode){const n=e.offsetWidth*(9/16),s=this._createGenericCLSWrapper(n,t,i);return e.parentNode.insertBefore(s,e),s.appendChild(e),s}return null}_createGenericCLSWrapper(e,t,i){const n=document.createElement("div");return n.id=`cls-video-container-${t}`,n.className="adthrive",n.style.minHeight=`${e+i}px`,n}_getTitleHeight(){const e=document.createElement("h3");e.style.margin="10px 0",e.innerText="Title",e.style.visibility="hidden",document.body.appendChild(e);const t=window.getComputedStyle(e),i=parseInt(t.height,10),n=parseInt(t.marginTop,10),s=parseInt(t.marginBottom,10);return document.body.removeChild(e),Math.min(i+s+n,50)}_initializePlayers(){const e=document.querySelectorAll(this._IN_POST_SELECTOR);e.length&&this._initializeRelatedPlayers(e),this._shouldRunAutoplayPlayers()&&this._determineAutoplayPlayers()}_createStationaryRelatedPlayer(e,t,i){const n="mobile"===this._device?[400,225]:[640,360],s=h.Video_In_Post_ClicktoPlay_SoundOn;if(t&&e.mediaOrPlaylistId){const o=`${e.mediaOrPlaylistId}_${i}`,r=this._wrapVideoPlayerWithCLS(t,o);this._playersAddedFromPlugin.push(e.mediaOrPlaylistId),r&&this._clsOptions.setInjectedVideoSlots({playerId:e.playerId,playerName:s,playerSize:n,element:r,type:"stationaryRelated"})}}_createStickyRelatedPlayer(e,t){const i="mobile"===this._device?[400,225]:[640,360],n=h.Video_Individual_Autoplay_SOff;if(this._stickyRelatedOnPage=!0,this._videoConfig.mobileStickyPlayerOnPage="mobile"===this._device,t&&e.position&&e.mediaId){const s=document.createElement("div");t.insertAdjacentElement(e.position,s);const o=this._getTitleHeight(),r=this._wrapVideoPlayerWithCLS(s,e.mediaId,this._WRAPPER_BAR_HEIGHT+o);this._playersAddedFromPlugin.push(e.mediaId),r&&this._clsOptions.setInjectedVideoSlots({playlistId:e.playlistId,playerId:e.playerId,playerSize:i,playerName:n,element:s,type:"stickyRelated"})}}_createPlaylistPlayer(e,t){const i=e.playlistId,n="mobile"===this._device?h.Video_Coll_SOff_Smartphone:h.Video_Collapse_Autoplay_SoundOff,s="mobile"===this._device?[400,225]:[640,360];this._videoConfig.mobileStickyPlayerOnPage=!0;const o=document.createElement("div");t.insertAdjacentElement(e.position,o);let r=this._WRAPPER_BAR_HEIGHT;e.title&&(r+=this._getTitleHeight());const a=this._wrapVideoPlayerWithCLS(o,i,r);this._playersAddedFromPlugin.push(`playlist-${i}`),a&&this._clsOptions.setInjectedVideoSlots({playlistId:e.playlistId,playerId:e.playerId,playerSize:s,playerName:n,element:o,type:"stickyPlaylist"})}_isVideoAllowedOnPage(){const e=this._clsOptions.disableAds;if(e&&e.video){let t="";e.reasons.has("video_tag")?t="video tag":e.reasons.has("video_plugin")?t="video plugin":e.reasons.has("video_page")&&(t="command queue");const i=t?"ClsVideoInsertionMigrated":"ClsVideoInsertion";return C.error(i,"isVideoAllowedOnPage",new Error(`DBP: Disabled by publisher via ${t||"other"}`)),!1}return!this._clsOptions.videoDisabledFromPlugin}constructor(e,t){super(e,"ClsVideoInsertion"),this._videoConfig=e,this._clsOptions=t,this._IN_POST_SELECTOR=".adthrive-video-player",this._WRAPPER_BAR_HEIGHT=36,this._playersAddedFromPlugin=[],t.removeVideoTitleWrapper&&(this._WRAPPER_BAR_HEIGHT=0)}}class De{add(e,t,i,n=document){this._map.push({el:e,coords:t,dynamicAd:i,target:n})}get map(){return this._map}sort(){this._map.sort((({coords:e},{coords:t})=>e-t))}filterUsed(){this._map=this._map.filter((({dynamicAd:e})=>!e.used))}reset(){this._map=[]}constructor(){this._map=[]}}class Re extends De{}try{(()=>{const e=new B;e&&e.enabled&&(new xe(e,new Re).start(),new ke(new q(e),e).init())})()}catch(e){C.error("CLS","pluginsertion-iife",e),window.adthriveCLS&&(window.adthriveCLS.injectedFromPlugin=!1)}}();
+</script><script data-no-optimize="1" data-cfasync="false">(function () {var clsElements = document.querySelectorAll("script[id^='cls-']"); window.adthriveCLS && clsElements && clsElements.length === 0 ? window.adthriveCLS.injectedFromPlugin = false : ""; })();</script><script>function lazySrc(){var e=jQuery('iframe[data-l-src]');e.each(function(){var frame=jQuery(this),vidSource=jQuery(frame).attr('data-l-src'),distance=jQuery(frame).offset().top-jQuery(window).scrollTop(),distTopBot=window.innerHeight-distance,distBotTop=distance+jQuery(frame).height();if(distTopBot>-2300&&distBotTop>-2400){jQuery(frame).attr('src',vidSource);jQuery(frame).removeAttr('data-l-src');console.log('ll iframe');document.removeEventListener('scroll',lazySrcSC)}})}function lazySrcSC(){if(window.scrollY>1)lazySrc()}
+document.addEventListener('scroll',lazySrcSC);
+document.addEventListener('mousemove',lazySrc)</script><!-- Custom Feeds for Instagram JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.aheadofthyme.com/wp-admin/admin-ajax.php";
+
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=c5c908eb-f9e4-4993-98d7-dc94c06b6e82"></script><style type="text/css" media="screen">#simple-social-icons-3 ul li a, #simple-social-icons-3 ul li a:hover, #simple-social-icons-3 ul li a:focus { background-color: #ffffff !important; border-radius: 27px; color: #2e5543 !important; border: 1px #2e5543 solid !important; font-size: 14px; padding: 7px; }  #simple-social-icons-3 ul li a:hover, #simple-social-icons-3 ul li a:focus { background-color: #2e5543 !important; border-color: #ffffff !important; color: #ffffff !important; }  #simple-social-icons-3 ul li a:focus { outline: 1px dotted #2e5543 !important; } #simple-social-icons-4 ul li a, #simple-social-icons-4 ul li a:hover, #simple-social-icons-4 ul li a:focus { background-color: #ffffff !important; border-radius: 27px; color: #2e5543 !important; border: 1px #2e5543 solid !important; font-size: 14px; padding: 7px; }  #simple-social-icons-4 ul li a:hover, #simple-social-icons-4 ul li a:focus { background-color: #2e5543 !important; border-color: #ffffff !important; color: #ffffff !important; }  #simple-social-icons-4 ul li a:focus { outline: 1px dotted #2e5543 !important; }</style><style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-core-columns-is-layout-1{flex-wrap:nowrap;}
+body{-webkit-animation:none!important;animation:none!important}</style>
+<script type="text/javascript" id="social_warfare_script-js-extra">
+/* <![CDATA[ */
+var socialWarfare = {"addons":["pro"],"post_id":"64755","variables":{"emphasizeIcons":"0","powered_by_toggle":false,"affiliate_link":"https:\/\/warfareplugins.com"},"floatBeforeContent":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-content/plugins/social-warfare/assets/js/script.min.js" id="social_warfare_script-js"></script>
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-includes/js/hoverIntent.min.js" id="hoverIntent-js"></script>
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-content/themes/genesis/lib/js/menu/superfish.min.js" id="superfish-js"></script>
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js" id="superfish-args-js"></script>
+<script type="text/javascript" src="https://www.aheadofthyme.com/wp-content/themes/genesis/lib/js/skip-links.min.js" id="skip-links-js"></script>
+<script>function loadIP(){console.log("load instant.page js");
+["mousemove","touchstart"].forEach(function(e){window.removeEventListener(e,loadIP)});
+var s=document.createElement("script");s.onload=function(){};s.src="//instant.page/2.0.0";s.setAttribute("type","module");s.setAttribute("integrity","sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8");document.head.appendChild(s)}
+["mousemove","touchstart"].forEach(function(e){window.addEventListener(e,loadIP)})</script><script type="text/javascript"> var swp_nonce = "c76fa007e2";var swpFloatBeforeContent = false; var swp_ajax_url = "https://www.aheadofthyme.com/wp-admin/admin-ajax.php";var swpClickTracking = false; swpPinIt={"enabled":false};</script><script>!function(){"use strict";!function(e){if(-1===e.cookie.indexOf("__adblocker")){e.cookie="__adblocker=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";var t=new XMLHttpRequest;t.open("GET","https://ads.adthrive.com/abd/abd.js",!0),t.onreadystatechange=function(){if(XMLHttpRequest.DONE===t.readyState)if(200===t.status){var a=e.createElement("script");a.innerHTML=t.responseText,e.getElementsByTagName("head")[0].appendChild(a)}else{var n=new Date;n.setTime(n.getTime()+3e5),e.cookie="__adblocker=true; expires="+n.toUTCString()+"; path=/"}},t.send()}}(document)}();
+</script><script>!function(){"use strict";var e;e=document,function(){var t,n;function r(){var t=e.createElement("script");t.src="https://cafemedia-com.videoplayerhub.com/galleryplayer.js",e.head.appendChild(t)}function a(){var t=e.cookie.match("(^|[^;]+)\\s*__adblocker\\s*=\\s*([^;]+)");return t&&t.pop()}function c(){clearInterval(n)}return{init:function(){var e;"true"===(t=a())?r():(e=0,n=setInterval((function(){100!==e&&"false"!==t||c(),"true"===t&&(r(),c()),t=a(),e++}),50))}}}().init()}();
+</script><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:811,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:811,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.aheadofthyme.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script></body></html>

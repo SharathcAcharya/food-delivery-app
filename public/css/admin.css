@@ -1,0 +1,234 @@
+.admin-container {
+	padding: 80px 2rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.admin-section {
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	margin-bottom: 2rem;
+}
+
+.section-controls {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.add-btn {
+	background-color: var(--primary-color);
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+select, input[type="date"] {
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.food-list, .order-list, .user-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+
+.food-item {
+	border: 1px solid #ddd;
+	padding: 1rem;
+	border-radius: 8px;
+	background: white;
+	transition: transform 0.2s;
+}
+
+.food-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.food-item img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.food-info {
+	margin: 1rem 0;
+}
+
+.food-info h3 {
+	margin: 0 0 0.5rem 0;
+	color: var(--primary-color);
+}
+
+.food-price {
+	font-weight: bold;
+	color: #2ecc71;
+}
+
+.food-category {
+	display: inline-block;
+	padding: 0.3rem 0.8rem;
+	background: #f0f0f0;
+	border-radius: 15px;
+	font-size: 0.9rem;
+	margin: 0.5rem 0;
+}
+
+.veg-badge {
+	color: green;
+	border: 1px solid green;
+	padding: 0.2rem 0.5rem;
+	border-radius: 4px;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+}
+
+.food-actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+.edit-btn, .delete-btn {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.edit-btn {
+	background-color: #3498db;
+	color: white;
+}
+
+.delete-btn {
+	background-color: #e74c3c;
+	color: white;
+}
+
+.edit-btn:hover { background-color: #2980b9; }
+.delete-btn:hover { background-color: #c0392b; }
+
+/* Analytics Section */
+.analytics-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.analytics-card {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	text-align: center;
+}
+
+.analytics-card h3 {
+	margin: 0 0 1rem 0;
+	color: #666;
+}
+
+.analytics-card p {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--primary-color);
+	margin: 0;
+}
+
+.charts-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+/* Forms */
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #666;
+}
+
+textarea {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	resize: vertical;
+	min-height: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+input[type="file"] {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px dashed #ddd;
+	border-radius: 5px;
+	margin-top: 0.5rem;
+}
+
+small {
+	color: #666;
+	font-size: 0.9rem;
+}
+
+/* Order Status Colors */
+.status-pending { background-color: #ffeeba; color: #856404; }
+.status-confirmed { background-color: #b8daff; color: #004085; }
+.status-preparing { background-color: #c3e6cb; color: #155724; }
+.status-out_for_delivery { background-color: #d6d8db; color: #383d41; }
+.status-delivered { background-color: #d4edda; color: #155724; }
+.status-cancelled { background-color: #f5c6cb; color: #721c24; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.admin-container {
+		padding: 70px 1rem 1rem;
+	}
+	
+	.food-list, .order-list, .user-list {
+		grid-template-columns: 1fr;
+	}
+	
+	.analytics-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.section-controls {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	
+	select, input[type="date"] {
+		width: 100%;
+	}
+}

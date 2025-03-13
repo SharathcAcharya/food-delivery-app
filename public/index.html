@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Delivery App</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/profile.css">
+	<link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<style>
+		.page {
+			display: none;
+		}
+		.page.active {
+			display: block;
+		}
+
+		.image-upload {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		.profile-preview {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+		
+		.upload-label {
+			display: inline-block;
+			padding: 8px 16px;
+			background: #3498db;
+			color: white;
+			border-radius: 4px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		
+		input[type="file"] {
+			display: none;
+		}
+
+		#profileLink img {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 1px solid #ddd;
+			background-color: #f8f9fa;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="logo">Food Delivery</div>
+		<div class="nav-items">
+			<a href="#" class="active">Home</a>
+			<a href="#menu">Menu</a>
+			<a href="#" id="cartBtn"><i class="fas fa-shopping-cart"></i> Cart <span id="cartCount">0</span></a>
+			<a href="/profile" id="profileLink">
+				<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCI+PHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNlMGUwZTAiLz48dGV4dCB4PSI3NSIgeT0iNzUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiM5OTkiPlU8L3RleHQ+PC9zdmc+" alt="Profile" class="profile-pic" style="width: 30px; height: 30px; border-radius: 50%; vertical-align: middle;">
+				Profile
+			</a>
+			<a href="#" id="loginBtn">Login</a>
+			<a href="#" id="registerBtn">Register</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero-content">
+			<h1>Delicious Food Delivered To Your Doorstep</h1>
+			<p>Order your favorite meals from the best restaurants in town</p>
+			<a href="#menu" class="cta-button">Order Now</a>
+		</div>
+	</header>
+
+	<div id="profilePage" class="page" style="display: none;">
+		<h2>User Profile</h2>
+		<p>Profile content will be loaded here</p>
+	</div>
+
+	<section id="menu" class="menu-section">
+		<h2>Our Menu</h2>
+		<div class="search-section">
+			<div class="search-container">
+				<input type="text" class="search-input" id="searchInput" placeholder="Search for dishes...">
+				<div class="filter-options">
+					<div class="filter-group">
+						<label class="filter-label">Category:</label>
+						<select class="filter-select" id="categoryFilter">
+							<option value="">All Categories</option>
+							<option value="Starters">Starters</option>
+							<option value="Main Course">Main Course</option>
+							<option value="Desserts">Desserts</option>
+							<option value="Beverages">Beverages</option>
+							<option value="Fast Food">Fast Food</option>
+							<option value="Healthy Food">Healthy Food</option>
+						</select>
+					</div>
+					<div class="filter-group">
+						<label class="filter-label">Price Range:</label>
+						<div class="price-range">
+							<input type="number" class="price-input" id="minPrice" placeholder="Min">
+							<span>-</span>
+							<input type="number" class="price-input" id="maxPrice" placeholder="Max">
+						</div>
+					</div>
+					<div class="filter-group">
+						<label class="filter-label">Dietary:</label>
+						<select class="filter-select" id="dietaryFilter">
+							<option value="">All</option>
+							<option value="veg">Vegetarian</option>
+							<option value="non-veg">Non-Vegetarian</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="category-pills" id="categoryPills">
+				<!-- Category pills will be dynamically added here -->
+			</div>
+		</div>
+		<!-- Search and Filter Section -->
+		<div class="search-section">
+			<div class="search-container">
+				<input type="text" id="searchInput" class="search-input" placeholder="Search for food...">
+				<div class="filter-options">
+					<div class="filter-group">
+						<label for="categoryFilter" class="filter-label">Category:</label>
+						<select id="categoryFilter" class="filter-select">
+							<option value="">All Categories</option>
+						</select>
+					</div>
+					<div class="filter-group">
+						<label for="vegFilter" class="filter-label">Type:</label>
+						<select id="vegFilter" class="filter-select">
+							<option value="">All</option>
+							<option value="true">Veg</option>
+							<option value="false">Non-Veg</option>
+						</select>
+					</div>
+					<div class="filter-group">
+						<label for="minPrice" class="filter-label">Price Range:</label>
+						<input type="number" id="minPrice" class="price-input" placeholder="Min" min="0">
+						<span>-</span>
+						<input type="number" id="maxPrice" class="price-input" placeholder="Max" min="0">
+					</div>
+					<div class="filter-group">
+						<label for="sortFilter" class="filter-label">Sort By:</label>
+						<select id="sortFilter" class="filter-select">
+							<option value="">Default</option>
+							<option value="price_asc">Price: Low to High</option>
+							<option value="price_desc">Price: High to Low</option>
+							<option value="rating_desc">Rating</option>
+							<option value="name_asc">Name</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="food-grid" id="foodGrid">
+			<!-- Food items will be dynamically loaded here -->
+		</div>
+	</section>
+
+	<!-- Login Modal -->
+	<div id="loginModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Login</h2>
+			<form id="loginForm">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<button type="submit" id="loginSubmitBtn">Login</button>
+				<div class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Register Modal -->
+	<div id="registerModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Register</h2>
+			<form id="registerForm" enctype="multipart/form-data">
+				<div class="image-upload">
+					<img id="profilePreview" alt="Profile Preview" class="profile-preview">
+					<input type="file" name="image" id="profileImage" accept="image/*" style="display: none;">
+					<label for="profileImage" class="upload-label">Choose Profile Picture (Optional)</label>
+				</div>
+				<input type="text" placeholder="Full Name" name="name" required pattern=".{3,}" title="Name must be at least 3 characters long">
+				<input type="tel" placeholder="Phone Number" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+				<input type="text" placeholder="Username" name="username" required pattern=".{3,}" title="Username must be at least 3 characters long">
+				<input type="email" placeholder="Email" name="email" required>
+				<input type="password" placeholder="Password" name="password" required pattern=".{6,}" title="Password must be at least 6 characters long">
+				<button type="submit" id="registerSubmitBtn">Register</button>
+				<div class="error-message" style="display: none; color: red; margin-top: 10px;"></div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Cart Modal -->
+	<div id="cartModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Your Cart</h2>
+			<div id="cartItems"></div>
+			<div class="cart-total">
+				<span>Total: ₹</span>
+				<span id="cartTotal">0.00</span>
+			</div>
+			<form id="checkoutForm">
+				<h3>Delivery Details</h3>
+				<input type="text" id="street" placeholder="Street Address" required>
+				<input type="text" id="city" placeholder="City" required>
+				<input type="text" id="state" placeholder="State" required>
+				<input type="text" id="pincode" placeholder="Pincode" required>
+				<input type="tel" id="phone" placeholder="Phone Number" required>
+				
+				<h3>Payment Method</h3>
+				<div class="payment-options">
+					<label>
+						<input type="radio" name="paymentMethod" value="razorpay" checked>
+						Pay Online (Razorpay)
+					</label>
+					<label>
+						<input type="radio" name="paymentMethod" value="cash_on_delivery">
+						Cash on Delivery
+					</label>
+				</div>
+				<button type="submit" id="checkoutBtn" disabled>Proceed to Checkout</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Order Tracking Modal -->
+	<div id="orderTrackingModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<!-- Tracking content will be dynamically added here -->
+		</div>
+	</div>
+
+	<!-- Order Receipt Modal -->
+	<div id="receiptModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<!-- Receipt content will be dynamically added here -->
+		</div>
+	</div>
+
+	<footer>
+		<p>&copy; 2023 Food Delivery. All rights reserved.</p>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/profile.js"></script>
+	<script>
+		// Initialize after all scripts are loaded
+		document.addEventListener('DOMContentLoaded', function() {
+			if (typeof Razorpay === 'undefined') {
+				console.error('Razorpay failed to load');
+			} else {
+				window.razorpay = window.Razorpay;
+				console.log('Razorpay initialized successfully');
+			}
+
+			// Check for existing session
+			const token = localStorage.getItem('token');
+			const user = JSON.parse(localStorage.getItem('user') || 'null');
+			if (token && user) {
+				if (user.isAdmin) {
+					localStorage.removeItem('token');
+					localStorage.removeItem('user');
+				} else {
+					updateUI();
+					initializeOrderTracking();
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Panel - Food Delivery</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<style>
+		.login-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f5f5f5;
+		}
+		.login-form {
+			background: white;
+			padding: 2rem;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+		}
+		.login-form h2 {
+			text-align: center;
+			margin-bottom: 1.5rem;
+		}
+		.login-form input {
+			width: 100%;
+			padding: 0.75rem;
+			margin-bottom: 1rem;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+		.login-form button {
+			width: 100%;
+			padding: 0.75rem;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		.login-form button:hover {
+			background-color: #45a049;
+		}
+		.login-error {
+			color: red;
+			text-align: center;
+			margin-bottom: 1rem;
+			display: none;
+		}
+		.admin-content {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="loginSection" class="login-container">
+		<form id="loginForm" class="login-form">
+			<h2>Admin Login</h2>
+			<div id="loginError" class="login-error"></div>
+			<input type="text" id="username" placeholder="Username" required>
+			<input type="password" id="password" placeholder="Password" required>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+
+	<div id="adminContent" class="admin-content">
+		<nav>
+			<div class="logo">Admin Panel</div>
+			<div class="nav-items">
+				<a href="#" class="active" onclick="showSection('foods')">Foods</a>
+				<a href="#" onclick="showSection('orders')">Orders</a>
+				<a href="#" onclick="showSection('users')">Users</a>
+				<a href="#" onclick="showSection('analytics')">Analytics</a>
+				<a href="#" id="logoutBtn">Logout</a>
+			</div>
+		</nav>
+
+	<div class="admin-container">
+		<!-- Food Management Section -->
+		<section id="foods-section" class="admin-section">
+			<h2>Food Management</h2>
+			<div class="section-controls">
+				<button onclick="showModal('addFoodModal')" class="add-btn">Add New Food</button>
+				<select id="categoryFilter" onchange="filterFoods()">
+					<option value="">All Categories</option>
+					<option value="Starters">Starters</option>
+					<option value="Main Course">Main Course</option>
+					<option value="Desserts">Desserts</option>
+					<option value="Beverages">Beverages</option>
+					<option value="Fast Food">Fast Food</option>
+					<option value="Healthy Food">Healthy Food</option>
+				</select>
+			</div>
+			
+			<div class="food-list" id="foodList">
+				<!-- Food items will be loaded here -->
+			</div>
+		</section>
+
+		<!-- Orders Management Section -->
+		<section id="orders-section" class="admin-section" style="display: none;">
+			<h2>Orders Management</h2>
+			<div class="section-controls">
+				<select id="orderStatusFilter" onchange="filterOrders()">
+					<option value="">All Orders</option>
+					<option value="pending">Pending</option>
+					<option value="confirmed">Confirmed</option>
+					<option value="preparing">Preparing</option>
+					<option value="out_for_delivery">Out for Delivery</option>
+					<option value="delivered">Delivered</option>
+					<option value="cancelled">Cancelled</option>
+				</select>
+				<input type="date" id="orderDateFilter" onchange="filterOrders()">
+			</div>
+			<div class="order-list" id="orderList">
+				<!-- Orders will be loaded here -->
+			</div>
+		</section>
+
+		<!-- Users Section -->
+		<section id="users-section" class="admin-section" style="display: none;">
+			<h2>User Management</h2>
+			<div class="user-list" id="userList">
+				<!-- Users will be loaded here -->
+			</div>
+		</section>
+
+		<!-- Analytics Section -->
+		<section id="analytics-section" class="admin-section" style="display: none;">
+			<h2>Analytics Dashboard</h2>
+			<div class="analytics-grid">
+				<div class="analytics-card">
+					<h3>Total Revenue</h3>
+					<p id="totalRevenue">₹0</p>
+				</div>
+				<div class="analytics-card">
+					<h3>Total Orders</h3>
+					<p id="totalOrders">0</p>
+				</div>
+				<div class="analytics-card">
+					<h3>Active Users</h3>
+					<p id="activeUsers">0</p>
+				</div>
+			</div>
+			<div class="charts-container">
+				<canvas id="revenueChart"></canvas>
+				<canvas id="ordersChart"></canvas>
+			</div>
+		</section>
+	</div>
+
+	<!-- Add Food Modal -->
+	<div id="addFoodModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Add New Food Item</h2>
+			<form id="addFoodForm" enctype="multipart/form-data">
+				<input type="text" name="name" placeholder="Food Name" required>
+				<textarea name="description" placeholder="Description" required></textarea>
+				<input type="number" name="price" placeholder="Price" step="0.01" required>
+				<select name="category" required>
+					<option value="">Select Category</option>
+					<option value="Starters">Starters</option>
+					<option value="Main Course">Main Course</option>
+					<option value="Desserts">Desserts</option>
+					<option value="Beverages">Beverages</option>
+					<option value="Fast Food">Fast Food</option>
+					<option value="Healthy Food">Healthy Food</option>
+				</select>
+				<div class="form-group">
+					<label>
+						<input type="checkbox" name="isVeg">
+						Vegetarian
+					</label>
+				</div>
+				<div class="form-group">
+					<label>Food Image:</label>
+					<input type="file" name="image" accept="image/*" required>
+				</div>
+				<button type="submit">Add Food</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Edit Food Modal -->
+	<div id="editFoodModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Edit Food Item</h2>
+			<form id="editFoodForm" enctype="multipart/form-data">
+				<input type="hidden" name="foodId">
+				<input type="text" name="name" placeholder="Food Name" required>
+				<textarea name="description" placeholder="Description" required></textarea>
+				<input type="number" name="price" placeholder="Price" step="0.01" required>
+				<select name="category" required>
+					<option value="">Select Category</option>
+					<option value="Starters">Starters</option>
+					<option value="Main Course">Main Course</option>
+					<option value="Desserts">Desserts</option>
+					<option value="Beverages">Beverages</option>
+					<option value="Fast Food">Fast Food</option>
+					<option value="Healthy Food">Healthy Food</option>
+				</select>
+				<div class="form-group">
+					<label>
+						<input type="checkbox" name="isVeg">
+						Vegetarian
+					</label>
+				</div>
+				<div class="form-group">
+					<label>Food Image:</label>
+					<input type="file" name="image" accept="image/*">
+					<small>Leave empty to keep current image</small>
+				</div>
+				<button type="submit">Update Food</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Order Details Modal -->
+	<div id="orderDetailsModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Order Details</h2>
+			<div id="orderDetails"></div>
+			<div class="order-actions">
+				<select id="orderStatus">
+					<option value="pending">Pending</option>
+					<option value="confirmed">Confirmed</option>
+					<option value="preparing">Preparing</option>
+					<option value="out_for_delivery">Out for Delivery</option>
+					<option value="delivered">Delivered</option>
+					<option value="cancelled">Cancelled</option>
+				</select>
+				<button onclick="updateOrderStatus()">Update Status</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+	<script>
+		// Add utility functions
+
+		function showModal(modalId) {
+			const modal = document.getElementById(modalId);
+			if (modal) modal.style.display = 'block';
+		}
+
+		function closeModal(modalId) {
+			const modal = document.getElementById(modalId);
+			if (modal) modal.style.display = 'none';
+		}
+
+		function showSection(sectionName) {
+			try {
+				const sections = ['foods', 'orders', 'users', 'analytics'];
+				sections.forEach(section => {
+					const sectionElement = document.getElementById(`${section}-section`);
+					if (sectionElement) {
+						sectionElement.style.display = sectionName === section ? 'block' : 'none';
+					}
+				});
+
+				// Load section data
+				switch(sectionName) {
+					case 'foods':
+						loadFoods();
+						break;
+					case 'orders':
+						loadOrders();
+						break;
+					case 'users':
+						loadUsers();
+						break;
+					case 'analytics':
+						loadAnalytics();
+						break;
+				}
+
+				// Update active nav link
+				document.querySelectorAll('.nav-items a').forEach(link => {
+					link.classList.remove('active');
+					if (link.getAttribute('onclick')?.includes(sectionName)) {
+						link.classList.add('active');
+					}
+				});
+			} catch (error) {
+				console.error('Error changing section:', error);
+			}
+		}
+
+		function filterFoods() {
+			const category = document.getElementById('categoryFilter').value;
+			loadFoods(category);
+		}
+
+		// Make functions globally available
+		window.showModal = showModal;
+		window.closeModal = closeModal;
+		window.showSection = showSection;
+		window.filterFoods = filterFoods;
+
+		// Initialize Chart.js and check authentication
+		document.addEventListener('DOMContentLoaded', async () => {
+			try {
+				// Check authentication
+				const token = localStorage.getItem('token');
+				const user = JSON.parse(localStorage.getItem('user') || 'null');
+				
+				if (!token || !user || !user.isAdmin) {
+					document.getElementById('loginSection').style.display = 'flex';
+					document.getElementById('adminContent').style.display = 'none';
+					return;
+				}
+
+				// Verify token is still valid
+				const response = await fetch(`${API_URL}/api/auth/profile`, {
+					headers: {
+						'Authorization': `Bearer ${token}`
+					}
+				});
+
+				if (!response.ok) {
+					localStorage.removeItem('token');
+					localStorage.removeItem('user');
+					document.getElementById('loginSection').style.display = 'flex';
+					document.getElementById('adminContent').style.display = 'none';
+					return;
+				}
+
+				const userData = await response.json();
+				if (!userData.isAdmin) {
+					throw new Error('Not an admin');
+				}
+
+				// Initialize admin panel
+				await initializeAdmin();
+			} catch (error) {
+				console.error('Authentication error:', error);
+				localStorage.removeItem('token');
+				localStorage.removeItem('user');
+				document.getElementById('loginSection').style.display = 'flex';
+document.getElementById('adminContent').style.display = 'none';
+			}
+
+			// Initialize Chart.js defaults
+			if (typeof Chart !== 'undefined') {
+				Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+				Chart.defaults.font.size = 12;
+				Chart.defaults.color = '#666';
+			} else {
+				console.error('Chart.js not loaded');
+			}
+		});
+
+		// Handle logout
+		document.getElementById('logoutBtn').addEventListener('click', () => {
+			localStorage.removeItem('token');
+			localStorage.removeItem('user');
+			document.getElementById('loginSection').style.display = 'flex';
+document.getElementById('adminContent').style.display = 'none';
+		});
+	</script>
+	<script src="js/admin.js"></script>
+</body>
+</html>

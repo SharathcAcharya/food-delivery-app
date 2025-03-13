@@ -1,0 +1,217 @@
+/* Advanced Search and Filter Styles */
+.search-section {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 12px 20px;
+    border: 2px solid #e1e1e1;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+    outline: none;
+    transform: scale(1.01);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.filter-select {
+    padding: 8px 16px;
+    border: 2px solid #e1e1e1;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+    border-color: var(--primary-color);
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-input {
+    width: 100px;
+    padding: 8px;
+    border: 2px solid #e1e1e1;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Category Pills */
+.category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.category-pill {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f8f9fa;
+    border: 2px solid #e1e1e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.category-pill {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #f8f9fa;
+    border: 2px solid #e1e1e1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-pill:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.category-pill:hover {
+    background: transparent;
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.2);
+}
+
+.category-pill:hover:before {
+    width: 300%;
+    height: 300%;
+}
+
+.category-pill.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Food Grid Animations */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    position: relative;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.food-item.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.food-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    .filter-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .price-range {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
