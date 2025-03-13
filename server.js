@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const path = require('path');
 const cors = require('cors');
-const WebSocket = require('ws');
+const path = require('path');
+const { createServer } = require('http');
+const { Server } = require('socket.io');
+const NotificationService = require('./services/notification');
 const { verifyToken, verifyAdmin } = require('./middleware/auth');
 require('dotenv').config();
 
@@ -34,6 +36,7 @@ app.use('/api/reviews', require('./routes/review'));
 app.use('/api/order', verifyToken, require('./routes/order'));
 app.use('/api/location', verifyToken, require('./routes/location'));
 app.use('/api/rewards', verifyToken, require('./routes/rewards'));
+app.use('/api/notifications', verifyToken, require('./routes/notification'));
 
 // Profile route
 app.get('/profile', verifyToken, (req, res) => {
@@ -69,7 +72,7 @@ async function startServer() {
 		});
 		console.log('MongoDB Connected Successfully');
 
-		const server = app.listen(PORT, () => {
+		const server = httpServer.listen(PORT, () => {
 			console.log(`Server is running on port ${PORT}`);
 		});
 

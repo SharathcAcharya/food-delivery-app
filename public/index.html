@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/profile.css">
 	<link rel="stylesheet" href="css/search.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<script type="module" src="js/i18n.js"></script>
 	<style>
 		.page {
 			display: none;
@@ -57,6 +58,12 @@
 	<nav>
 		<div class="logo">Food Delivery</div>
 		<div class="nav-items">
+			<div class="language-selector">
+				<select id="languageSelect" onchange="window.i18n.setLanguage(this.value)">
+					<option value="en">English</option>
+					<option value="es">Español</option>
+				</select>
+			</div>
 			<a href="#" class="active">Home</a>
 			<a href="#menu">Menu</a>
 			<a href="#" id="cartBtn"><i class="fas fa-shopping-cart"></i> Cart <span id="cartCount">0</span></a>
