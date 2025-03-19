@@ -1,3 +1,6 @@
+// Import global config
+const API_URL = window.config.API_URL;
+
 // Global state
 let foodItems = [];
 let selectedCategory = '';

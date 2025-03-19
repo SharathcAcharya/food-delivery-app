@@ -1,5 +1,6 @@
 // API URL configuration
-const API_URL = 'http://localhost:3005';
+// Import global config
+const API_URL = window.config.API_URL;
 
 // Default profile image as base64 SVG - only declare if not already defined
 if (typeof window.DEFAULT_PROFILE_IMAGE === 'undefined') {
