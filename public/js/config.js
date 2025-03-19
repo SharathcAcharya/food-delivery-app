@@ -1,5 +1,5 @@
 // Global configuration
-window.API_URL = window.API_URL || 'http://localhost:3005';
+window.API_URL = window.API_URL || 'https://food-delivery-app-tsa5.onrender.com';
 window.orderSocket = window.orderSocket || null;
 
 // Export configuration
