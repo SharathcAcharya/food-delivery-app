@@ -113,12 +113,45 @@ function displayFoodItems(items) {
                     <span class="food-category">${item.category}</span>
                     ${item.isVeg ? '<span class="veg-badge">VEG</span>' : ''}
                 </div>
-                <button onclick="addToCart(${JSON.stringify(item)})" class="add-to-cart-btn">Add to Cart</button>
+                <button onclick="addToCart(${JSON.stringify(item).replace(/"/g, '&quot;')})" class="add-to-cart-btn">Add to Cart</button>
             </div>
         `;
     }).join('');
 }
 
+// Add to cart functionality
+function addToCart(item) {
+    try {
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        const existingItem = cart.find(i => i._id === item._id);
+        
+        if (existingItem) {
+            existingItem.quantity = (existingItem.quantity || 1) + 1;
+        } else {
+            cart.push({ ...item, quantity: 1 });
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        showNotification('Item added to cart', 'success');
+        updateCartCount();
+    } catch (error) {
+        console.error('Error adding item to cart:', error);
+        showNotification('Failed to add item to cart', 'error');
+    }
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const cartCount = cart.reduce((total, item) => total + (item.quantity || 1), 0);
+    const cartCountElement = document.getElementById('cartCount');
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+        cartCountElement.style.display = cartCount > 0 ? 'block' : 'none';
+    }
+}
+
+// Make addToCart function available globally
+window.addToCart = addToCart;
 function filterByCategory(category) {
     selectedCategory = category;
     applyFilters();
