@@ -7,6 +7,13 @@ const DEFAULT_FOOD_IMAGE = '/uploads/cheese-pizza.jpg';
 // WebSocket initialization
 let orderSocket = null;
 
+// Clear user data when window is closed
+window.addEventListener('beforeunload', () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart');
+});
+
 window.initializeOrderTracking = function() {
     const token = localStorage.getItem('token');
     if (!token) return;
@@ -113,15 +120,16 @@ function displayFoodItems(items) {
                     <span class="food-category">${item.category}</span>
                     ${item.isVeg ? '<span class="veg-badge">VEG</span>' : ''}
                 </div>
-                <button onclick="addToCart(${JSON.stringify(item).replace(/"/g, '&quot;')})" class="add-to-cart-btn">Add to Cart</button>
+                <button onclick="addToCart('${encodeURIComponent(JSON.stringify(item))}')" class="add-to-cart-btn">Add to Cart</button>
             </div>
         `;
     }).join('');
 }
 
 // Add to cart functionality
-function addToCart(item) {
+function addToCart(itemData) {
     try {
+        const item = JSON.parse(decodeURIComponent(itemData));
         let cart = JSON.parse(localStorage.getItem('cart') || '[]');
         const existingItem = cart.find(i => i._id === item._id);
         
@@ -251,11 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Razorpay initialized successfully');
     }
 
-    // Check authentication status
+    // Check authentication status but don't automatically redirect
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
     if (token && user) {
         currentUser = user;
+        // Only update UI elements without automatic redirection
         updateUI();
     }
 });
