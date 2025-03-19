@@ -1,4 +1,4 @@
-// Global state
+// User state management is handled at the top of the file
 let foodItems = [];
 let selectedCategory = '';
 let razorpay = null;
@@ -206,24 +206,7 @@ function applyFilters() {
 }
 
 // Event listeners for filters
-document.addEventListener('DOMContentLoaded', () => {
-    loadFoodItems();
-    initializeOrderTracking();
-
-    // Initialize Razorpay if available
-    if (typeof Razorpay !== 'undefined') {
-        razorpay = window.Razorpay;
-    }
-
-    // Add event listeners for filters
-    document.getElementById('searchInput')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('categoryFilter')?.addEventListener('change', () => {
-        filterByCategory(document.getElementById('categoryFilter').value);
-    });
-    document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
-});
+// Event listeners for filters are now consolidated in the main initialization block
 
 // Utility function for debouncing
 function debounce(func, wait) {
@@ -248,14 +231,10 @@ function showNotification(message, type = 'info') {
     setTimeout(() => notification.remove(), 3000);
 }
 
+// User state management is handled at the top of the file
+
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
-    // Clear any existing session data first
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    localStorage.removeItem('cart');
-    currentUser = null;
-
     // Check authentication status
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
@@ -270,23 +249,23 @@ document.addEventListener('DOMContentLoaded', () => {
     currentUser = user;
     loadFoodItems();
     initializeOrderTracking();
-    updateUI();
+    updateCartCount(); // Update cart count instead of undefined updateUI
 
     // Initialize Razorpay if available
     if (typeof Razorpay !== 'undefined') {
         razorpay = Razorpay;
         console.log('Razorpay initialized successfully');
     }
-});
 
-// Add event listeners for filters
-document.getElementById('searchInput')?.addEventListener('input', debounce(applyFilters, 300));
-document.getElementById('categoryFilter')?.addEventListener('change', () => {
-    filterByCategory(document.getElementById('categoryFilter').value);
+    // Add event listeners for filters
+    document.getElementById('searchInput')?.addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('categoryFilter')?.addEventListener('change', () => {
+        filterByCategory(document.getElementById('categoryFilter').value);
+    });
+    document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
 });
-document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
-document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
-document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
 
 // Export necessary functions
 window.filterByCategory = filterByCategory;
