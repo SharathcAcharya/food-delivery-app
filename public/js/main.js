@@ -235,15 +235,16 @@ function showNotification(message, type = 'info') {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize application only if user is authenticated
+    // Clear any existing session data first
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart');
+
+    // Get fresh token and user data
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
 
     if (!token || !user) {
-        // Clear any existing session data
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        localStorage.removeItem('cart');
         // Redirect to login if no valid session
         window.location.href = '/login.html';
         return;
