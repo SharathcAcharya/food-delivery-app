@@ -287,7 +287,6 @@ document.getElementById('categoryFilter')?.addEventListener('change', () => {
 document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
 document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
 document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
-});
 
 // Export necessary functions
 window.filterByCategory = filterByCategory;
