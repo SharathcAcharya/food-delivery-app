@@ -235,21 +235,25 @@ function showNotification(message, type = 'info') {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
-    // Check authentication status
+    // Initialize application only if user is authenticated
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
 
     if (!token || !user) {
+        // Clear any existing session data
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('cart');
         // Redirect to login if no valid session
         window.location.href = '/login.html';
         return;
     }
 
-    // Initialize application only if user is authenticated
+    // Set up the current user and initialize features
     currentUser = user;
     loadFoodItems();
     initializeOrderTracking();
-    updateCartCount(); // Update cart count instead of undefined updateUI
+    updateCartCount();
 
     // Initialize Razorpay if available
     if (typeof Razorpay !== 'undefined') {
