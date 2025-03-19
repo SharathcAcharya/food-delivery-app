@@ -1,5 +1,5 @@
 // API URL configuration
-const API_URL = 'https://food-delivery-app-tsa5.onrender.com';
+const API_URL = 'http://localhost:3005';
 const DEFAULT_FOOD_IMAGE = '/uploads/cheese-pizza.jpg';
 
 // Global state

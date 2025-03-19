@@ -1,5 +1,5 @@
 // API URL configuration
-const API_URL = 'https://food-delivery-app-tsa5.onrender.com';
+const API_URL = 'http://localhost:3005';
 
 // Default profile image as base64 SVG - only declare if not already defined
 if (typeof window.DEFAULT_PROFILE_IMAGE === 'undefined') {
