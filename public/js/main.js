@@ -250,6 +250,12 @@ function showNotification(message, type = 'info') {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
+    // Clear any existing session data on startup
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart');
+    currentUser = null;
+
     loadFoodItems();
     initializeOrderTracking();
 
@@ -259,14 +265,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Razorpay initialized successfully');
     }
 
-    // Check authentication status but don't automatically redirect
+    // Check authentication status
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
-    if (token && user) {
-        currentUser = user;
-        // Only update UI elements without automatic redirection
-        updateUI();
+    if (!token || !user) {
+        // Redirect to login if no valid session
+        window.location.href = '/login.html';
+        return;
     }
+
+    currentUser = user;
+    updateUI();
 });
 
 // Export necessary functions
