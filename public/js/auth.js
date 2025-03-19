@@ -1,6 +1,5 @@
 // API URL configuration
 // Import global config
-const API_URL = window.config.API_URL;
 
 // Default profile image as base64 SVG - only declare if not already defined
 if (typeof window.DEFAULT_PROFILE_IMAGE === 'undefined') {
@@ -256,3 +255,4 @@ window.currentUser = currentUser;
 window.initializeUserState = initializeUserState;
 window.showModal = showModal;
 window.closeModal = closeModal;
+window.API_URL = window.config.API_URL;
