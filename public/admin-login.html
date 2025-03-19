@@ -67,7 +67,7 @@
     </div>
 
     <script>
-        const API_URL = 'http://localhost:3005';
+        const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:3005' : 'https://food-delivery-app-tsa5.onrender.com';
 
         document.getElementById('adminLoginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
