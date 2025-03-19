@@ -250,32 +250,43 @@ function showNotification(message, type = 'info') {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
-    // Clear any existing session data on startup
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    localStorage.removeItem('cart');
-    currentUser = null;
+    // Check authentication status first
+    const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user') || 'null');
 
+    if (!token || !user) {
+        // Clear any existing session data
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('cart');
+        currentUser = null;
+
+        // Redirect to login if no valid session
+        window.location.href = '/login.html';
+        return;
+    }
+
+    // Initialize application only if user is authenticated
+    currentUser = user;
     loadFoodItems();
     initializeOrderTracking();
+    updateUI();
 
     // Initialize Razorpay if available
     if (typeof Razorpay !== 'undefined') {
         razorpay = Razorpay;
         console.log('Razorpay initialized successfully');
     }
+});
 
-    // Check authentication status
-    const token = localStorage.getItem('token');
-    const user = JSON.parse(localStorage.getItem('user') || 'null');
-    if (!token || !user) {
-        // Redirect to login if no valid session
-        window.location.href = '/login.html';
-        return;
-    }
-
-    currentUser = user;
-    updateUI();
+// Add event listeners for filters
+document.getElementById('searchInput')?.addEventListener('input', debounce(applyFilters, 300));
+document.getElementById('categoryFilter')?.addEventListener('change', () => {
+    filterByCategory(document.getElementById('categoryFilter').value);
+});
+document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
+document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
+document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
 });
 
 // Export necessary functions
