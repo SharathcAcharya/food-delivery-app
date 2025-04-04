@@ -42,6 +42,9 @@ app.use('/api/location', verifyToken, require('./routes/location'));
 app.use('/api/rewards', verifyToken, require('./routes/rewards'));
 app.use('/api/notifications', verifyToken, require('./routes/notification'));
 
+// Cart routes (requires authentication)
+app.use('/api/cart', verifyToken, require('./routes/cart'));
+
 // Profile route
 app.get('/profile', verifyToken, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -50,6 +53,28 @@ app.get('/profile', verifyToken, (req, res) => {
 // Admin route protection
 app.get('/admin.html', verifyToken, verifyAdmin, (req, res, next) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+});
+
+// Handle client-side routing - must be after API routes
+app.get('/*', (req, res) => {
+    // Check if the request is for a static file
+    const ext = path.extname(req.path);
+    if (ext) {
+        // If it's a static file that doesn't exist, let express.static handle the 404
+        next();
+    } else {
+        // For all other routes, send the index.html file
+        const filePath = req.path === '/' ? 'index.html' : `${req.path.substring(1)}.html`;
+        const fullPath = path.join(__dirname, 'public', filePath);
+        
+        // Check if the HTML file exists
+        if (require('fs').existsSync(fullPath)) {
+            res.sendFile(fullPath);
+        } else {
+            // If the specific page doesn't exist, send index.html
+            res.sendFile(path.join(__dirname, 'public', 'index.html'));
+        }
+    }
 });
 
 // Error handling middleware

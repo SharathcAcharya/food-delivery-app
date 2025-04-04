@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Food Delivery App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        .container {
+            padding-top: 80px;
+        }
+        
+        .cart-page {
+            min-height: calc(100vh - 180px);
+        }
+
+        #checkoutForm input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #checkoutForm button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #checkoutForm button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .payment-options {
+            margin: 20px 0;
+        }
+
+        .payment-options label {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .payment-options label:hover {
+            background-color: #f8f9fa;
+        }
+
+        .payment-options input[type="radio"]:checked + label {
+            border-color: var(--primary-color);
+            background-color: #fff5f5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Food Delivery</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/menu">Menu</a>
+            <a href="/cart" class="active">Cart <span id="cartCount">0</span></a>
+            <a href="/profile">Profile</a>
+            <a href="#" onclick="document.getElementById('loginModal').style.display='block'">Login</a>
+            <a href="#" onclick="document.getElementById('registerModal').style.display='block'">Register</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="cart-page">
+            <h1>Your Cart</h1>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item">
+                        <span>Total:</span>
+                        <span>₹<span id="cartTotal">0.00</span></span>
+                    </div>
+                    <form id="checkoutForm">
+                        <h3>Delivery Details</h3>
+                        <div class="form-group">
+                            <label for="street">Street Address</label>
+                            <input type="text" id="street" name="street" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                        </div>
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-option">
+                                <input type="radio" id="razorpay" name="paymentMethod" value="razorpay" required>
+                                <label for="razorpay">Online Payment (Razorpay)</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="cod" name="paymentMethod" value="cod">
+                                <label for="cod">Cash on Delivery</label>
+                            </div>
+                        </div>
+                        <button type="submit" id="checkoutBtn" disabled>Proceed to Checkout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="error-message" id="loginError"></div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Phone</label>
+                    <input type="tel" id="regPhone" name="phone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="profilePic">Profile Picture</label>
+                    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+                </div>
+                <div class="error-message" id="registerError"></div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+
+    <footer>
+        <p>&copy; 2023 Food Delivery. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/config.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+        // Initialize Razorpay
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Razorpay === 'undefined') {
+                console.error('Razorpay failed to load');
+            } else {
+                window.Razorpay = Razorpay;
+                console.log('Razorpay initialized successfully');
+            }
+        });
+    </script>
+    <script src="/js/cart.js"></script>
+</body>
+</html> 

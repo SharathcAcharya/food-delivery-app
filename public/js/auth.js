@@ -39,6 +39,14 @@ function initializeUserState() {
     }
     
     updateUI(); // Update UI to reflect current state
+
+    // Show login modal if not logged in and on the main page
+    if (!isLoggedIn && window.location.pathname === '/') {
+        const loginModal = document.getElementById('loginModal');
+        if (loginModal) {
+            loginModal.style.display = 'block';
+        }
+    }
 }
 
 // Call initializeUserState when the page loads

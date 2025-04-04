@@ -5,51 +5,51 @@ const path = require('path');
 const images = [
 	{
 		name: 'paneer-tikka.jpg',
-		url: 'https://www.cookwithmanali.com/wp-content/uploads/2015/07/Restaurant-Style-Paneer-Tikka-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'chicken-65.jpg',
-		url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/chicken-65-recipe-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'butter-chicken.jpg',
-		url: 'https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'paneer-butter-masala.jpg',
-		url: 'https://www.indianveggiedelight.com/wp-content/uploads/2021/08/restaurant-style-paneer-butter-masala-featured-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'cheese-pizza.jpg',
-		url: 'https://www.cookingclassy.com/wp-content/uploads/2014/07/four-cheese-pizza-2-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'chicken-burger.jpg',
-		url: 'https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Crispy-Chicken-Burger-square-FS-4518-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'greek-salad.jpg',
-		url: 'https://www.aheadofthyme.com/wp-content/uploads/2016/03/the-perfect-greek-salad-7-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'grilled-chicken-salad.jpg',
-		url: 'https://www.eatwell101.com/wp-content/uploads/2019/04/Blackened-Chicken-and-Avocado-Salad-recipe-1-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'mango-lassi.jpg',
-		url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/mango-lassi-recipe-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'cold-coffee.jpg',
-		url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/cold-coffee-recipe-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'gulab-jamun.jpg',
-		url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2014/09/gulab-jamun-recipe-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=500&fit=crop'
 	},
 	{
 		name: 'chocolate-brownie.jpg',
-		url: 'https://preppykitchen.com/wp-content/uploads/2019/09/brownies-recipe-500x500.jpg'
+		url: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&h=500&fit=crop'
 	}
 ];
 
@@ -60,18 +60,61 @@ if (!fs.existsSync(uploadsDir)) {
 	fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
-// Download images
-images.forEach(image => {
+// Function to download an image with retry logic
+async function downloadImage(image, retries = 3) {
 	const filePath = path.join(uploadsDir, image.name);
-	https.get(image.url, (response) => {
-		const fileStream = fs.createWriteStream(filePath);
-		response.pipe(fileStream);
-		
-		fileStream.on('finish', () => {
-			console.log(`Downloaded: ${image.name}`);
-			fileStream.close();
-		});
-	}).on('error', (err) => {
-		console.error(`Error downloading ${image.name}:`, err.message);
-	});
-});
+	
+	for (let attempt = 1; attempt <= retries; attempt++) {
+		try {
+			await new Promise((resolve, reject) => {
+				https.get(image.url, (response) => {
+					if (response.statusCode !== 200) {
+						reject(new Error(`Failed to download ${image.name}: Status code ${response.statusCode}`));
+						return;
+					}
+					
+					const fileStream = fs.createWriteStream(filePath);
+					response.pipe(fileStream);
+					
+					fileStream.on('finish', () => {
+						fileStream.close();
+						// Verify file size
+						const stats = fs.statSync(filePath);
+						if (stats.size < 1000) { // If file is too small, probably an error
+							fs.unlinkSync(filePath);
+							reject(new Error(`Downloaded file too small for ${image.name}`));
+						} else {
+							console.log(`Successfully downloaded: ${image.name}`);
+							resolve();
+						}
+					});
+					
+					fileStream.on('error', (err) => {
+						fs.unlinkSync(filePath);
+						reject(err);
+					});
+				}).on('error', (err) => {
+					reject(err);
+				});
+			});
+			return; // Success, exit the retry loop
+		} catch (error) {
+			console.error(`Attempt ${attempt} failed for ${image.name}:`, error.message);
+			if (attempt === retries) {
+				console.error(`Failed to download ${image.name} after ${retries} attempts`);
+			} else {
+				// Wait before retrying
+				await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+			}
+		}
+	}
+}
+
+// Download all images
+async function downloadAllImages() {
+	for (const image of images) {
+		await downloadImage(image);
+	}
+}
+
+downloadAllImages().catch(console.error);

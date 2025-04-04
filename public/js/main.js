@@ -245,31 +245,29 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('user');
         localStorage.removeItem('cart');
         
-        // Redirect to login if no valid session
-        window.location.href = '/login.html';
-        return;
+        // Show login modal instead of redirecting
+        const loginModal = document.getElementById('loginModal');
+        if (loginModal) {
+            loginModal.style.display = 'block';
+        }
+    } else {
+        // Update UI for logged-in user
+        updateUI();
+        initializeOrderTracking();
     }
 
-    // Set up the current user and initialize features
-    currentUser = user;
+    // Load initial food items
     loadFoodItems();
-    initializeOrderTracking();
+    
+    // Initialize filters
+    document.getElementById('searchInput').addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('minPrice').addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('maxPrice').addEventListener('input', debounce(applyFilters, 300));
+    document.getElementById('dietaryFilter').addEventListener('change', applyFilters);
+    document.getElementById('categoryFilter').addEventListener('change', applyFilters);
+    
+    // Update cart count
     updateCartCount();
-
-    // Initialize Razorpay if available
-    if (typeof Razorpay !== 'undefined') {
-        razorpay = Razorpay;
-        console.log('Razorpay initialized successfully');
-    }
-
-    // Add event listeners for filters
-    document.getElementById('searchInput')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('categoryFilter')?.addEventListener('change', () => {
-        filterByCategory(document.getElementById('categoryFilter').value);
-    });
-    document.getElementById('minPrice')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('maxPrice')?.addEventListener('input', debounce(applyFilters, 300));
-    document.getElementById('dietaryFilter')?.addEventListener('change', applyFilters);
 });
 
 // Export necessary functions

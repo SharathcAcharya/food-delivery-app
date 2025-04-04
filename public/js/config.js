@@ -1,6 +1,22 @@
 // Global configuration
-window.API_URL = window.API_URL || 'https://food-delivery-app-tsa5.onrender.com';
+window.API_URL = 'http://localhost:3005';
 window.orderSocket = window.orderSocket || null;
+window.RAZORPAY_KEY = 'YOUR_RAZORPAY_KEY'; // Replace with your actual Razorpay key
+
+// Global state
+window.isLoggedIn = false;
+window.currentUser = null;
+
+// Initialize state from localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user') || 'null');
+    
+    if (token && user) {
+        window.isLoggedIn = true;
+        window.currentUser = user;
+    }
+});
 
 // Export configuration
 window.config = {
