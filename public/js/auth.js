@@ -3,7 +3,8 @@
 
 // Default profile image as base64 SVG - only declare if not already defined
 if (typeof window.DEFAULT_PROFILE_IMAGE === 'undefined') {
-	window.DEFAULT_PROFILE_IMAGE = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCI+PHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNlMGUwZTAiLz48dGV4dCB4PSI3NSIgeT0iNzUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiM5OTkiPlU8L3RleHQ+PC9zdmc+';}
+	window.DEFAULT_PROFILE_IMAGE = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCI+PHJlY3Qgd2lkdGg9IjE1MCIgaGVpZ2h0PSIxNTAiIGZpbGw9IiNlMGUwZTAiLz48dGV4dCB4PSI3NSIgeT0iNzUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiM5OTkiPlU8L3RleHQ+PC9zdmc+';
+}
 
 // Global state
 let currentUser = null;
@@ -24,7 +25,30 @@ function initializeUserState() {
                 currentUser = null;
                 isLoggedIn = false;
             } else {
-                isLoggedIn = true;
+                // Validate token before setting logged in state
+                fetch(`${API_URL}/api/auth/validate`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Invalid session');
+                    }
+                    return response.json();
+                })
+                .then(() => {
+                    isLoggedIn = true;
+                    updateUI();
+                })
+                .catch(() => {
+                    // Clear invalid session data
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    currentUser = null;
+                    isLoggedIn = false;
+                    updateUI();
+                });
             }
         } catch (error) {
             console.error('Error parsing user data:', error);
@@ -249,6 +273,7 @@ function updateUI() {
 window.logout = function() {
 	localStorage.removeItem('token');
 	localStorage.removeItem('user');
+	localStorage.removeItem('cart'); // Also clear cart data on logout
 	currentUser = null;
 	isLoggedIn = false;
 	updateUI();

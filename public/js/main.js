@@ -2,7 +2,7 @@
 let foodItems = [];
 let selectedCategory = '';
 let razorpay = null;
-const DEFAULT_FOOD_IMAGE = '/uploads/cheese-pizza.jpg';
+const DEFAULT_FOOD_IMAGE = window.config.API_URL + '/uploads/cheese-pizza.jpg';
 
 // WebSocket initialization
 let orderSocket = null;
@@ -18,7 +18,7 @@ window.initializeOrderTracking = function() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    const wsUrl = window.config.API_URL.replace('http', 'ws');
+    const wsUrl = window.config.API_URL.replace('https', 'wss');
     orderSocket = new WebSocket(wsUrl);
 
     orderSocket.onopen = function() {
@@ -73,7 +73,7 @@ function sendWebSocketMessage(message) {
 
 // Food item loading and filtering
 function loadFoodItems(category = '') {
-    const url = new URL(`${API_URL}/api/food`);
+    const url = new URL(`${window.config.API_URL}/api/food`);
     if (category) url.searchParams.set('category', category);
     
     fetch(url)
@@ -107,7 +107,7 @@ function displayFoodItems(items) {
 
     foodGrid.innerHTML = items.map(item => {
         const imagePath = item.image ? 
-            (item.image.startsWith('/') ? item.image : `/${item.image}`) : 
+            (item.image.startsWith('http') ? item.image : `${window.config.API_URL}${item.image.startsWith('/') ? item.image : `/${item.image}`}`) : 
             DEFAULT_FOOD_IMAGE;
 
         return `
@@ -231,29 +231,52 @@ function showNotification(message, type = 'info') {
     setTimeout(() => notification.remove(), 3000);
 }
 
-// User state management is handled at the top of the file
-
 // Initialize application
 document.addEventListener('DOMContentLoaded', () => {
+    // Clear any existing session data first
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    localStorage.removeItem('cart');
+
     // Get token and user data
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
 
     if (!token || !user) {
-        // Clear any existing session data
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        localStorage.removeItem('cart');
-        
-        // Show login modal instead of redirecting
+        // Show login modal
         const loginModal = document.getElementById('loginModal');
         if (loginModal) {
             loginModal.style.display = 'block';
         }
     } else {
-        // Update UI for logged-in user
-        updateUI();
-        initializeOrderTracking();
+        // Validate token before proceeding
+        fetch(`${API_URL}/api/auth/validate`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Invalid session');
+            }
+            return response.json();
+        })
+        .then(() => {
+            // Update UI for logged-in user
+            updateUI();
+            initializeOrderTracking();
+        })
+        .catch(() => {
+            // Clear invalid session data
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            localStorage.removeItem('cart');
+            // Show login modal
+            const loginModal = document.getElementById('loginModal');
+            if (loginModal) {
+                loginModal.style.display = 'block';
+            }
+        });
     }
 
     // Load initial food items

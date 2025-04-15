@@ -3,18 +3,23 @@ const DEFAULT_FOOD_IMAGE = 'https://via.placeholder.com/100x100?text=Food';
 let cart = [];
 
 // Initialize cart when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Check login status first
-    checkLoginStatus();
-    
-    // Load cart data
-    loadCart();
-    
-    // Initialize UI elements
-    initializeUI();
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // Check login status first
+        await checkLoginStatus();
+        
+        // Load cart data
+        await loadCart();
+        
+        // Initialize UI elements
+        initializeUI();
 
-    // Add event listeners
-    setupEventListeners();
+        // Add event listeners
+        setupEventListeners();
+    } catch (error) {
+        console.error('Error initializing cart:', error);
+        showNotification('Error loading cart', 'error');
+    }
 });
 
 // Function to check login status
@@ -22,6 +27,7 @@ async function checkLoginStatus() {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || 'null');
     window.isLoggedIn = !!(token && user && !user.isAdmin);
+    window.currentUser = user;
     
     if (window.isLoggedIn) {
         try {
@@ -35,7 +41,7 @@ async function checkLoginStatus() {
             if (response.ok) {
                 const dbCart = await response.json();
                 // Merge database cart with local cart
-                mergeCart(dbCart);
+                await mergeCart(dbCart);
             }
         } catch (error) {
             console.error('Error fetching cart from database:', error);
@@ -44,7 +50,7 @@ async function checkLoginStatus() {
 }
 
 // Function to merge database cart with local cart
-function mergeCart(dbCart) {
+async function mergeCart(dbCart) {
     try {
         const localCart = JSON.parse(localStorage.getItem('cart') || '[]');
         
@@ -65,7 +71,7 @@ function mergeCart(dbCart) {
         });
 
         cart = mergedCart;
-        saveCart();
+        await saveCart();
         updateCartDisplay();
     } catch (error) {
         console.error('Error merging carts:', error);
@@ -189,7 +195,7 @@ async function handleLogin(e) {
 }
 
 // Function to load cart from localStorage
-function loadCart() {
+async function loadCart() {
     try {
         const savedCart = localStorage.getItem('cart');
         if (savedCart) {
@@ -204,7 +210,7 @@ function loadCart() {
                 image: item.image || DEFAULT_FOOD_IMAGE,
                 quantity: Math.max(1, parseInt(item.quantity) || 1)
             }));
-            saveCart(); // Save the validated cart back to localStorage
+            await saveCart(); // Save the validated cart back to localStorage
         }
     } catch (error) {
         console.error('Error loading cart:', error);
