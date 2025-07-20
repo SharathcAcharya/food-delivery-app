@@ -7,13 +7,7 @@ const DEFAULT_FOOD_IMAGE = window.config.API_URL + '/uploads/cheese-pizza.jpg';
 // WebSocket initialization
 let orderSocket = null;
 
-// Clear user data when window is closed
-window.addEventListener('beforeunload', () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    localStorage.removeItem('cart');
-});
-
+// Initialize WebSocket for order tracking
 window.initializeOrderTracking = function() {
     const token = localStorage.getItem('token');
     if (!token) return;
@@ -48,9 +42,15 @@ window.initializeOrderTracking = function() {
 
     orderSocket.onclose = () => {
         console.log('WebSocket connection closed');
-        setTimeout(initializeOrderTracking, 5000); // Attempt to reconnect
     };
 };
+
+// Initialize order tracking when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('token')) {
+        window.initializeOrderTracking();
+    }
+});
 
 // Helper function to safely send WebSocket messages
 function sendWebSocketMessage(message) {

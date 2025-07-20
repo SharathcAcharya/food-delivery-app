@@ -56,7 +56,7 @@ app.get('/admin.html', verifyToken, verifyAdmin, (req, res, next) => {
 });
 
 // Handle client-side routing - must be after API routes
-app.get('/*', (req, res) => {
+app.get('/*', (req, res, next) => {
     // Check if the request is for a static file
     const ext = path.extname(req.path);
     if (ext) {
