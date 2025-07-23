@@ -12,7 +12,7 @@ window.initializeOrderTracking = function() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    const wsUrl = window.config.API_URL.replace('https', 'wss');
+    const wsUrl = window.config.API_URL.replace('http', 'ws');
     orderSocket = new WebSocket(wsUrl);
 
     orderSocket.onopen = function() {
